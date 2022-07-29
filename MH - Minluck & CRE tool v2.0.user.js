@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.1.0
+// @version      2.1.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -2247,7 +2247,7 @@ var minluckvalues = [
 [9999,9999,9999,9999,9999,9999,9999,71,9999,9999],
 [9999,9999,9999,9999,9999,9999,9999,78,9999,9999],
 [9999,9999,9999,9999,9999,9999,9999,81,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,56,9999,9999],
+[9999,9999,9999,9999,9999,9999,9999,72,9999,9999],
 [9999,9999,9999,64,9999,9999,9999,9999,9999,9999],
 [9999,9999,9999,68,9999,9999,9999,9999,9999,9999],
 [9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
@@ -2259,8 +2259,8 @@ var minluckvalues = [
 [9999,9999,9999,87,9999,9999,9999,9999,9999,9999],
 [9999,9999,9999,90,9999,9999,9999,9999,9999,9999],
 [9999,9999,9999,139,9999,9999,9999,9999,9999,9999],
-[9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
 [9999,9999,64,9999,9999,9999,9999,9999,9999,9999],
+[9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
 [9999,9999,66,9999,9999,9999,9999,9999,9999,9999],
 [9999,9999,60,9999,9999,9999,9999,9999,9999,9999],
 [9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
@@ -3369,7 +3369,7 @@ var micePower = [
 10000,
 12000,
 13000,
-12000,
+20000,
 8000,
 9000,
 10000,
@@ -3381,8 +3381,8 @@ var micePower = [
 15000,
 16000,
 75000,
-9000,
 8000,
+9000,
 8500,
 7000,
 9000,
@@ -4491,7 +4491,7 @@ var miceEff = [
 [0,0,0,0,0,0,0,100,0,0],
 [0,0,0,0,0,0,0,100,0,0],
 [0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,300,0,0],
+[0,0,0,0,0,0,0,500,0,0],
 [0,0,0,100,0,0,0,0,0,0],
 [0,0,0,100,0,0,0,0,0,0],
 [0,0,0,100,0,0,0,0,0,0],
@@ -4629,7 +4629,7 @@ function renderBox(list){return new Promise((resolve, reject) => {
     infoButton.style.marginLeft = "10px"
     infoButton.onclick = function(){
         let position = JSON.parse(localStorage.getItem("Chro-minluck-vwvh")).split(",");
-        let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 26 July 2022\n\n Change tool's position/ Set % for red text?\n\n" +
+        let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 29 July 2022\nMoo Moo\n\n Change tool's position/ Set % for red text?\n\n" +
                          "Left: " + position[0] + "\nTop: " + position[1] + "\nRed text at: " + position[2] + "%","35,28,60");
         if (mes == null || mes == ""){
             return
