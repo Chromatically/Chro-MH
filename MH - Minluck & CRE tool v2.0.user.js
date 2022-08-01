@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.1.1
+// @version      2.1.3
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -30,4495 +30,4487 @@ $(document).ajaxStop(function() {
     }
 });
 
-//Data
-var allMice = [
-"Abominable Snow",
-"Absolute Acolyte",
-"Acolyte",
-"Admiral Arrrgh",
-"Admiral Cloudbeard",
-"Aether",
-"Aged",
-"Agent M",
-"Agitated Gentle Giant",
-"Alchemist",
-"Alnilam",
-"Alnitak",
-"Alpha Weremouse",
-"Amplified Brown",
-"Amplified Grey",
-"Amplified White",
-"Ancient of the Deep",
-"Ancient Scribe",
-"Angelfish",
-"Angler",
-"Angry Train Staff",
-"Aquos",
-"Arcane Summoner",
-"Arch Champion Necromancer",
-"Archer",
-"Aristo-Cat Burglar",
-"Armored Archer",
-"Artillery Commander",
-"Ascended Elder",
-"Ash Golem",
-"Assassin",
-"Assassin Beast",
-"Astrological Astronomer",
-"Automated Sentry",
-"Automated Stone Sentry",
-"Automorat",
-"Baba Gaga",
-"Balack the Banished",
-"Bandit",
-"Bark",
-"Barkshell",
-"Barmy Gunner",
-"Barnacle Beautician",
-"Barracuda",
-"Bartender",
-"Bat",
-"Battering Ram",
-"Battle Cleric",
-"Bear",
-"Bearded Elder",
-"Beast Tamer",
-"Berserker",
-"Berzerker",
-"Betta",
-"Big Bad Behemoth Burroughs",
-"Big Bad Burroughs",
-"Bilged Boatswain",
-"Biohazard",
-"Bionic",
-"Birthday",
-"Bitter Root",
-"Black Diamond Racer",
-"Black Mage",
-"Black Powder Thief",
-"Black Widow",
-"Blacksmith",
-"Bloomed Sylvan",
-"Bog Beast",
-"Bonbon Gummy Globlin",
-"Bookborn",
-"Borean Commander",
-"Bottled",
-"Bottom Feeder",
-"Boulder Biter",
-"Bounty Hunter",
-"Brawny",
-"Breakdancer",
-"Breeze Borrower",
-"Briegull",
-"Brimstone",
-"Brown",
-"Bruticle",
-"Bruticus, the Blazing",
-"Buccaneer",
-"Buckethead",
-"Builder",
-"Bulwark of Ascent",
-"Burglar",
-"Burly Bruiser",
-"Cabin Boy",
-"Calalilly",
-"Calligraphy",
-"Camoflower",
-"Camofusion",
-"Candy Cane",
-"Candy Cat",
-"Candy Goblin",
-"Cannonball",
-"Captain",
-"Captain Cannonball",
-"Captain Cloudkicker",
-"Captain Croissant",
-"Caravan Guard",
-"Cardshark",
-"Carefree Cook",
-"Caretaker",
-"Carmine the Apothecary",
-"Carnivore",
-"Carrion Medium",
-"Cavalier",
-"Cavern Crumbler",
-"Centaur",
-"Centaur Ranger",
-"Chamber Cleaver",
-"Chameleon",
-"Champion",
-"Champion Danseuse",
-"Champion Thief",
-"Charming Chimer",
-"Cheesy Party",
-"Cherry",
-"Cherry Sprite",
-"Chess Master",
-"Chip Chiseler",
-"Chipper",
-"Chitinous",
-"Chocolate Gold Foil",
-"Chocolate Overload",
-"Christmas Tree",
-"Chrono",
-"Chronomaster",
-"Cinderstorm",
-"Circuit Judge",
-"City Noble",
-"City Worker",
-"Clockwork Samurai",
-"Clockwork Timespinner",
-"Cloud Collector",
-"Cloud Miner",
-"Cloud Strider",
-"Clownfish",
-"Clump",
-"Clumsy Carrier",
-"Clumsy Chemist",
-"Coal Shoveller",
-"Cobweb",
-"Coco Commander",
-"Coffin Zombie",
-"Confused Courier",
-"Conjurer",
-"Conqueror",
-"Consumed Charm Tinkerer",
-"Cook",
-"Coral",
-"Coral Cuddler",
-"Coral Dragon",
-"Coral Gardener",
-"Coral Guard",
-"Coral Harvester",
-"Coral Queen",
-"Core Sample",
-"Cork Defender",
-"Corkataur",
-"Corky, the Collector",
-"Corridor Bruiser",
-"Corrupt",
-"Corrupt Commodore",
-"Costumed Dog",
-"Costumed Dragon",
-"Costumed Horse",
-"Costumed Monkey",
-"Costumed Ox",
-"Costumed Pig",
-"Costumed Rabbit",
-"Costumed Rat",
-"Costumed Rooster",
-"Costumed Sheep",
-"Costumed Snake",
-"Costumed Tiger",
-"Count Vampire",
-"Cowardly",
-"Cowbell",
-"Crabolia",
-"Crag Elder",
-"Craggy Ore",
-"Cranky Caterpillar",
-"Crate Camo",
-"Crazed Goblin",
-"Creepy Marionette",
-"Crimson Commander",
-"Crimson Ranger",
-"Crimson Titan",
-"Crimson Watch",
-"Croquet Crusher",
-"Crown Collector",
-"Crystal Behemoth",
-"Crystal Cave Worm",
-"Crystal Controller",
-"Crystal Golem",
-"Crystal Lurker",
-"Crystal Observer",
-"Crystal Queen",
-"Crystalback",
-"Crystalline Slasher",
-"Cumulost",
-"Cupcake Camo",
-"Cupcake Candle Thief",
-"Cupcake Cutie",
-"Cupcake Runner",
-"Cupid",
-"Curious Chemist",
-"Cursed",
-"Cursed Crusader",
-"Cursed Enchanter",
-"Cursed Engineer",
-"Cursed Librarian",
-"Cursed Taskmaster",
-"Cursed Thief",
-"Cute Cloud Conjurer",
-"Cute Crate Carrier",
-"Cutpurse",
-"Cutthroat Cannoneer",
-"Cutthroat Pirate",
-"Cuttle",
-"Cyber Miner",
-"Cybernetic Specialist",
-"Cyborg",
-"Cycloness",
-"Cyclops",
-"Cyclops Barbarian",
-"Dance Party",
-"Dancer",
-"Dancing Assassin",
-"Dangerous Duo",
-"Dark Magi",
-"Dark Templar",
-"Dashing Buccaneer",
-"Davy Jones",
-"Dawn Guardian",
-"Daydreamer",
-"Decrepit Tentacle Terror",
-"Deep",
-"Deep Sea Diver",
-"Defender",
-"Dehydrated",
-"Demolitions",
-"Deranged Deckhand",
-"Derpicorn",
-"Derpshark",
-"Derr Chieftain",
-"Derr Lich",
-"Desert Archer",
-"Desert Architect",
-"Desert Nomad",
-"Desert Soldier",
-"Desperado",
-"Destructoy",
-"Devious Gentleman",
-"Diamond",
-"Diamondhide",
-"Dinosuit",
-"Dire Lycan",
-"Dirt Thing",
-"Dojo Sensei",
-"Doktor",
-"Double Black Diamond Racer",
-"Draconic Warden",
-"Dragon",
-"Dragonbreather",
-"Dragoon",
-"Dread Knight",
-"Dread Pirate Mousert",
-"Dream Drifter",
-"Drudge",
-"Drummer",
-"Dumpling Chef",
-"Dumpling Delivery",
-"Dunehopper",
-"Dwarf",
-"Eagle Owl",
-"Eclipse",
-"Eel",
-"Effervescent",
-"Egg Painter",
-"Egg Scrambler",
-"Eggscavator",
-"Eggsplosive Scientist",
-"Eggsquisite Entertainer",
-"El Flamenco",
-"Elder",
-"Elf",
-"Elite Guardian",
-"Elixir Maker",
-"Elub Chieftain",
-"Elub Lich",
-"Elven Princess",
-"Emberstone Scaled",
-"Empyrean Appraiser",
-"Empyrean Empress",
-"Empyrean Geologist",
-"Empyrean Javelineer",
-"Enginseer",
-"Enlightened Labourer",
-"Enslaved Spirit",
-"Epoch Golem",
-"Escape Artist",
-"Essence Collector",
-"Essence Guardian",
-"Ethereal Enchanter",
-"Ethereal Engineer",
-"Ethereal Guardian",
-"Ethereal Librarian",
-"Ethereal Thief",
-"Evil Scientist",
-"Excitable Electric",
-"Exo-Tech",
-"Explorator",
-"Extreme Everysports",
-"Factory Technician",
-"Fairy",
-"Fall Familiar",
-"Fallen Champion Footman",
-"Falling Carpet",
-"Farmhand",
-"Farrier",
-"Fencer",
-"Fete Fromager",
-"Fetid Swamp",
-"Fiddler",
-"Field",
-"Fiend",
-"Fiery Crusher",
-"Finder",
-"Firebreather",
-"Firefly",
-"Flame Archer",
-"Flame Ordnance",
-"Flame Warrior",
-"Floating Spore",
-"Flutterby",
-"Fluttering Flutist",
-"Flying",
-"Fog",
-"Force Fighter Blue",
-"Force Fighter Green",
-"Force Fighter Pink",
-"Force Fighter Red",
-"Force Fighter Yellow",
-"Forever Alone",
-"Forgotten Elder",
-"Fortuitous Fool",
-"Foxy",
-"Free Skiing",
-"Frightened Flying Fireworks",
-"Frigid Foreman",
-"Frog",
-"Frostbite",
-"Frostlance Guard",
-"Frostwing Commander",
-"Frosty Snow",
-"Frozen",
-"Fuel",
-"Ful'Mina, The Mountain Queen",
-"Fungal Frog",
-"Fungal Spore",
-"Fungal Technomorph",
-"Funglore",
-"Fuzzy Drake",
-"Gargantuamouse",
-"Gargoyle",
-"Gate Guardian",
-"Gelatinous Octahedron",
-"Gemorpher",
-"Gemstone Worshipper",
-"General Drheller",
-"Gentleman Caller",
-"Ghost",
-"Ghost Pirate Queen",
-"Giant Snail",
-"Gilded Leaf",
-"Gingerbread",
-"Glacia Ice Fist",
-"Gladiator",
-"Glamorous Gladiator",
-"Glass Blower",
-"Glazy",
-"Glitchpaw",
-"Gluttonous Zombie",
-"Goblin",
-"Gold",
-"Goldleaf",
-"Golem",
-"Goliath Field",
-"Gorgon",
-"Gourd Ghoul",
-"Gourdborg",
-"Grampa Golem",
-"Grand Master of the Dojo",
-"Grandfather",
-"Granite",
-"Granny Spice",
-"Grave Robber",
-"Great Giftnapper",
-"Great Winter Hunt Impostor",
-"Greedy Al",
-"Grey",
-"Grey Recluse",
-"Greyrun",
-"Grizzled Silth",
-"Ground Gavaleer",
-"Grubling",
-"Grubling Herder",
-"Grunt",
-"Guardian",
-"Guppy",
-"Guqin Player",
-"Gyrologer",
-"Hapless",
-"Hapless Marionette",
-"Harbinger of Death",
-"Hardboiled",
-"Hardworking Hauler",
-"Hare Razer",
-"Harpy",
-"Harvest Harrier",
-"Harvester",
-"Hazmat",
-"Healer",
-"Heart of the Meteor",
-"Heavy Blaster",
-"Herc",
-"High Roller",
-"Hired Eidolon",
-"Hoarder",
-"Hollowed",
-"Hollowed Minion",
-"Hollowhead",
-"Homeopathic Apothecary",
-"Hookshot",
-"Hope",
-"Horned Cork Hoarder",
-"Hot Head",
-"Huntereater",
-"Hurdle",
-"Hydra",
-"Hydrologist",
-"Hydrophobe",
-"Hypnotized Gunslinger",
-"Iceberg Sculptor",
-"Iceblade",
-"Iceblock",
-"Icebreaker",
-"Icewing",
-"Icicle",
-"Ignatia",
-"Ignis",
-"Impersonator",
-"Incompetent Ice Climber",
-"Industrious Digger",
-"Inferna, The Engulfed",
-"Inferno Mage",
-"Infiltrator",
-"Itty Bitty Rifty Burroughs",
-"Itty-Bitty Burroughs",
-"Jellyfish",
-"Joy",
-"Juliyes",
-"Jurassic",
-"Kalor'ignis of the Geyser",
-"Karmachameleon",
-"Keeper",
-"Keeper's Assistant",
-"King Grub",
-"King Scarab",
-"Kite Flyer",
-"Knight",
-"Koimaid",
-"Kung Fu",
-"Lab Technician",
-"Lady Coldsnap",
-"Lambent",
-"Lambent Crystal",
-"Lancer Guard",
-"Lasso Cowgirl",
-"Launchpad Labourer",
-"Lawbender",
-"Leprechaun",
-"Leviathan",
-"Lich",
-"Lightning Rod",
-"Limestone Miner",
-"Living Ice",
-"Living Salt",
-"Lockpick",
-"Longtail",
-"Lord Splodington",
-"Lost",
-"Lost Legionnaire",
-"Lovely Sports",
-"Lucky",
-"Lumahead",
-"Lumberjack",
-"Lumi-lancer",
-"Lunar Red Candle Maker",
-"Lycan",
-"Lycanoid",
-"M400",
-"Mad Elf",
-"Mage Weaver",
-"Magic",
-"Magic Champion",
-"Magma Carrier",
-"Magmarage",
-"Magmatic Crystal Thief",
-"Magmatic Golem",
-"Mairitime Pirate",
-"Maize Harvester",
-"Mammoth",
-"Manaforge Smith",
-"Manatee",
-"Market Guard",
-"Market Thief",
-"Martial",
-"Masked Pikeman",
-"Master Burglar",
-"Master Exploder",
-"Master of the Cheese Belt",
-"Master of the Cheese Claw",
-"Master of the Cheese Fang",
-"Master of the Chi Belt",
-"Master of the Chi Claw",
-"Master of the Chi Fang",
-"Master of the Dojo",
-"Matron of Machinery",
-"Matron of Wealth",
-"Mecha Tail",
-"Medicine",
-"Menace of the Rift",
-"Mermouse",
-"Mermousette",
-"Mershark",
-"Meteorite Golem",
-"Meteorite Miner",
-"Meteorite Mover",
-"Meteorite Mystic",
-"Meteorite Snacker",
-"Micro",
-"Mighty Mole",
-"Mild Spicekin",
-"Militant Samurai",
-"Mimic",
-"Mind Tearer",
-"Miner",
-"Mining Materials Manager",
-"Mintaka",
-"Mischievous Meteorite Miner",
-"Mischievous Wereminer",
-"Miser",
-"Missile Toe",
-"Mist Maker",
-"Mlounder Flounder",
-"Mobster",
-"Mole",
-"Molten Midas",
-"Monarch",
-"Monk",
-"Monsoon Maker",
-"Monster",
-"Monster of the Meteor",
-"Monster Tail",
-"Monstrous Abomination",
-"Monstrous Black Widow",
-"Moosker",
-"Mossy Moosker",
-"Mouldy Mole",
-"Mountain",
-"Mousataur Priestess",
-"Mouse of Elements",
-"Mouse of Winter Future",
-"Mouse of Winter Past",
-"Mouse of Winter Present",
-"Mouse With No Name",
-"Mousevina von Vermin",
-"Moussile",
-"Mummy",
-"Mush",
-"Mush Monster",
-"Mushroom Harvester",
-"Mushroom Sprite",
-"Mutant Mongrel",
-"Mutant Ninja",
-"Mutated Behemoth",
-"Mutated Brown",
-"Mutated Grey",
-"Mutated Mole",
-"Mutated Siblings",
-"Mutated White",
-"Mysterious Traveller",
-"Mystic",
-"Mystic Bishop",
-"Mystic Guardian",
-"Mystic Herald",
-"Mystic King",
-"Mystic Knight",
-"Mystic Pawn",
-"Mystic Queen",
-"Mystic Rook",
-"Mystic Scholar",
-"Nachore Golem",
-"Nachous, The Molten",
-"Narrator",
-"Naturalist",
-"Naughty Nougat",
-"Necromancer",
-"Nerg Chieftain",
-"Nerg Lich",
-"New Year's",
-"Nibbler",
-"Nice Knitting",
-"Night Shift Materials Manager",
-"Night Watcher",
-"Nightfire",
-"Nightmancer",
-"Nightshade Flower Girl",
-"Nightshade Fungalmancer",
-"Nightshade Maiden",
-"Nightshade Masquerade",
-"Nightshade Nanny",
-"Nimbomancer",
-"Ninja",
-"Nitro Racer",
-"Nomad",
-"Nomadic Warrior",
-"Nugget",
-"Nutcracker",
-"Octomermaid",
-"Ol' King Coal",
-"Old One",
-"Old Spice Collector",
-"One-Mouse Band",
-"Onion Chopper",
-"Ooze",
-"Ore Chipper",
-"Ornament",
-"Outbreak Assassin",
-"Outlaw",
-"Over-Prepared",
-"Overcaster",
-"Oxygen Baron",
-"Pack",
-"Page",
-"Paladin",
-"Paladin Weapon Master",
-"Pan Slammer",
-"Para Para Dancer",
-"Paragon of Arcane",
-"Paragon of Dragons",
-"Paragon of Forgotten",
-"Paragon of Shadow",
-"Paragon of Strength",
-"Paragon of Tactics",
-"Paragon of the Lawless",
-"Paragon of Water",
-"Parlour Player",
-"Party Head",
-"Passenger",
-"Pathfinder",
-"Pearl",
-"Pearl Diver",
-"Pebble",
-"Peggy the Plunderer",
-"Penguin",
-"Phalanx",
-"Phase Zombie",
-"Photographer",
-"Pie Thief",
-"Pinchy",
-"Pintail",
-"Pirate",
-"Pirate Anchor",
-"Plague Hag",
-"Plutonium Tentacle",
-"Pneumatic Dirt Displacement",
-"Pocketwatch",
-"Polar Bear",
-"Portable Generator",
-"Portal Paladin",
-"Portal Plunderer",
-"Portal Pursuer",
-"Possessed Armaments",
-"Praetorian Champion",
-"Present",
-"Prestigious Adventurer",
-"Primal",
-"Princess Fist",
-"Prospector",
-"Protector",
-"Prototype",
-"Puddlemancer",
-"Puffer",
-"Pugilist",
-"Pump Raider",
-"Pumpkin Head",
-"Pumpkin Hoarder",
-"Puppet Champion",
-"Puppet Master",
-"Puppetto",
-"Pygmy Wrangler",
-"Pyrehyde",
-"Pyrite",
-"Queen Quesada",
-"Queso Extractor",
-"Quesodillo",
-"Quillback",
-"Radioactive Ooze",
-"Rain Collector",
-"Rain Summoner",
-"Rain Wallower",
-"Rainbow Racer",
-"Rainmancer",
-"Rainwater Purifier",
-"Rambunctious Rain Rumbler",
-"Rancid Bog Beast",
-"Ravenous Zombie",
-"Raw Diamond",
-"Reality Restitch",
-"Realm Ripper",
-"Reanimated Carver",
-"Reaper",
-"Record Keeper",
-"Record Keeper's Assistant",
-"Red Coat Bear",
-"Red Envelope",
-"Red-Eyed Watcher Owl",
-"Regal Spearman",
-"Reinbo",
-"Relic Hunter",
-"Renegade",
-"Retired Minotaur",
-"Reveling Lycanthrope",
-"Revenant",
-"Ribbon",
-"Richard the Rich",
-"Ridiculous Sweater",
-"Rift Bio Engineer",
-"Rift Guardian",
-"Rift Tiger",
-"Rifterranian",
-"Riftweaver",
-"Riptide",
-"Robat",
-"Rock Muncher",
-"Rocketeer",
-"Rockstar",
-"Rogue",
-"Romeno",
-"Romeo",
-"RR-8",
-"Rubble Rouser",
-"Rubble Rummager",
-"Ruffian",
-"S.N.O.W. Golem",
-"Saboteur",
-"Sacred Shrine",
-"Saloon Gal",
-"Salt Water Snapper",
-"Saltwater Axolotl",
-"Samurai",
-"Sand Cavalry",
-"Sand Colossus",
-"Sand Dollar Diver",
-"Sand Dollar Queen",
-"Sand Pilgrim",
-"Sandmouse",
-"Sandwing Cavalry",
-"Sanguinarian",
-"Sarcophamouse",
-"Scarab",
-"Scarecrow",
-"Scarlet Revenger",
-"Scavenger",
-"School of Mish",
-"Scorned Pirate",
-"Scout",
-"Scrap Metal Monster",
-"Scribe",
-"Scrooge",
-"Scruffy",
-"Seadragon",
-"Seasoned Islandographer",
-"Seer",
-"Sentient Slime",
-"Sentinel",
-"Serpent Monster",
-"Serpentine",
-"Shackled Servant",
-"Shade of the Eclipse",
-"Shadow Sage",
-"Shadow Stalker",
-"Shaman",
-"Shaolin Kung Fu",
-"Shard Centurion",
-"Sharpshooter",
-"Shattered Carmine",
-"Shattered Obsidian",
-"Shelder",
-"Shinobi",
-"Shipwrecked",
-"Shopkeeper",
-"Shortcut",
-"Shorts-All-Year",
-"Shroom",
-"Silth",
-"Silvertail",
-"Sinister Egg Painter",
-"Sir Fleekio",
-"Siren",
-"Sizzle Pup",
-"Skeletal Champion",
-"Skeleton",
-"Sky Dancer",
-"Sky Glass Glazier",
-"Sky Glass Sorcerer",
-"Sky Glider",
-"Sky Greaser",
-"Sky Highborne",
-"Sky Squire",
-"Sky Surfer",
-"Sky Swordsman",
-"Skydiver",
-"Slay Ride",
-"Slayer",
-"Sleepwalker",
-"Sleepy Merchant",
-"Slimefist",
-"Slope Swimmer",
-"Sludge",
-"Sludge Scientist",
-"Sludge Soaker",
-"Sludge Swimmer",
-"Smoldersnap",
-"Snake Charmer",
-"Snooty",
-"Snow Boulder",
-"Snow Bowler",
-"Snow Fort",
-"Snow Golem Architect",
-"Snow Golem Jockey",
-"Snow Scavenger",
-"Snow Slinger",
-"Snow Sniper",
-"Snow Soldier",
-"Snow Sorceress",
-"Snowball Hoarder",
-"Snowblind",
-"Snowblower",
-"Snowflake",
-"Snowglobe",
-"Sock Puppet Ghost",
-"Soldier of the Shade",
-"Solemn Soldier",
-"Soothsayer",
-"Sorcerer",
-"Soul Binder",
-"Space Party-Time Plumber",
-"Spear Fisher",
-"Spectral Butler",
-"Spectral Swashbuckler",
-"Spectre",
-"Speedy",
-"Spellbinder",
-"Spheric Diviner",
-"Spice Farmer",
-"Spice Finder",
-"Spice Merchant",
-"Spice Raider",
-"Spice Reaper",
-"Spice Seer",
-"Spice Sovereign",
-"Spider",
-"Spiked Burrower",
-"Spiky Devil",
-"Spirit Fox",
-"Spirit Light",
-"Spirit of Balance",
-"Spiritual Steel",
-"Splintered Stone Sentry",
-"Spore",
-"Spore Muncher",
-"Spore Salesman",
-"Sporeticus",
-"Sporty Ski Instructor",
-"Spotted",
-"Spring Familiar",
-"Spring Sprig",
-"Sprinkly Sweet Cupcake Cook",
-"Spry Sky Explorer",
-"Spry Sky Seer",
-"Spud",
-"Squeaken",
-"Squeaker Bot",
-"Squeaker Claws",
-"Stack of Thieves",
-"Stagecoach Driver",
-"Stalagmite",
-"Stealth",
-"Steam Grip",
-"Steam Sailor",
-"Steel",
-"Steel Horse Rider",
-"Stickybomber",
-"Stinger",
-"Stingray",
-"Stocking",
-"Stone Cutter",
-"Stone Maiden",
-"Stonework Warrior",
-"Stormsurge, the Vile Tempest",
-"Stoutgear",
-"Stowaway",
-"Stratocaster",
-"Strawberry Hotcakes",
-"Stuck Snowball",
-"Student of the Cheese Belt",
-"Student of the Cheese Claw",
-"Student of the Cheese Fang",
-"Student of the Chi Belt",
-"Student of the Chi Claw",
-"Student of the Chi Fang",
-"Stuffy Banker",
-"Suave Pirate",
-"Subterranean",
-"Sugar Rush",
-"Summer Mage",
-"Summoning Scholar",
-"Sunken Banshee",
-"Sunken Citizen",
-"Super FighterBot MegaSupreme",
-"Super Mega Mecha Ultra RoboGold",
-"Supernatural",
-"Supply Hoarder",
-"Supreme Sensei",
-"Surgeon Bot",
-"Swabbie",
-"Swamp Runner",
-"Swamp Thang",
-"Swarm of Pygmy Mice",
-"Swashblade",
-"Sylvan",
-"Tadpole",
-"Taleweaver",
-"Tanglefoot",
-"Tech Golem",
-"Tech Ravenous Zombie",
-"Technic Bishop",
-"Technic King",
-"Technic Knight",
-"Technic Pawn",
-"Technic Queen",
-"Technic Rook",
-"Teenage Vampire",
-"Telekinetic Mutant",
-"Tentacle",
-"Terra",
-"Terrible Twos",
-"Terrified Adventurer",
-"Terror Knight",
-"The Menace",
-"The Total Eclipse",
-"Theurgy Warden",
-"Thirsty",
-"Thistle",
-"Thorn",
-"Thunder Strike",
-"Thundering Watcher",
-"Thunderlord",
-"Tidal Fisher",
-"Tiger",
-"Time Punk",
-"Time Tailor",
-"Time Thief",
-"Timeless Lich",
-"Timelost Thaumaturge",
-"Timeslither Pythoness",
-"Timid Explorer",
-"Tiny",
-"Tiny Dragonfly",
-"Tiny Saboteur",
-"Tiny Toppler",
-"Titanic Brain-Taker",
-"Toboggan Technician",
-"Tomb Exhumer",
-"Tome Sprite",
-"Tonic Salesman",
-"Totally Not Bitter",
-"Toxic Avenger",
-"Toxic Warrior",
-"Toxikinetic",
-"Toy",
-"Toy Sylvan",
-"Toy Tinkerer",
-"Trailblazer",
-"Train Conductor",
-"Train Engineer",
-"Trampoline",
-"Travelling Barber",
-"Treant",
-"Treant Queen",
-"Treasure Brawler",
-"Treasure Hoarder",
-"Treasure Keeper",
-"Treasurer",
-"Treat",
-"Tree Troll",
-"Tri-dra",
-"Trick",
-"Tricky Witch",
-"Triple Lutz",
-"Tritus",
-"Troll",
-"Tumbleweed",
-"Tundra Huntress",
-"Turret Guard",
-"Twisted Carmine",
-"Twisted Fiend",
-"Twisted Hotcakes",
-"Twisted Lilly",
-"Twisted Treant",
-"Undertaker",
-"Unwavering Adventurer",
-"Upper Class Lady",
-"Urchin King",
-"Vampire",
-"Vanguard",
-"Vanquisher",
-"Vaporior",
-"Vigilant Ward",
-"Vincent, The Magnificent",
-"Vinetail",
-"Violet Stormchild",
-"Walker",
-"Wandering Monk",
-"Warden of Fog",
-"Warden of Frost",
-"Warden of Rain",
-"Warden of Wind",
-"Warehouse Manager",
-"Warming Wyvern",
-"Warmonger",
-"Water Nymph",
-"Water Sprite",
-"Water Wielder",
-"Wave Racer",
-"Wealth",
-"Wealthy Werewarrior",
-"Werehauler",
-"Wereminer",
-"Whelpling",
-"Whirleygig",
-"White",
-"White Mage",
-"Wicked Witch of Whisker Woods",
-"Wiggler",
-"Wight",
-"Wild Chainsaw",
-"Wind Warrior",
-"Wind Watcher",
-"Windy Farmer",
-"Winged Harpy",
-"Winter Games",
-"Winter Mage",
-"Withered Remains",
-"Wolfskie",
-"Wordsmith",
-"Worker",
-"Worried Wayfinder",
-"Wound Up White",
-"Wreath Thief",
-"Yeti",
-"Young Prodigy Racer",
-"Zealous Academic",
-"Zephyr",
-"Zombie",
-"Zombot Unipire",
-"Zombot Unipire the Third",
-"Zurreal the Eternal",
-"Land Loafer",
-"Root Rummager",
-"Grit Grifter",
-"Crazed Cultivator",
-"Angry Aphid",
-"Wily Weevil",
-"Mighty Mite",
-"Loathsome Locust",
-"Beachcomber",
-"Sand Sifter",
-"Tackle Tracker",
-"Covetous Coastguard",
-"Pompous Perch",
-"Careless Catfish",
-"Melodramatic Minnow",
-"Sinister Squid",
-"Nefarious Nautilus",
-"Vicious Vampire Squid",
-"Architeuthulhu of the Abyss",
-"Hans Cheesetian Squeakersen",
-"Brothers Grimmaus",
-"Madame d'Ormouse",
-"Matriarch Gander",
-"Little Miss Fluffet",
-"Humphrey Dumphrey",
-"Little Bo Squeak",
-"Princess and the Olive",
-"Pinkielina",
-"Fibbocchio",
-"Greenbeard",
-"Flamboyant Flautist",
-"Ice Regent",
-"Bitter Grammarian",
-"Mythweaver"
-];
-var minluckvalues = [
-[31,9999,31,31,9999,31,31,31,31,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,118],
-[380,9999,68,9999,9999,9999,380,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[145,145,145,145,9999,145,145,145,145,9999],
-[9999,9999,9999,9999,9999,56,9999,50,9999,9999],
-[9999,9999,9999,9999,9999,49,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,100,9999],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,23,9999,32,9999,32,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,38,9999,9999],
-[9999,9999,9999,40,9999,9999,9999,9999,9999,9999],
-[73,9999,9999,9999,9999,9999,53,9999,9999,9999],
-[200,200,200,200,9999,200,200,200,200,20],
-[200,200,200,200,9999,200,200,200,200,20],
-[200,200,200,200,9999,200,200,200,200,20],
-[9999,9999,9999,138,9999,9999,9999,9999,9999,9999],
-[92,9999,66,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,66,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[48,48,48,48,192,64,35,64,9999,9999],
-[54,9999,9999,9999,9999,9999,75,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[9999,9999,9999,9999,9999,28,9999,20,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,62,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,36],
-[103,9999,9999,206,9999,206,9999,206,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,310],
-[83,9999,60,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,82,9999,59,9999,9999],
-[870,870,870,870,9999,870,870,870,870,87],
-[9999,9999,9999,9999,9999,9999,77,9999,9999,9999],
-[220,220,220,220,9999,220,220,220,220,22],
-[101,9999,73,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,32,9999],
-[44,44,44,44,44,44,44,44,44,32],
-[382,9999,137,9999,9999,9999,764,9999,9999,9999],
-[32,32,32,32,32,6,32,8,8,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,64,9999,9999,9999,9999,9999,9999],
-[12,12,12,9,9999,12,12,12,12,9999],
-[9999,9999,9999,52,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,66,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[17,9999,17,9999,9999,17,13,68,9999,9999],
-[696,9999,9999,9999,9999,9999,696,9999,9999,9999],
-[74,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[19,9999,9999,19,9999,19,19,14,19,9999],
-[9999,63,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,28,9999,9999],
-[36,36,36,36,72,36,36,13,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,47],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[1330,1330,1330,1330,9999,1330,1330,1330,1330,133],
-[160,9999,9999,9999,9999,160,160,160,9999,9999],
-[12,12,12,9,9999,12,12,12,12,9999],
-[9999,9999,9999,81,9999,9999,9999,9999,9999,9999],
-[11,9999,11,11,9999,11,11,11,11,9999],
-[20,20,20,20,20,20,20,20,20,20],
-[9999,9999,59,59,9999,9999,9999,9999,9999,9999],
-[25,25,25,25,9999,25,25,25,25,25],
-[28,28,28,28,112,38,20,38,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[45,45,45,45,9999,45,45,45,45,45],
-[9999,9999,9999,9999,9999,85,9999,85,85,9999],
-[300,300,300,300,9999,300,300,300,300,30],
-[9999,9999,9999,46,9999,9999,9999,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,45,9999,40,9999,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[9999,9999,9999,31,9999,43,9999,43,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[9999,9999,9999,9999,9999,9999,9999,9999,24,9999],
-[210,210,210,210,9999,210,210,210,210,21],
-[20,20,20,20,20,20,20,20,20,20],
-[42,42,9999,9999,9999,9999,42,9999,9999,9999],
-[9999,9999,9999,13,9999,18,9999,18,9999,9999],
-[29,9999,32,9999,9999,9999,29,9999,9999,9999],
-[2,2,2,2,9999,2,2,2,2,2],
-[9999,9999,9999,66,9999,9999,9999,92,9999,9999],
-[9999,123,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,35,9999,48,9999,48,9999,9999],
-[16,16,16,16,16,16,16,16,16,16],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,458],
-[33,33,33,33,9999,33,33,33,27,33],
-[9999,57,9999,9999,9999,9999,9999,9999,9999,9999],
-[8,8,8,6,9999,8,8,8,8,9999],
-[9999,9999,9999,55,9999,9999,9999,9999,9999,9999],
-[22,22,22,22,22,22,22,22,16,16],
-[9999,9999,9999,68,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,86,9999,9999,9999,9999,9999,9999],
-[7,7,7,7,9999,7,7,7,7,7],
-[25,25,25,25,25,25,25,25,25,18],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[9999,9999,9999,43,9999,59,9999,59,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,9999,9999,136,9999,9999],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,136,9999,136,9999,136,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[34,34,34,34,9999,34,34,34,34,34],
-[9999,9999,9999,29,9999,29,9999,21,9999,9999],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,87,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,47],
-[52,52,52,52,104,52,52,19,9999,9999],
-[9999,9999,43,86,9999,9999,9999,9999,9999,9999],
-[54,9999,9999,54,9999,54,54,39,54,9999],
-[620,620,620,620,9999,620,620,620,620,62],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,27],
-[18,9999,9999,18,9999,18,18,13,18,9999],
-[9999,9999,9999,56,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[37,102,9999,9999,9999,9999,51,9999,9999,9999],
-[23,23,23,23,23,23,23,23,23,23],
-[28,9999,9999,28,9999,28,28,20,28,9999],
-[320,320,320,320,9999,320,320,320,320,32],
-[9999,9999,9999,9999,9999,9999,9999,150,9999,9999],
-[9999,9999,9999,9999,9999,9999,26,9999,9999,9999],
-[9999,9999,9999,48,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,60,9999,9999,9999],
-[37,37,37,37,9999,37,37,37,37,37],
-[10,10,10,10,9999,10,10,10,10,10],
-[16,16,16,16,9999,16,16,16,16,16],
-[452,9999,81,9999,9999,9999,452,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,28],
-[9999,69,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[9999,9999,9999,44,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,47,9999,9999,9999,9999,9999,9999],
-[20,20,20,20,20,5,20,5,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,34],
-[35,35,9999,9999,9999,9999,35,9999,9999,9999],
-[104,104,104,104,9999,104,104,104,104,9999],
-[9999,9999,9999,93,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,51,9999,9999,9999,9999,9999,9999],
-[260,260,260,260,9999,260,260,260,260,26],
-[9999,9999,9999,58,9999,9999,9999,9999,9999,9999],
-[11,9999,11,11,9999,11,11,11,11,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[24,24,24,24,24,24,24,24,24,18],
-[32,32,32,32,9999,32,32,32,32,32],
-[24,9999,24,9999,9999,96,18,96,9999,9999],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,9999,9999,9999,9999,40,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,42,9999,9999],
-[70,70,70,70,9999,70,70,70,70,9999],
-[9999,9999,9999,27,9999,37,9999,37,9999,9999],
-[9999,9999,9999,52,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,59,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,66,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,57,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,75,9999,9999,9999,9999,9999,9999],
-[23,9999,9999,9999,9999,23,23,23,9999,9999],
-[9999,48,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,70,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,37,9999,9999,9999,9999,9999,9999,9999,9999],
-[93,9999,75,9999,9999,9999,9999,9999,9999,9999],
-[57,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[13,13,13,10,9999,13,13,13,13,9999],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[26,26,26,26,26,26,26,26,19,19],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[25,25,25,25,25,25,25,25,18,18],
-[230,230,230,230,9999,230,230,230,230,23],
-[2,2,2,2,9999,2,2,2,2,2],
-[34,34,34,34,68,34,34,13,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,46,92,9999,9999,9999,9999,9999,9999],
-[18,9999,18,18,9999,18,18,18,18,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[9999,9999,9999,9999,9999,9999,9999,9999,32,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[55,55,55,55,55,55,55,55,55,40],
-[56,56,9999,56,9999,56,9999,56,9999,9999],
-[9999,9999,9999,74,9999,55,9999,74,9999,9999],
-[9999,9999,9999,79,9999,59,9999,79,9999,9999],
-[9999,9999,9999,71,9999,53,9999,71,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,39,9999],
-[37,37,37,37,9999,37,37,37,37,37],
-[9999,9999,155,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,58,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,79,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,86,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,73,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,58,116,9999,9999,9999,9999,9999,9999],
-[9999,9999,98,9999,9999,9999,9999,9999,9999,9999],
-[22,22,22,22,22,22,22,22,22,22],
-[13,13,13,13,13,13,13,13,13,13],
-[22,22,22,22,22,22,22,22,22,22],
-[18,18,18,18,18,18,18,18,18,18],
-[19,19,19,19,9999,19,19,19,19,19],
-[20,9999,9999,20,9999,20,20,15,20,9999],
-[46,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,75],
-[42,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[58,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[80,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[70,9999,9999,9999,9999,9999,97,9999,9999,9999],
-[66,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,109,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,42],
-[128,128,128,128,9999,128,128,128,128,9999],
-[111,111,111,111,9999,111,111,111,111,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[260,260,260,260,9999,260,260,260,260,26],
-[210,210,210,210,9999,210,210,210,210,21],
-[260,260,260,260,9999,260,260,260,260,26],
-[53,148,9999,9999,9999,9999,74,9999,9999,9999],
-[29,9999,9999,29,9999,29,29,21,29,9999],
-[620,620,620,620,9999,620,620,620,620,62],
-[16,16,16,16,16,16,16,16,16,16],
-[52,52,52,52,104,52,52,19,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,110],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[142,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[121,9999,87,9999,9999,9999,9999,9999,9999,9999],
-[11,11,11,8,9999,11,11,11,11,9999],
-[23,9999,26,9999,9999,9999,23,9999,9999,9999],
-[136,9999,9999,9999,9999,9999,190,9999,9999,9999],
-[80,80,80,80,9999,80,80,80,80,9999],
-[111,9999,80,9999,9999,9999,80,9999,9999,9999],
-[9999,9999,9999,218,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,47,9999,9999],
-[9999,9999,9999,32,9999,9999,9999,9999,9999,9999],
-[34,9999,9999,9999,9999,34,34,34,9999,9999],
-[9999,9999,9999,75,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,17,9999,19,9999,9999],
-[9999,9999,9999,76,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,73,9999,9999,9999,9999],
-[73,9999,73,9999,9999,9999,82,9999,9999,9999],
-[9999,9999,9999,63,9999,47,9999,63,9999,9999],
-[9999,9999,9999,9999,9999,54,9999,54,54,9999],
-[9999,9999,9999,9999,9999,67,9999,67,67,9999],
-[9999,9999,9999,67,9999,50,9999,67,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[14,14,14,14,9999,14,14,14,14,14],
-[9999,9999,9999,9999,9999,9999,9999,9999,53,9999],
-[15,9999,15,15,9999,15,15,15,15,9999],
-[9999,9999,113,9999,9999,9999,9999,9999,9999,9999],
-[22,22,22,22,22,22,22,22,22,22],
-[25,25,25,25,25,25,25,25,25,18],
-[9999,9999,55,110,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,150,9999,108,9999,9999],
-[240,240,240,240,9999,240,240,240,240,24],
-[33,33,33,33,9999,33,33,33,33,33],
-[9999,82,9999,110,9999,110,9999,110,9999,9999],
-[9999,139,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,95,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,100,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,35],
-[9999,9999,9999,57,9999,9999,9999,9999,9999,9999],
-[220,220,220,220,9999,220,220,220,220,22],
-[63,9999,45,9999,9999,9999,9999,9999,9999,9999],
-[46,46,46,46,92,46,46,17,9999,9999],
-[9999,9999,9999,9999,9999,32,9999,23,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,34],
-[9999,9999,9999,9999,9999,9999,50,9999,9999,9999],
-[5,5,5,5,9999,5,5,5,5,5],
-[34,9999,9999,34,9999,34,34,25,34,9999],
-[98,98,98,98,548,98,98,98,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,67,9999,60,9999,9999],
-[22,22,22,22,9999,22,22,22,22,22],
-[25,25,25,25,9999,25,25,25,25,25],
-[34,34,34,34,9999,34,34,34,34,34],
-[33,33,33,33,9999,33,33,33,33,33],
-[34,34,34,34,9999,34,34,34,34,34],
-[27,27,27,27,27,27,27,27,27,27],
-[9999,9999,9999,48,9999,9999,9999,9999,9999,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[9999,9999,9999,54,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,51],
-[9999,9999,9999,63,9999,9999,9999,9999,9999,9999],
-[75,9999,75,9999,9999,9999,84,9999,9999,9999],
-[26,9999,9999,26,9999,26,26,19,26,9999],
-[9999,70,9999,9999,9999,9999,9999,9999,9999,9999],
-[73,73,73,73,9999,73,73,73,73,9999],
-[260,260,260,260,9999,260,260,260,260,9999],
-[63,63,63,63,9999,63,63,63,63,9999],
-[9999,81,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,34],
-[39,9999,44,9999,9999,9999,39,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,25],
-[20,20,20,20,20,4,20,5,5,9999],
-[41,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[41,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[36,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[53,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[74,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[58,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[58,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[240,240,240,240,9999,240,240,240,240,24],
-[220,220,220,220,9999,220,220,220,220,22],
-[74,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,35,9999,35,9999,9999],
-[23,23,23,23,9999,23,23,23,23,23],
-[23,23,23,23,23,23,23,23,23,23],
-[36,9999,9999,36,9999,36,36,26,36,9999],
-[9999,9999,9999,9999,9999,9999,55,76,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[9999,9999,9999,9999,9999,57,9999,57,57,9999],
-[18,18,18,18,9999,18,18,18,18,18],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[22,22,22,22,44,22,22,8,9999,9999],
-[10,10,10,10,10,10,10,10,10,10],
-[9999,9999,9999,9999,9999,9999,58,9999,9999,9999],
-[64,64,64,64,128,64,64,23,9999,9999],
-[2,2,2,2,9999,2,2,2,2,2],
-[60,60,60,54,300,100,60,100,9999,9999],
-[9999,9999,9999,9999,9999,9999,51,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,25,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,63,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,31,9999,9999],
-[9999,9999,9999,68,9999,51,9999,68,9999,9999],
-[63,9999,9999,126,9999,126,9999,126,9999,9999],
-[9999,9999,9999,72,9999,54,9999,72,9999,9999],
-[9999,9999,68,68,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,45,9999,40,9999,9999],
-[46,128,9999,9999,9999,9999,64,9999,9999,9999],
-[5,5,5,5,9999,5,5,5,5,5],
-[9,9999,9,9,9999,9,9,9,9,9999],
-[23,23,23,23,23,23,23,23,23,23],
-[32,32,32,32,32,32,32,32,32,32],
-[30,30,30,30,30,30,30,30,30,30],
-[28,28,28,28,28,28,28,28,28,28],
-[25,25,25,25,25,25,25,25,25,25],
-[22,22,22,22,9999,22,22,22,22,22],
-[9999,9999,87,9999,9999,9999,9999,9999,9999,9999],
-[100,100,100,100,9999,100,100,100,100,9999],
-[29,9999,9999,29,9999,29,29,21,29,9999],
-[16,16,16,16,9999,16,16,16,16,16],
-[16,16,16,16,9999,16,16,16,16,16],
-[7,7,7,7,9999,7,7,7,7,7],
-[18,9999,9999,18,9999,18,18,13,18,9999],
-[9999,9999,9999,61,9999,9999,9999,85,9999,9999],
-[9999,9999,9999,58,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,88,9999,9999,9999,9999,9999,9999],
-[12,9999,12,12,9999,12,12,12,12,9999],
-[7,9999,7,7,9999,7,7,7,7,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[9999,142,9999,9999,9999,9999,9999,9999,9999,9999],
-[250,250,250,250,9999,250,250,250,250,25],
-[9999,9999,9999,76,9999,9999,9999,9999,9999,9999],
-[121,9999,87,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,66,66,9999,9999,9999,9999,9999,9999],
-[9999,40,9999,9999,9999,9999,9999,9999,9999,9999],
-[434,155,9999,868,9999,868,9999,868,9999,9999],
-[37,9999,51,9999,9999,9999,51,9999,9999,9999],
-[45,9999,62,9999,9999,9999,62,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,48,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,41,82,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,109,9999,9999,9999,9999,9999,9999],
-[32,32,32,32,9999,32,32,32,32,32],
-[34,9999,34,9999,9999,136,25,136,9999,9999],
-[45,45,45,45,45,45,45,45,45,33],
-[28,9999,28,9999,9999,112,20,112,9999,9999],
-[270,270,270,270,9999,270,270,270,270,27],
-[14,14,14,14,9999,14,14,14,14,14],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,9999,9999,64,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,86,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,85,9999,85,85,9999],
-[11,11,11,11,9999,11,11,11,11,11],
-[20,20,20,20,20,20,20,20,20,20],
-[21,9999,21,9999,9999,84,15,84,9999,9999],
-[34,9999,9999,34,9999,34,25,34,9999,9999],
-[14,9999,14,14,9999,14,14,14,14,9999],
-[33,9999,9999,33,9999,33,33,24,33,9999],
-[43,9999,59,9999,9999,9999,59,9999,9999,9999],
-[750,750,750,750,9999,750,750,750,750,75],
-[50,9999,69,9999,9999,9999,69,9999,9999,9999],
-[42,42,42,42,42,42,42,42,42,30],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,9999,38,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,291],
-[9999,9999,9999,9999,9999,9999,9999,43,9999,9999],
-[10,9999,10,10,9999,10,10,10,10,9999],
-[49,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[33,33,33,33,9999,33,33,33,27,24],
-[30,30,30,30,9999,30,30,30,30,30],
-[30,30,30,30,9999,30,30,30,30,30],
-[33,33,33,33,9999,33,33,33,33,33],
-[1,1,1,1,9999,1,1,1,1,1],
-[36,36,36,36,36,36,36,36,36,26],
-[220,220,220,220,9999,220,220,220,220,22],
-[320,320,320,320,9999,320,320,320,320,32],
-[9999,9999,9999,9999,9999,79,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,25,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,45,9999,9999,9999],
-[9999,9999,9999,9999,9999,35,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,59,9999,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[90,90,90,90,180,90,90,33,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,95,9999,9999],
-[9999,9999,9999,9999,9999,17,9999,13,9999,9999],
-[4,4,4,4,4,1,4,1,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,35],
-[36,36,36,36,9999,36,36,36,36,36],
-[76,9999,9999,9999,9999,9999,76,9999,28,9999],
-[37,37,37,37,9999,37,37,37,37,37],
-[86,9999,9999,86,9999,86,62,86,9999,9999],
-[9999,9999,9999,9999,9999,9999,53,74,9999,9999],
-[9999,9999,9999,9999,9999,9999,73,102,9999,9999],
-[9999,9999,9999,54,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,43,9999,31,9999,43,9999,9999],
-[620,9999,9999,9999,9999,9999,867,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,104,9999,9999,9999,9999],
-[91,91,91,91,9999,91,91,91,91,91],
-[78,9999,56,9999,9999,9999,9999,9999,9999,9999],
-[6,6,6,6,9999,6,6,6,6,6],
-[42,42,42,42,9999,42,42,42,42,30],
-[45,45,45,45,9999,45,45,45,45,33],
-[20,20,20,20,20,20,20,20,20,15],
-[26,26,9999,9999,9999,9999,26,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,34,9999],
-[3,3,3,3,9999,3,3,3,3,3],
-[9999,66,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,25,9999,9999],
-[9999,9999,58,9999,9999,9999,9999,9999,9999,9999],
-[25,25,25,25,9999,25,25,25,25,25],
-[9999,9999,9999,36,9999,50,9999,36,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,23,9999,26,9999,9999],
-[51,9999,9999,9999,9999,9999,71,9999,9999,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[9999,9999,9999,63,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,52,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,112,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,55,9999,9999,9999,76,9999,9999],
-[9999,69,9999,9999,9999,9999,9999,9999,9999,9999],
-[34,34,34,34,136,46,25,46,9999,9999],
-[8,8,8,8,8,2,8,2,2,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[24,9999,9999,9999,9999,24,24,24,9999,9999],
-[95,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,49,9999,66,9999,66,9999,9999],
-[9999,9999,9999,9999,9999,64,9999,58,9999,9999],
-[250,250,250,250,9999,250,250,250,250,25],
-[65,9999,9999,9999,9999,65,65,65,9999,9999],
-[9999,9999,9999,47,9999,9999,9999,9999,9999,9999],
-[7,7,7,7,9999,7,7,7,7,7],
-[39,39,39,39,9999,39,39,39,39,39],
-[9999,9999,9999,9999,9999,9999,60,9999,9999,9999],
-[9999,124,9999,9999,9999,9999,9999,9999,9999,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[30,9999,42,9999,9999,9999,42,9999,9999,9999],
-[30,9999,41,9999,9999,9999,41,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,500,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,708,9999,9999,9999],
-[106,106,106,106,9999,106,106,106,106,9999],
-[38,38,38,38,76,38,38,14,9999,9999],
-[9999,9999,9999,34,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,54,9999,39,9999,9999],
-[9999,9999,9999,30,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,97,9999,9999,9999,9999,9999,9999],
-[260,260,260,260,9999,260,260,260,260,26],
-[64,9999,9999,9999,9999,64,64,64,9999,9999],
-[9999,89,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,23,9999],
-[69,69,69,69,9999,69,69,69,69,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,70,9999],
-[117,117,117,117,9999,117,117,117,117,117],
-[9999,9999,9999,60,9999,83,9999,83,9999,9999],
-[73,9999,102,9999,9999,9999,102,9999,9999,9999],
-[2,2,2,2,9999,2,2,2,2,2],
-[9999,9999,9999,9999,9999,81,9999,81,81,9999],
-[9999,9999,9999,32,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,39,9999,9999,9999,9999,9999,9999],
-[12,12,12,12,12,3,12,3,3,9999],
-[7,7,7,7,9999,7,7,7,7,7],
-[9999,9999,9999,78,9999,9999,9999,9999,9999,9999],
-[57,9999,46,9999,9999,9999,9999,9999,9999,9999],
-[52,9999,42,9999,9999,9999,9999,9999,9999,9999],
-[19,19,19,19,9999,19,19,19,19,19],
-[12,12,12,12,9999,12,12,12,12,12],
-[9999,9999,65,65,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,83,9999,83,83,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,78],
-[22,22,22,22,22,22,22,22,16,16],
-[67,9999,67,9999,9999,268,48,268,9999,9999],
-[240,240,240,240,9999,240,240,240,240,24],
-[9999,9999,9999,9999,9999,148,9999,148,9999,9999],
-[33,44,44,44,9999,44,44,44,44,44],
-[9999,9999,9999,9999,9999,88,9999,88,88,9999],
-[13,13,13,13,9999,13,13,13,13,13],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[9999,9999,9999,9999,9999,9999,61,9999,9999,9999],
-[9999,9999,9999,53,9999,71,9999,71,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,38,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,40,9999],
-[188,188,188,188,9999,188,188,188,188,9999],
-[40,40,40,40,40,40,40,40,40,29],
-[9999,9999,9999,60,9999,9999,9999,9999,9999,9999],
-[97,9999,70,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,105,9999,105,105,9999],
-[9999,9999,9999,9999,9999,105,9999,105,105,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,48],
-[83,9999,60,9999,9999,9999,9999,9999,9999,9999],
-[39,39,39,39,9999,39,39,39,32,39],
-[270,270,270,270,9999,270,270,270,270,27],
-[9999,9999,9999,9999,9999,45,9999,33,9999,9999],
-[9999,9999,9999,9999,9999,45,9999,33,9999,9999],
-[9999,9999,9999,9999,9999,45,9999,33,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,154],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,154],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,154],
-[9999,9999,9999,9999,9999,71,9999,51,9999,9999],
-[92,9999,66,9999,9999,9999,9999,9999,9999,9999],
-[88,9999,63,9999,9999,9999,9999,9999,9999,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[250,250,250,250,9999,250,250,250,250,25],
-[510,510,510,510,9999,510,510,510,510,51],
-[9999,9999,9999,30,9999,41,9999,41,9999,9999],
-[9999,9999,9999,57,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[74,9999,9999,9999,9999,9999,103,9999,9999,9999],
-[102,9999,9999,9999,9999,9999,102,9999,37,9999],
-[150,9999,9999,9999,9999,9999,150,9999,54,9999],
-[84,9999,9999,9999,9999,9999,117,9999,9999,9999],
-[74,9999,9999,9999,9999,9999,74,9999,27,9999],
-[210,210,210,210,9999,210,210,210,210,21],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,54,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,68],
-[96,9999,69,9999,9999,9999,9999,9999,9999,9999],
-[101,9999,73,9999,9999,9999,9999,9999,9999,9999],
-[42,9999,9999,9999,9999,42,42,42,9999,9999],
-[82,9999,9999,9999,9999,9999,82,9999,30,9999],
-[9999,9999,9999,9999,9999,46,9999,9999,9999,9999],
-[90,9999,9999,9999,9999,9999,90,9999,33,9999],
-[73,9999,9999,9999,9999,9999,53,9999,9999,9999],
-[23,23,23,23,9999,23,23,23,23,23],
-[30,30,30,30,9999,30,30,30,30,30],
-[9999,9999,9999,154,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,44,9999,9999,9999,9999,9999,9999],
-[101,101,101,101,9999,101,101,101,101,101],
-[13,9999,9999,9999,9999,13,13,13,9999,9999],
-[496,9999,355,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,26,9999,9999],
-[9999,9999,9999,9999,9999,58,9999,42,9999,9999],
-[69,138,9999,9999,9999,9999,50,9999,9999,9999],
-[65,9999,65,65,9999,47,47,65,65,9999],
-[150,9999,9999,9999,9999,9999,210,9999,9999,9999],
-[9999,9999,9999,44,9999,9999,9999,9999,9999,9999],
-[1120,1120,1120,1120,9999,1120,1120,1120,1120,112],
-[680,680,680,680,9999,680,680,680,680,49],
-[5,9999,9999,5,9999,5,5,4,5,9999],
-[320,320,320,320,9999,320,320,320,320,32],
-[9999,9999,53,53,9999,9999,9999,9999,9999,9999],
-[24,9999,24,24,9999,24,24,24,24,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,65],
-[36,36,36,36,9999,36,36,36,36,36],
-[40,40,40,40,9999,40,40,40,40,40],
-[33,33,33,33,9999,33,33,33,33,33],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[96,9999,96,9999,9999,384,69,384,9999,9999],
-[19,19,19,19,9999,19,19,19,19,19],
-[44,9999,44,9999,9999,176,32,176,9999,9999],
-[9999,9999,61,61,9999,9999,9999,9999,9999,9999],
-[60,9999,60,9999,9999,9999,9999,9999,9999,9999],
-[53,9999,53,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,67,67,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,94,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,75,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,112,9999,9999,9999,9999,9999,9999],
-[16,9999,16,16,9999,16,16,16,16,9999],
-[10,9999,10,10,9999,10,10,10,10,9999],
-[51,9999,51,51,9999,51,51,51,51,9999],
-[9999,9999,9999,42,9999,9999,9999,9999,9999,9999],
-[9,9999,9,9,9999,9,9,9,9,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[9999,9999,9999,30,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,74,9999,9999],
-[143,9999,103,9999,9999,9999,9999,9999,9999,9999],
-[101,9999,73,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,100,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,66,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,30,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,105,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,97,9999,9999],
-[121,9999,87,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,34,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,83,9999,9999,9999],
-[9999,9999,9999,26,9999,26,9999,19,9999,9999],
-[320,320,320,320,9999,320,320,320,320,32],
-[36,36,36,36,9999,36,36,36,36,36],
-[26,26,26,23,128,43,26,43,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,58,9999,9999],
-[74,9999,74,9999,9999,9999,83,9999,9999,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[12,12,12,12,9999,12,12,12,12,12],
-[16,16,16,16,9999,16,16,16,16,16],
-[65,9999,9999,9999,9999,9999,47,9999,9999,9999],
-[62,9999,9999,9999,9999,9999,86,9999,9999,9999],
-[164,9999,9999,9999,9999,9999,229,9999,9999,9999],
-[179,9999,9999,9999,9999,9999,128,9999,9999,9999],
-[38,38,9999,9999,9999,9999,38,9999,9999,9999],
-[63,9999,63,9999,9999,9999,9999,9999,9999,9999],
-[29,29,9999,9999,9999,9999,29,9999,9999,9999],
-[9999,9999,44,44,9999,9999,9999,9999,9999,9999],
-[66,9999,66,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,83,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,26,9999,19,9999,9999],
-[30,30,30,30,9999,30,30,30,30,30],
-[82,9999,9999,82,9999,82,82,59,82,9999],
-[360,360,360,360,9999,360,360,360,360,36],
-[22,9999,9999,9999,9999,22,22,22,9999,9999],
-[25,25,25,25,9999,25,25,25,25,25],
-[9999,9999,9999,59,9999,9999,9999,9999,9999,9999],
-[30,30,30,30,9999,30,30,30,30,30],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[44,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,55],
-[34,34,34,34,9999,34,34,34,34,34],
-[38,9999,52,9999,9999,9999,52,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,30,9999,9999,9999],
-[25,25,25,25,9999,25,25,25,25,25],
-[9999,9999,9999,93,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[9999,9999,9999,25,9999,9999,9999,34,9999,9999],
-[9999,9999,9999,9999,9999,9999,93,9999,9999,9999],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,27,9999,9999,9999,9999,9999,9999],
-[24,24,24,24,48,24,24,9,9999,9999],
-[45,45,45,45,252,84,45,84,9999,9999],
-[97,9999,70,9999,9999,9999,9999,9999,9999,9999],
-[36,36,36,36,9999,36,36,36,36,36],
-[22,22,22,22,22,22,22,22,22,22],
-[240,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,198,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,284,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,252,9999,9999,9999],
-[9999,9999,9999,9999,9999,280,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,252,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,179,9999],
-[9999,9999,9999,288,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,9999,9999,9999,9999,9999,28,9999],
-[9999,9999,9999,28,9999,28,9999,20,9999,9999],
-[9999,9999,9999,54,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[8,9999,8,8,9999,8,8,8,8,9999],
-[169,169,169,169,9999,169,169,169,169,9999],
-[9999,9999,9999,26,9999,9999,9999,36,9999,9999],
-[40,40,40,40,80,40,40,15,9999,9999],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,9999,9999,9999,9999,9999,28,9999],
-[9999,9999,9999,9999,9999,48,9999,48,48,9999],
-[9999,9999,9999,13,9999,18,9999,18,9999,9999],
-[18,18,18,18,18,18,18,18,18,18],
-[26,26,26,19,9999,26,26,26,26,9999],
-[9999,9999,9999,59,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,67,9999,9999,9999,9999,9999,9999],
-[870,870,870,870,9999,870,870,870,870,87],
-[250,250,250,250,9999,250,250,250,250,25],
-[9999,9999,9999,9999,9999,37,9999,37,9999,9999],
-[9999,9999,9999,51,9999,9999,9999,9999,9999,9999],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,64],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,29],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,100],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,99],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[7,7,7,7,7,7,7,7,7,7],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,196],
-[9999,9999,9999,9999,9999,9999,57,9999,9999,9999],
-[9999,9999,9999,89,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,22,9999],
-[9999,9999,9999,53,9999,9999,9999,9999,9999,9999],
-[220,220,220,220,9999,220,220,220,220,22],
-[9999,9999,9999,9999,9999,51,9999,57,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[6,6,6,6,9999,6,6,6,6,6],
-[9999,9999,9999,9999,9999,9999,9999,9999,31,9999],
-[9999,9999,9999,9999,9999,9999,25,35,9999,9999],
-[29,29,29,29,29,29,29,29,29,21],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,136],
-[32,32,32,32,32,8,32,8,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,39],
-[9999,9999,9999,9999,9999,9999,31,9999,9999,9999],
-[9999,83,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,14,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,104,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,47,9999],
-[9999,9999,9999,9999,9999,9999,50,9999,9999,9999],
-[9999,9999,64,64,9999,9999,9999,9999,9999,9999],
-[290,290,290,290,9999,290,290,290,290,29],
-[35,70,9999,9999,9999,9999,25,9999,9999,9999],
-[60,120,9999,9999,9999,9999,43,9999,9999,9999],
-[44,88,9999,9999,9999,9999,32,9999,9999,9999],
-[40,40,40,40,9999,40,40,40,40,40],
-[97,194,9999,9999,9999,9999,70,9999,9999,9999],
-[42,42,9999,9999,9999,9999,42,9999,9999,9999],
-[9999,83,9999,9999,9999,9999,9999,9999,9999,9999],
-[340,340,340,340,9999,340,340,340,340,34],
-[35,9999,35,9999,9999,140,25,140,9999,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[13,13,13,13,13,13,13,13,13,13],
-[29,9999,40,9999,9999,9999,40,9999,9999,9999],
-[86,9999,69,9999,9999,9999,9999,9999,9999,9999],
-[55,9999,76,9999,9999,9999,76,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,34],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,29],
-[300,300,300,300,9999,300,300,300,300,30],
-[22,22,22,22,22,22,22,22,16,16],
-[320,320,320,320,9999,320,320,320,320,32],
-[9999,133,9999,9999,9999,9999,9999,9999,9999,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[25,25,25,25,9999,25,25,25,25,25],
-[9999,9999,9999,9999,9999,50,9999,9999,9999,9999],
-[956,9999,683,9999,9999,9999,9999,9999,9999,9999],
-[77,9999,9999,9999,9999,9999,55,9999,9999,9999],
-[240,240,240,240,9999,240,240,240,240,24],
-[7,7,7,7,9999,7,7,7,7,7],
-[93,93,93,93,9999,93,93,93,93,9999],
-[14,14,14,14,9999,14,14,14,14,14],
-[230,230,230,230,9999,230,230,230,230,23],
-[250,250,250,250,9999,250,250,250,250,25],
-[320,320,320,320,9999,320,320,320,320,32],
-[250,250,250,250,9999,250,250,250,250,25],
-[220,220,220,220,9999,220,220,220,220,22],
-[30,9999,30,9999,9999,9999,30,9999,9999,9999],
-[230,230,230,230,9999,230,230,230,230,23],
-[24,9999,9999,9999,9999,24,24,24,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,84,9999,9999],
-[39,39,39,39,9999,39,39,39,39,39],
-[72,72,72,72,72,13,72,18,18,9999],
-[1,1,1,1,9999,1,1,1,1,1],
-[39,39,39,39,9999,39,39,39,39,39],
-[63,9999,45,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,46,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,42,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,23,9999],
-[30,30,30,30,9999,30,30,30,30,30],
-[9999,9999,9999,48,9999,9999,9999,9999,9999,9999],
-[37,37,37,37,204,68,37,68,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,22,9999],
-[9999,9999,9999,21,9999,29,9999,29,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,58,9999,42,9999,9999],
-[9999,9999,9999,71,9999,71,9999,53,9999,9999],
-[9999,9999,9999,9999,9999,9999,50,9999,9999,9999],
-[9999,9999,9999,44,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,47,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,39,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,75,9999,75,9999,56,9999,9999],
-[83,9999,60,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,50,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,64,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,27,37,9999,9999],
-[171,171,171,171,9999,171,171,171,171,9999],
-[38,9999,52,9999,9999,9999,52,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[35,35,35,35,35,35,35,35,35,25],
-[9999,9999,9999,22,9999,30,9999,30,9999,9999],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,84,9999,84,9999,9999],
-[33,33,33,33,9999,33,33,33,33,33],
-[8,8,8,8,9999,8,8,8,8,8],
-[9999,9999,9999,50,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,102,9999,9999],
-[9999,9999,9999,9999,9999,48,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,30],
-[9999,9999,9999,66,9999,49,9999,66,9999,9999],
-[9999,9999,9999,116,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,64,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,39],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,1337],
-[9999,9999,9999,9999,9999,9999,138,9999,9999,9999],
-[9999,9999,324,9999,9999,9999,9999,9999,9999,9999],
-[20,9999,9999,20,9999,20,20,15,20,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,57],
-[260,260,260,260,9999,260,260,260,260,26],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[9999,9999,9999,142,9999,9999,9999,9999,9999,9999],
-[9999,9999,65,130,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,19,9999,26,9999,26,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,39],
-[9999,9999,9999,20,9999,28,9999,28,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,20,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[30,30,30,30,9999,30,30,30,30,30],
-[9999,9999,9999,60,9999,9999,9999,9999,9999,9999],
-[174,9999,9999,125,9999,174,174,140,9999,9999],
-[16,9999,16,16,9999,16,16,16,16,9999],
-[24,24,24,24,9999,24,24,24,24,24],
-[92,9999,66,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,38,9999,53,9999,53,9999,9999],
-[9999,54,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,28],
-[29,9999,40,9999,9999,9999,40,9999,9999,9999],
-[96,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[90,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[75,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[80,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[64,64,64,64,9999,64,64,64,64,9999],
-[130,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,144,9999,9999,9999,9999],
-[9999,9999,9999,101,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,97,9999,9999,9999,9999],
-[55,55,55,55,9999,55,55,55,55,9999],
-[30,30,30,30,9999,30,30,30,30,30],
-[9999,9999,9999,9999,9999,9999,9999,50,9999,9999],
-[20,20,20,20,20,20,20,20,20,20],
-[9999,9999,9999,9999,9999,9999,9999,9999,15,9999],
-[9999,9999,9999,97,9999,9999,9999,9999,9999,9999],
-[18,9999,18,18,9999,18,18,18,18,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[16,9999,16,16,9999,16,16,16,16,9999],
-[9999,9999,9999,61,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,98,9999,9999,9999,9999,9999,9999],
-[9999,63,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,41,9999,41,41,9999],
-[79,79,79,79,9999,79,79,79,79,79],
-[7,7,7,7,9999,7,7,7,7,9999],
-[9999,9999,9999,58,9999,9999,9999,9999,9999,9999],
-[48,48,48,48,9999,48,48,48,48,48],
-[14,14,14,14,9999,14,14,14,14,14],
-[16,16,16,16,9999,16,16,16,16,16],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,52,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,53,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,51,9999,9999,9999,9999,9999,9999],
-[44,44,44,44,9999,44,44,44,44,44],
-[12,12,12,12,9999,12,12,12,12,9999],
-[9999,9999,9999,53,9999,9999,9999,9999,9999,9999],
-[12,12,12,12,9999,12,12,12,12,12],
-[12,12,12,12,9999,12,12,12,12,12],
-[14,14,14,14,9999,14,14,14,14,14],
-[44,44,44,44,44,11,44,11,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,300],
-[143,9999,103,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,43,9999,9999,9999,9999,9999,9999],
-[38,9999,52,9999,9999,9999,52,9999,9999,9999],
-[97,9999,70,9999,9999,9999,9999,9999,9999,9999],
-[16,16,16,16,16,16,16,16,16,16],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[40,40,40,40,40,40,40,40,40,29],
-[39,39,39,39,39,39,39,39,39,28],
-[38,9999,52,9999,9999,9999,52,9999,9999,9999],
-[8,8,8,8,9999,8,8,8,8,8],
-[9999,9999,9999,9999,9999,38,9999,9999,9999,9999],
-[9999,9999,150,9999,9999,9999,9999,9999,9999,9999],
-[36,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[53,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,60,9999,60,60,9999],
-[44,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[58,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[31,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[40,9999,9999,9999,9999,9999,9999,9999,9999,9999],
-[38,9999,52,9999,9999,9999,52,9999,9999,9999],
-[9999,9999,54,54,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,39,9999,9999,9999],
-[300,300,300,300,9999,300,300,300,300,30],
-[18,18,18,18,18,18,18,18,18,13],
-[280,280,280,280,9999,280,280,280,280,28],
-[260,260,260,260,9999,260,260,260,260,26],
-[9999,9999,60,120,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,39,9999,9999,9999,9999,9999,9999],
-[9999,9999,52,52,9999,9999,9999,9999,9999,9999],
-[34,34,9999,9999,9999,9999,34,9999,9999,9999],
-[9999,9999,51,51,9999,9999,9999,9999,9999,9999],
-[14,14,14,14,9999,14,14,14,14,14],
-[2,2,2,2,9999,2,2,2,2,2],
-[9999,9999,9999,9999,9999,53,9999,59,9999,9999],
-[34,34,34,34,9999,34,34,34,34,34],
-[23,23,23,23,23,23,23,23,23,23],
-[9999,9999,70,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,90,9999,9999,9999,9999,9999,9999,9999],
-[12,12,12,12,9999,12,12,12,12,12],
-[9999,9999,9999,59,9999,82,9999,82,9999,9999],
-[6,9999,6,6,9999,6,6,6,6,9999],
-[40,40,40,40,9999,40,40,40,40,40],
-[9999,9999,9999,9999,9999,9999,9999,9999,65,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[9999,9999,63,9999,9999,9999,9999,9999,9999,9999],
-[52,52,52,52,52,10,52,13,13,9999],
-[9999,9999,9999,9999,9999,78,9999,78,9999,9999],
-[9999,52,9999,9999,9999,9999,9999,9999,9999,9999],
-[9,9,9,9,9999,9,9,9,9,9],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[9999,9999,9999,48,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,59,9999,9999],
-[9999,9999,9999,47,9999,9999,9999,9999,9999,9999],
-[40,40,40,40,9999,40,40,40,40,40],
-[33,9999,9999,9999,9999,33,33,33,9999,9999],
-[9999,9999,45,90,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,60,9999,9999,9999],
-[9999,128,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,33,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,26,9999],
-[9999,9999,9999,9999,9999,9999,100,9999,9999,9999],
-[9999,9999,9999,48,9999,9999,9999,9999,9999,9999],
-[23,23,23,23,9999,23,23,23,23,23],
-[9999,9999,9999,9999,9999,34,9999,25,9999,9999],
-[9999,9999,9999,9999,9999,34,9999,25,9999,9999],
-[9999,9999,9999,9999,9999,34,9999,25,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,63],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,63],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,63],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[97,97,97,97,9999,97,97,97,97,9999],
-[69,9999,9999,9999,9999,69,69,69,9999,9999],
-[40,40,40,40,40,40,40,40,40,29],
-[9999,9999,9999,9999,9999,9999,9999,72,9999,9999],
-[63,9999,45,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[35,35,35,35,35,35,35,35,35,35],
-[340,340,340,340,9999,340,340,340,340,34],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,9999,9999,9999,9999,9999,36,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,322],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,13,9999,17,9999,17,9999,9999],
-[9999,9999,9999,33,9999,9999,9999,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[9999,9999,9999,9999,9999,9999,28,9999,9999,9999],
-[9999,9999,9999,66,9999,9999,9999,9999,9999,9999],
-[10,9999,9999,10,9999,10,10,8,10,9999],
-[9999,9999,9999,52,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,21,9999,29,9999,29,9999,9999],
-[9999,9999,9999,9999,9999,35,9999,39,9999,9999],
-[143,9999,103,9999,9999,9999,9999,9999,9999,9999],
-[240,240,240,240,9999,240,240,240,240,24],
-[9999,9999,9999,9999,9999,9999,9999,74,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,100,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,66,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,30,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,105,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,97,9999,9999],
-[8,8,8,8,8,8,8,8,8,6],
-[9999,9999,9999,86,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,78,9999,9999,9999,9999,9999,9999],
-[34,34,34,34,136,46,25,46,9999,9999],
-[52,52,52,52,10,52,52,52,13,52],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,6],
-[39,9999,54,9999,9999,9999,54,9999,9999,9999],
-[9999,9999,9999,100,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,1857],
-[9999,9999,9999,98,9999,73,9999,98,9999,9999],
-[9999,9999,9999,23,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,55,9999,9999,9999,9999,9999,9999],
-[9999,29,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,65,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,60,9999,9999,9999,9999,9999,9999,9999,9999],
-[26,9999,29,9999,9999,9999,26,9999,9999,9999],
-[58,9999,9999,58,9999,58,58,42,58,9999],
-[23,23,23,23,23,23,23,23,23,23],
-[28,28,28,28,28,28,28,28,28,28],
-[38,38,38,38,38,38,38,38,38,38],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,50],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,35],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,48],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,41],
-[2,2,2,2,9999,2,2,2,2,2],
-[9999,73,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,24,9999],
-[9999,9999,9999,9999,9999,9999,38,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[7,7,7,7,9999,7,7,7,7,7],
-[24,24,24,24,9999,24,24,24,24,18],
-[9999,9999,9999,9999,9999,45,9999,40,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[19,19,19,19,9999,19,19,19,19,19],
-[330,330,330,330,9999,330,330,330,330,33],
-[9999,9999,9999,93,9999,9999,9999,9999,9999,9999],
-[300,300,300,300,9999,300,300,300,300,30],
-[7,7,7,7,9999,7,7,7,7,7],
-[8,8,8,8,8,2,8,2,9999,9999],
-[8,8,8,8,9999,8,8,8,8,8],
-[9999,9999,9999,36,9999,26,9999,36,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[20,20,20,20,9999,20,20,20,20,20],
-[9999,9999,9999,9999,9999,9999,9999,9999,30,9999],
-[20,9999,9999,20,9999,20,20,15,20,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[119,9999,85,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,58,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,66,9999,9999,9999,9999,9999,9999],
-[46,46,46,46,9999,46,46,46,46,46],
-[32,32,32,32,32,32,32,32,32,23],
-[320,320,320,320,9999,320,320,320,320,32],
-[620,620,620,620,9999,620,620,620,620,62],
-[32,32,32,32,32,32,32,32,32,23],
-[25,25,25,25,25,25,25,25,25,18],
-[12,12,12,12,9999,12,12,12,12,12],
-[9999,9999,9999,186,9999,9999,9999,9999,9999,9999],
-[86,9999,9999,86,9999,86,62,86,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,20,9999],
-[58,58,58,58,9999,58,58,58,58,58],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,100,9999,9999,9999,9999,9999,9999],
-[28,9999,32,9999,9999,9999,28,9999,9999,9999],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,69,9999,9999,9999,9999,9999,9999],
-[280,280,280,280,9999,280,280,280,280,28],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,35],
-[9999,9999,9999,9999,9999,9999,9999,9999,25,9999],
-[9999,9999,9999,75,9999,9999,9999,9999,9999,9999],
-[35,9999,35,9999,9999,140,25,140,9999,9999],
-[9999,9999,9999,62,9999,46,9999,62,9999,9999],
-[9999,9999,9999,45,9999,9999,9999,9999,9999,9999],
-[9999,71,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,36],
-[45,45,45,45,45,45,45,45,45,45],
-[9999,9999,9999,9999,9999,70,9999,79,9999,9999],
-[9999,32,9999,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,9999,9999,69,9999,62,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,63],
-[229,229,229,229,9999,229,229,229,229,9999],
-[229,229,229,229,9999,229,229,229,229,9999],
-[229,229,229,229,9999,229,229,229,229,9999],
-[229,229,229,229,9999,229,229,229,229,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,35,9999],
-[9999,61,9999,9999,9999,9999,9999,9999,9999,9999],
-[196,9999,9999,196,9999,147,9999,196,9999,9999],
-[9999,9999,9999,34,9999,47,9999,47,9999,9999],
-[300,300,300,300,9999,300,300,300,300,30],
-[9999,9999,9999,62,9999,9999,9999,9999,9999,9999],
-[25,25,25,25,9999,25,25,25,25,25],
-[280,280,280,280,9999,280,280,280,280,28],
-[69,9999,9999,9999,9999,9999,50,9999,9999,9999],
-[66,9999,9999,9999,9999,9999,48,9999,9999,9999],
-[86,9999,9999,9999,9999,9999,62,9999,9999,9999],
-[9999,26,9999,35,9999,35,9999,35,9999,9999],
-[9999,9999,9999,9999,9999,9999,25,34,9999,9999],
-[1,1,1,1,9999,1,1,1,1,1],
-[37,37,37,37,204,68,37,68,9999,9999],
-[26,9999,9999,26,9999,26,26,19,26,9999],
-[7,9999,9999,7,9999,7,7,5,7,9999],
-[60,9999,84,9999,9999,9999,84,9999,9999,9999],
-[30,30,30,30,30,30,30,30,30,22],
-[74,206,9999,9999,9999,9999,103,9999,9999,9999],
-[33,92,9999,9999,9999,9999,46,9999,9999,9999],
-[35,35,9999,9999,9999,9999,35,9999,9999,9999],
-[360,360,360,360,9999,360,360,360,360,36],
-[16,16,16,16,9999,16,16,16,16,16],
-[9999,9999,9999,75,9999,9999,9999,104,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,9999,9999,87],
-[9999,9999,9999,53,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,39,9999,28,9999,39,9999,9999],
-[9999,9999,9999,9999,9999,18,9999,13,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,79,9999,9999],
-[4,4,4,4,4,1,4,1,9999,9999],
-[33,33,33,33,9999,33,33,33,27,33],
-[9999,9999,9999,58,9999,9999,9999,9999,9999,9999],
-[7,7,7,7,9999,7,7,7,7,7],
-[9999,9999,9999,9999,9999,9999,85,9999,9999,9999],
-[46,46,46,46,184,62,33,62,9999,9999],
-[22,9999,22,9999,9999,22,16,88,9999,9999],
-[13,13,13,13,13,13,13,13,13,10],
-[230,230,230,230,9999,230,230,230,230,23],
-[9999,9999,9999,9999,9999,9999,9999,138,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,64,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,68,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,71,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,60,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,71,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,78,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,81,9999,9999],
-[9999,9999,9999,9999,9999,9999,9999,72,9999,9999],
-[9999,9999,9999,64,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,68,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,60,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,68,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,71,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,75,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,81,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,87,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,90,9999,9999,9999,9999,9999,9999],
-[9999,9999,9999,139,9999,9999,9999,9999,9999,9999],
-[9999,9999,64,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,66,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,60,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,68,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,69,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,71,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,70,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,75,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,78,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,76,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,80,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,81,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,132,9999,9999,9999,9999,9999,9999,9999],
-[9999,9999,144,9999,9999,9999,9999,9999,9999,9999]
-];
-var micePower = [
-1900,
-54000,
-18000,
-1800,
-81690,
-9800,
-9000,
-38885,
-1000,
-1930,
-5500,
-6150,
-10500,
-750,
-750,
-750,
-37999,
-16700,
-4960,
-8709,
-3499,
-4600,
-11000,
-72000,
-1500,
-14590,
-2590,
-21065,
-375015,
-13601,
-13175,
-14999,
-11825,
-950,
-20250,
-3751,
-3750,
-72929,
-100,
-5000,
-8000,
-275,
-5400,
-8600,
-2250,
-515,
-59974,
-10851,
-700,
-7825,
-3000,
-600,
-8250,
-4960,
-35002,
-51151,
-250,
-12999,
-220,
-765,
-6825,
-1215,
-1550,
-4999,
-4010,
-27899,
-1750,
-4200,
-1800,
-6100,
-755,
-3600,
-3930,
-1500,
-2100,
-882,
-750,
-3500,
-635,
-3200,
-3,
-16800,
-58920,
-4544,
-500,
-510,
-818250,
-2100,
-6300,
-100,
-6000,
-888,
-9000,
-14500,
-85,
-1250,
-1750,
-3499,
-6885,
-1800,
-72000,
-500,
-9000,
-4500,
-2200,
-1600,
-9998,
-15099,
-8400,
-1270,
-3630,
-5690,
-7500,
-1400,
-635,
-12000,
-72000,
-72000,
-5100,
-1010,
-1500,
-2000,
-88000,
-1260,
-4500,
-14000,
-2650,
-200,
-460,
-25450,
-3000,
-9410,
-4500,
-3810,
-4240,
-50,
-2300,
-2400,
-41950,
-33400,
-5110,
-1300,
-6559,
-233,
-2250,
-1100,
-2000,
-1135,
-510,
-6000,
-6600,
-18435,
-2650,
-5400,
-3930,
-7500,
-6741,
-8709,
-6380,
-11150,
-1000,
-4550,
-18630,
-2595,
-17150,
-6351,
-300,
-1200,
-1200,
-1200,
-1200,
-1200,
-1300,
-1200,
-1200,
-1200,
-1200,
-1200,
-1200,
-1000,
-4,
-570,
-4900,
-4100,
-600,
-1500,
-3751,
-1500,
-6000,
-9299,
-5999,
-6799,
-5600,
-2945,
-2647,
-94170,
-12526,
-10550,
-17399,
-24100,
-28400,
-20500,
-10925,
-6575,
-19100,
-900,
-290,
-950,
-600,
-680,
-800,
-4225,
-21500,
-3500,
-6499,
-12499,
-18502,
-8502,
-23400,
-3499,
-6650,
-32604,
-24375,
-3990,
-1350,
-880,
-1340,
-10800,
-1600,
-7500,
-500,
-1280,
-46501,
-4999,
-40001,
-28901,
-225,
-2000,
-71999,
-12565,
-24251,
-94990,
-7500,
-8400,
-2000,
-2300,
-11150,
-998,
-11302,
-20400,
-20800,
-4398,
-11151,
-17201,
-4900,
-4500,
-370,
-5520,
-400,
-48748,
-900,
-1240,
-5925,
-45000,
-1150,
-2100,
-13194,
-74800,
-17790,
-38400,
-2450,
-6380,
-947,
-7900,
-1000,
-2000,
-2305,
-5000,
-40,
-2295,
-37399,
-4960,
-13500,
-900,
-1250,
-2200,
-2100,
-2200,
-1400,
-8800,
-755,
-5710,
-5050,
-15250,
-22000,
-1270,
-18690,
-20550,
-263025,
-15235,
-25350,
-3930,
-2180,
-5732,
-1250,
-50,
-3275,
-3275,
-2500,
-5500,
-10851,
-6499,
-6499,
-1100,
-965,
-10851,
-4700,
-1000,
-1000,
-2500,
-11500,
-72000,
-12200,
-600,
-2250,
-225,
-200,
-12675,
-2000,
-5,
-11000,
-5095,
-2350,
-15401,
-3691,
-5200,
-7900,
-5700,
-9200,
-6248,
-8000,
-50,
-160,
-1000,
-2000,
-1750,
-1500,
-1250,
-900,
-29000,
-39150,
-1650,
-460,
-465,
-85,
-590,
-14399,
-6500,
-15250,
-280,
-80,
-3253,
-78003,
-1250,
-11499,
-28901,
-8525,
-3175,
-93997,
-5010,
-7600,
-5000,
-8501,
-3340,
-23500,
-2000,
-2200,
-4000,
-1515,
-1400,
-370,
-510,
-15600,
-28575,
-27899,
-205,
-785,
-820,
-2290,
-350,
-2100,
-6885,
-11175,
-9500,
-3500,
-1800,
-2815,
-330997,
-7000,
-185,
-4625,
-2145,
-1695,
-1695,
-2100,
-2,
-2500,
-913,
-2000,
-12475,
-1200,
-4000,
-4620,
-13200,
-4900,
-4000,
-18050,
-570,
-2,
-4590,
-2500,
-2780,
-2600,
-14500,
-10867,
-20700,
-5799,
-3650,
-1500000,
-5000,
-21625,
-16320,
-11900,
-70,
-3500,
-4000,
-750,
-1300,
-4250,
-10,
-8565,
-2300,
-12551,
-1250,
-5000,
-4970,
-1995,
-10000,
-755,
-7700,
-5400,
-5000,
-25000,
-11340,
-9400,
-2300,
-5,
-5000,
-1150,
-35325,
-4800,
-12500,
-1250,
-8250,
-4300,
-85,
-2999,
-13650,
-59640,
-1500,
-3485,
-3300,
-499995,
-999989,
-22275,
-700,
-2240,
-5695,
-1800,
-18500,
-1350,
-8000,
-15532,
-2000,
-9512,
-9680,
-27200,
-13706,
-20700,
-4,
-25101,
-2000,
-3000,
-10,
-80,
-12000,
-6425,
-5300,
-650,
-250,
-8275,
-26000,
-23000,
-888,
-8765,
-1100,
-24599,
-2100,
-29999,
-300,
-72000,
-14300,
-5500,
-5499,
-6000,
-137485,
-3050,
-7000,
-18501,
-3990,
-42803,
-42900,
-8800,
-13601,
-3000,
-1450,
-4000,
-4000,
-4000,
-92000,
-92000,
-92000,
-10000,
-16700,
-15400,
-1500,
-1250,
-5003,
-3300,
-6380,
-7500,
-21000,
-5100,
-10999,
-27002,
-2650,
-866,
-1000,
-5725,
-18000,
-18051,
-20250,
-3442,
-3250,
-8000,
-3900,
-10500,
-1030,
-1695,
-91674,
-3710,
-20400,
-300,
-491997,
-2530,
-6630,
-9500,
-8240,
-87996,
-3750,
-24998,
-9000,
-45,
-2000,
-5560,
-1100,
-1800,
-16000,
-2560,
-3100,
-2095,
-4999,
-18300,
-700,
-3860,
-7290,
-13601,
-10851,
-8800,
-17499,
-11003,
-25000,
-465,
-192,
-5004,
-3500,
-138,
-3253,
-3250,
-10800,
-40602,
-20250,
-38398,
-8596,
-1800,
-22004,
-18620,
-28901,
-2235,
-26675,
-1330,
-2000,
-2560,
-2000,
-12600,
-20900,
-755,
-275,
-510,
-8400,
-14751,
-103992,
-64021,
-2800,
-15400,
-1600,
-3800,
-16700,
-13474,
-1275,
-1695,
-13175,
-2500,
-900,
-1215,
-6741,
-1695,
-9850,
-3800,
-11750,
-2200,
-5205,
-1720,
-1215,
-17250,
-4500,
-2280,
-17275,
-7500,
-2700,
-275,
-7700,
-18501,
-2500,
-900,
-225000,
-151650,
-315000,
-246650,
-305875,
-246965,
-124100,
-322000,
-2250,
-510,
-3000,
-1500,
-5720,
-4960,
-120,
-110950,
-2508,
-800,
-975,
-2752,
-8600,
-635,
-600,
-1275,
-6741,
-8801,
-14999,
-1200,
-5001,
-5200,
-1000,
-8000,
-1650,
-5000,
-38000,
-72000,
-85,
-150000,
-12345,
-15500,
-1750,
-10400,
-950,
-9925,
-3990,
-70,
-1915,
-2400,
-1600,
-72000,
-100,
-2900,
-3600,
-13700,
-650,
-42000,
-4310,
-5000,
-8000,
-1601,
-2400,
-7000,
-3800,
-3100,
-18500,
-3500,
-13700,
-2199,
-2385,
-1525,
-300,
-3200,
-14651,
-11400,
-2300,
-1650,
-1750,
-888,
-2000,
-68550,
-755,
-1250,
-9700,
-1824975,
-11750,
-1150,
-85,
-33725,
-370,
-980,
-1225,
-2000,
-1250,
-900,
-3260,
-975,
-1145,
-27300,
-3000,
-600,
-1,
-3000,
-7900,
-4225,
-3480,
-2000,
-1695,
-4500,
-5200,
-1750,
-1650,
-3990,
-6630,
-5500,
-5000,
-3750,
-4300,
-3000,
-1800,
-6200,
-13601,
-5000,
-7998,
-2645,
-114000,
-5205,
-3930,
-2350,
-1750,
-10000,
-26999,
-2100,
-120,
-4900,
-20550,
-8800,
-1750,
-4800,
-26599,
-7998,
-5800,
-7000000,
-73500,
-51990,
-755,
-12375,
-1340,
-4999,
-40000,
-8325,
-1270,
-2910,
-1485,
-1500,
-1750,
-1695,
-7000,
-60001,
-500,
-1100,
-16700,
-5508,
-5725,
-1550,
-3175,
-18375,
-16100,
-11000,
-24350,
-8185,
-64845,
-80460,
-20374,
-18610,
-5950,
-1695,
-9800,
-800,
-420,
-18500,
-600,
-3900,
-462,
-7400,
-19000,
-7820,
-6351,
-12240,
-85,
-6500,
-4510,
-370,
-510,
-510,
-5400,
-5600,
-5200,
-3740,
-288,
-5600,
-288,
-285,
-370,
-210,
-350000,
-40602,
-6775,
-5208,
-18501,
-500,
-9850,
-3200,
-3000,
-5210,
-120,
-5350,
-86670,
-2455,
-5575,
-13950,
-3810,
-6700,
-1873,
-3080,
-5205,
-5750,
-3000,
-1750,
-600,
-1500,
-1340,
-7050,
-3000,
-5275,
-2200,
-5175,
-370,
-5,
-10500,
-2250,
-1000,
-9594,
-16175,
-250,
-13250,
-65,
-3100,
-8400,
-4500,
-14799,
-300,
-23001,
-5365,
-160,
-4999,
-4500,
-13200,
-4300,
-3100,
-2100,
-3950,
-13450,
-63300,
-4000,
-2501,
-19700,
-4500,
-1033,
-2200,
-2200,
-2200,
-15000,
-15000,
-15000,
-2250,
-18510,
-9500,
-3200,
-19800,
-7900,
-9850,
-3930,
-2450,
-2300,
-980,
-4999,
-404014,
-975,
-570,
-2150,
-1800,
-3000,
-8709,
-200,
-5400,
-1600,
-4420,
-40602,
-1100,
-10800,
-38398,
-8596,
-1800,
-22004,
-18620,
-100,
-14498,
-12000,
-2200,
-300,
-100,
-5750,
-20000,
-13500000,
-10498,
-999,
-4000,
-6000,
-1650,
-16500,
-13500,
-2500,
-6700,
-1000,
-1500,
-2850,
-9500,
-4700,
-8800,
-3300,
-7,
-10390,
-1120,
-2815,
-1800,
-85,
-1100,
-6200,
-2250,
-650,
-2100,
-17000,
-1700,
-85,
-3,
-120,
-2500,
-3253,
-3499,
-750,
-3253,
-760,
-1500,
-27900,
-6549,
-8600,
-4080,
-2000,
-2000,
-7500,
-2000,
-1250,
-285,
-68501,
-14460,
-1375,
-6620,
-9850,
-20000,
-3000,
-7501,
-9499,
-1500,
-4500,
-4800,
-2250,
-11150,
-2340,
-4100,
-7450,
-10000,
-5000,
-4000,
-18900,
-2000,
-14751,
-15275,
-203580,
-203580,
-203580,
-203580,
-4498,
-7350,
-43007,
-4280,
-1750,
-7500,
-1250,
-1525,
-9450,
-8500,
-14501,
-1275,
-2185,
-1,
-5200,
-1270,
-90,
-13780,
-1800,
-21200,
-4100,
-2400,
-2500,
-500,
-21600,
-29000,
-5600,
-3000,
-635,
-12410,
-1,
-2100,
-6500,
-85,
-28000,
-4100,
-920,
-330,
-1000,
-73001,
-8000,
-9000,
-10000,
-7000,
-10000,
-12000,
-13000,
-20000,
-8000,
-9000,
-10000,
-7000,
-9000,
-10000,
-11000,
-13000,
-15000,
-16000,
-75000,
-8000,
-9000,
-8500,
-7000,
-9000,
-9500,
-10000,
-9800,
-11000,
-12000,
-11500,
-12500,
-13000,
-67500,
-80001
-];
-var miceEff = [
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,0,0,0,0,0,0,2500],
-[25,0,175,0,0,0,25,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[500,500,500,500,0,500,500,500,500,0],
-[0,0,0,0,0,125,0,275,0,0],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,0,0,0,0,0,0,300,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[0,0,0,175,0,0,0,0,0,0],
-[100,0,0,0,0,0,150,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,25,75,400,75,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,0,900],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,0,0,0,600,0],
-[0,0,0,0,0,0,0,0,0,100],
-[100,0,0,50,0,50,0,50,0,0],
-[0,0,0,0,0,0,0,0,0,350],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,100,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[101,101,101,101,101,101,101,101,101,300],
-[50,0,200,0,0,0,25,0,0,0],
-[25,25,25,25,25,200,25,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,175,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,0,100,0,0,100,200,25,0,0],
-[25,0,0,0,0,0,25,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,0,0,0,0,0,0,175],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,100,100,100,0,0],
-[100,100,100,175,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,100,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,25,75,400,75,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,300,0,300,300,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,125,0,200,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,0,0,0,0,100,0,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[150,0,125,0,0,0,200,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,200,0,0,0,100,0,0],
-[0,600,0,0,0,0,0,0,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,0,7500],
-[100,100,100,100,0,100,100,100,125,100],
-[0,100,0,0,0,0,0,0,0,0],
-[100,100,100,175,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[101,101,101,101,101,101,101,101,300,300],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[101,101,101,101,101,101,101,101,101,300],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,175,0,100,0,100,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,0,300,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,50,0,50,0,50,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,100,0,175,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,315],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,0,100],
-[100,0,0,100,0,100,100,175,100,0],
-[0,0,0,175,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,900],
-[0,0,0,0,0,0,0,0,0,900],
-[150,50,0,0,0,0,100,0,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,4000,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,200,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[25,0,175,0,0,0,25,0,0,0],
-[0,0,0,0,0,0,0,0,0,300],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[25,25,25,25,25,100,25,100,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[100,100,0,0,0,0,100,0,0,0],
-[500,500,500,500,0,500,500,500,500,0],
-[0,0,0,600,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,0,0,0,0,0,200,0],
-[101,101,101,101,101,101,101,101,101,300],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,100,0,0,25,200,25,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,175,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[300,300,300,300,0,300,300,300,300,0],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,0,0,100,100,100,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,600,0,0,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[100,0,125,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,100,100,175,0,100,100,100,100,0],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[101,101,101,101,101,101,101,101,300,300],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[10,10,10,10,0,10,10,10,10,100],
-[101,101,101,101,101,101,101,101,101,300],
-[125,125,0,125,0,125,0,125,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,0,0,0,0,0,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,2150,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[100,0,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,600],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,0,200],
-[100,100,100,100,0,100,100,100,100,0],
-[100,100,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[150,50,0,0,0,0,100,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,100,100,100,100,100,100],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,0,0,0,0,0,0,250],
-[0,0,0,0,0,0,0,0,200,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,100,100,175,0,100,100,100,100,0],
-[150,0,125,0,0,0,200,0,0,0],
-[1000,0,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,0],
-[100,0,300,0,0,0,300,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,0,0,100,100,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,200,0,125,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,175,0,0,0,0],
-[150,0,200,0,0,0,125,0,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[0,0,0,0,0,300,0,300,300,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,100,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,200,0,0,0,0,0,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,100,0,75,0,75,0,75,0,0],
-[0,900,0,0,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,400,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,300,0,0,0,0,0,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[1000,1000,100000,1000,25,1000,1000,1000,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,125,0,250,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,175,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,175,0,0,0,0,0,0],
-[150,0,200,0,0,0,125,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[0,600,0,0,0,0,0,0,0,0],
-[300,300,300,300,0,300,300,300,300,0],
-[500,500,500,500,0,500,500,500,500,0],
-[300,300,300,300,0,300,300,300,300,0],
-[0,600,0,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[150,0,125,0,0,0,200,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[25,25,25,25,25,200,25,100,100,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,175,0,150,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[0,0,0,0,0,0,200,100,0,0],
-[0,0,0,0,0,0,0,0,0,900],
-[0,0,0,0,0,300,0,300,300,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,200,0],
-[50,50,50,50,25,50,50,200,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,0,0,0,200,0,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[125,125,125,400,25,75,125,75,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[0,0,0,0,0,0,0,150,0,0],
-[0,0,0,0,0,0,0,150,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[100,0,0,50,0,50,0,50,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[0,0,0,0,0,125,0,200,0,0],
-[150,50,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,100,100,0,100,100,100,100,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,600,0,0,0,0,0,0,0],
-[200,200,200,200,0,200,200,200,200,0],
-[100,0,0,100,0,100,100,175,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[0,0,0,200,0,0,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,900,0,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[50,50000,0,25,0,25,0,25,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,100,0,0,25,200,25,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[100,0,100,0,0,25,200,25,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,0,0,0,600,0,0,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,0,100,0,0,25,200,25,0,0],
-[100,0,0,100,0,100,175,100,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,0,0,100,0,100,100,175,100,0],
-[200,0,100,0,0,0,100,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[200,0,100,0,0,0,100,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,175,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,125,300],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[101,101,101,101,101,101,101,101,101,300],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,100,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[25,25,25,25,25,100,25,100,0,0],
-[0,0,0,0,0,0,0,0,0,216],
-[100,100,100,100,0,100,100,100,100,100],
-[50,0,0,0,0,0,50,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,100,0,100,175,100,0,0],
-[0,0,0,0,0,0,200,100,0,0],
-[0,0,0,0,0,0,200,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,175,0,100,0,0],
-[1000,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,300,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,200],
-[100,100,100,100,0,100,100,100,100,200],
-[101,101,101,101,101,101,101,101,101,300],
-[100,100,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,150,0,0],
-[0,0,200,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,175,0,100,0,175,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,200,0,125,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,200,0,0,0,100,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[100,100,100,100,25,75,400,75,0,0],
-[25,25,25,25,25,200,25,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,0,0,100,100,100,0,0],
-[500,0,0,0,0,0,0,0,0,0],
-[0,0,0,100,0,75,0,75,0,0],
-[0,0,0,0,0,125,0,250,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,100,100,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,200,0,0,0],
-[0,900,0,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[200,0,100,0,0,0,100,0,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,0],
-[50,50,50,50,25,50,50,200,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,100,100,100,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,0],
-[0,0,0,0,0,0,0,0,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,175,0,100,0,100,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,300,0,300,300,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[25,25,25,25,25,200,25,100,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,125,0,0,0,0,0,0,0],
-[100,0,125,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,100,100,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[0,0,0,0,0,0,0,0,0,175],
-[101,101,101,101,101,101,101,101,300,300],
-[100,0,100,0,0,25,200,25,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,75,0,75,0,0],
-[100,75,75,75,0,75,75,75,75,75],
-[0,0,0,0,0,300,0,300,300,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,0,900],
-[0,0,0,0,0,0,200,0,0,0],
-[0,0,0,100,0,75,0,75,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,200,0],
-[300,300,300,300,0,300,300,300,300,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,5000,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[0,0,0,0,0,300,0,300,400,0],
-[0,0,0,0,0,0,0,0,0,300],
-[100,0,300,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,125,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,0,0,0,0,400],
-[0,0,0,0,0,0,0,0,0,400],
-[0,0,0,0,0,0,0,0,0,400],
-[0,0,0,0,0,100,0,175,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[50,0,0,0,0,0,50,0,200,0],
-[50,0,0,0,0,0,50,0,200,0],
-[150,0,0,0,0,0,100,0,0,0],
-[50,0,0,0,0,0,50,0,200,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,0,0,0,100,100,100,0,0],
-[50,0,0,0,0,0,50,0,200,0],
-[0,0,0,0,0,175,0,0,0,0],
-[50,0,0,0,0,0,50,0,200,0],
-[100,0,0,0,0,0,150,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,300,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,0,0,100,100,100,0,0],
-[100,0,5000,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,150,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[100,50,0,0,0,0,150,0,0,0],
-[100,0,100,100,0,500,500,100,100,0],
-[1000,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,200],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,100,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,0,0,0,500],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,200,0],
-[100,0,100,0,0,25,2500,25,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,100,0,0,25,200,25,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[275,0,300,0,0,0,0,0,0,0],
-[275,0,300,0,0,0,0,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,175,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,4000,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,500,0,0,0],
-[0,0,0,100,0,100,0,175,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[125,125,125,400,25,75,125,75,0,0],
-[0,0,0,0,0,0,0,175,0,0],
-[150,0,200,0,0,0,125,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,0,0,0,150,0,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[150,0,0,0,0,0,100,0,0,0],
-[100,0,0,0,0,0,150,0,0,0],
-[100,100,0,0,0,0,100,0,0,0],
-[275,0,300,0,0,0,0,0,0,0],
-[100,100,0,0,0,0,100,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[275,0,300,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,100,100,100,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,400],
-[100,100,100,100,0,100,100,100,100,100],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,200,0,0,0,100,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,175,0,0,0,0,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[300,200,200,200,25,75,200,75,0,0],
-[100,0,5000,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[500,0,0,0,0,0,0,0,0,0],
-[0,500,0,0,0,0,0,0,0,0],
-[0,0,500,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,500,0,0,0],
-[0,0,0,0,0,500,0,0,0,0],
-[0,0,0,0,0,0,0,500,0,0],
-[0,0,0,0,0,0,0,0,500,0],
-[0,0,0,500,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,100,0,100,0,175,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[700,700,700,700,0,700,700,700,700,0],
-[0,0,0,200,0,0,0,100,0,0],
-[50,50,50,50,25,50,50,200,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,300,0,300,400,0],
-[0,0,0,175,0,100,0,100,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,175,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,175,0,150,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,0,0,0,0,0,0,50],
-[0,0,0,0,0,0,0,0,0,1000],
-[0,0,0,0,0,0,0,0,0,900],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,0,2500],
-[0,0,0,0,0,0,200,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,175,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,200,0,125,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,100,0],
-[0,0,0,0,0,0,200,100,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,0,0,0,900],
-[25,25,25,25,25,100,25,100,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,0,0,0,200,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,500,0],
-[0,0,0,0,0,0,0,0,100,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,50,0,0,0,0,150,0,0,0],
-[100,50,0,0,0,0,150,0,0,0],
-[100,50,0,0,0,0,150,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,50,0,0,0,0,150,0,0,0],
-[100,100,0,0,0,0,100,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,100,0,0,25,200,25,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,100,100,100,100,100,100],
-[400,0,100,0,0,0,100,0,0,0],
-[100,0,125,0,0,0,0,0,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,0,0,0,0,0,0,100],
-[10,10,10,10,0,10,10,10,10,100],
-[101,101,101,101,101,101,101,101,300,300],
-[10,10,10,10,0,10,10,10,10,100],
-[0,300,0,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,175,0,0,0,0],
-[100,0,5000,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,150,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[200,200,200,200,0,200,200,200,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[150,0,200,0,0,0,200,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,100,100,100,0,0],
-[0,0,0,0,0,0,0,600,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[25,25,25,25,25,200,25,100,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[300,200,200,200,25,75,200,75,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,75,0,75,0,100,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,75,0,75,0,100,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,200,100,0,0],
-[300,300,300,300,0,300,300,300,300,0],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,275,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,0,100000],
-[0,0,0,0,0,0,300,0,0,0],
-[0,0,50,0,0,0,0,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[0,0,0,0,0,0,0,0,0,200],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[101,101,101,101,101,101,101,101,101,300],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,175,0,100,100,125,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100],
-[200,0,100,0,0,0,100,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[600,0,0,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,0],
-[300,0,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,100,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,175,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[25,25,25,25,25,100,25,100,0,0],
-[0,0,0,0,0,0,0,0,0,5000],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,175,0,0,0,0,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[100,0,5000,0,0,0,0,0,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[101,101,101,101,101,101,101,101,101,300],
-[200,0,100,0,0,0,100,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,175,0,0,0,0],
-[0,0,300,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,300,0,300,300,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[100,0,0,0,0,0,0,0,0,0],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,100,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[101,101,101,101,101,101,101,101,101,300],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[100,100,0,0,0,0,100,0,0,0],
-[0,0,100,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,200,0,125,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,175,0,100,0,100,0,0],
-[100,0,100,100,0,100,100,100,100,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,100,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,200,0,0,0,0,0,0,0],
-[25,25,25,25,25,200,25,100,100,0],
-[0,0,0,0,0,300,0,275,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,150,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[100,0,0,0,0,100,100,100,0,0],
-[0,0,100,50,0,0,0,0,0,0],
-[0,0,0,0,0,0,200,0,0,0],
-[0,600,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,0],
-[100,0,0,0,0,100,100,100,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,0,150,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,100,100,100,100,100,100],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,0,200],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,0,0,0,200,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[0,0,0,0,0,200,0,125,0,0],
-[100,0,300,0,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,4000,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,25,75,400,75,0,0],
-[25,25,25,25,200,25,25,25,100,25],
-[0,0,0,0,0,0,0,0,0,150],
-[200,0,100,0,0,0,100,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,100000],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,300,0,0,0,0,0,0,0,0],
-[0,300,0,0,0,0,0,0,0,0],
-[150,0,125,0,0,0,200,0,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,0,300],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,0,200],
-[0,0,0,0,0,0,0,0,0,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,100,0],
-[0,0,0,0,0,0,100,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[100,100,100,100,0,100,100,100,100,100],
-[100,100,100,100,0,100,100,100,100,200],
-[0,0,0,0,0,125,0,200,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[25,25,25,25,25,100,25,100,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,175,0,100,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,0,0,200,0],
-[100,0,0,100,0,100,100,175,100,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,300,0,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[101,101,101,101,101,101,101,101,101,300],
-[10,10,10,10,0,10,10,10,10,100],
-[10,10,10,10,0,10,10,10,10,100],
-[101,101,101,101,101,101,101,101,101,300],
-[101,101,101,101,101,101,101,101,101,300],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,0,100,0,100,175,100,0,0],
-[0,0,0,0,0,0,0,0,200,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[150,0,125,0,0,0,200,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,0,0,0,0,0,0,175],
-[0,0,0,0,0,0,0,0,200,0],
-[0,0,0,100,0,0,0,0,0,0],
-[100,0,100,0,0,25,200,25,0,0],
-[0,0,0,75,0,100,0,75,0,0],
-[0,0,0,175,0,0,0,0,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[100,100,100,100,100,100,100,100,100,100],
-[0,0,0,0,0,200,0,125,0,0],
-[0,100,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,125,0,250,0,0],
-[0,0,0,0,0,0,0,0,0,200],
-[400,400,400,400,0,400,400,400,400,0],
-[400,400,400,400,0,400,400,400,400,0],
-[400,400,400,400,0,400,400,400,400,0],
-[400,400,400,400,0,400,400,400,400,0],
-[0,0,0,0,0,0,0,0,200,0],
-[0,100,0,0,0,0,0,0,0,0],
-[75,0,0,75,0,100,0,75,0,0],
-[0,0,0,175,0,100,0,100,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[10,10,10,10,0,10,10,10,10,100],
-[100,0,0,0,0,0,150,0,0,0],
-[100,0,0,0,0,0,150,0,0,0],
-[100,0,0,0,0,0,150,0,0,0],
-[0,100,0,75,0,75,0,75,0,0],
-[0,0,0,0,0,0,200,100,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[300,200,200,200,25,75,200,75,0,0],
-[100,0,0,100,0,100,100,175,100,0],
-[100,0,0,100,0,100,100,175,100,0],
-[200,0,100,0,0,0,100,0,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[150,50,0,0,0,0,100,0,0,0],
-[150,50,0,0,0,0,100,0,0,0],
-[100,100,0,0,0,0,100,0,0,0],
-[10,10,10,10,0,10,10,10,10,100],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,200,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,0,0,700],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,175,0,100,0,0],
-[0,0,0,0,0,100,0,175,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[25,25,25,25,25,100,25,100,0,0],
-[100,100,100,100,0,100,100,100,125,100],
-[0,0,0,100,0,0,0,0,0,0],
-[100,100,100,100,0,100,100,100,100,100],
-[0,0,0,0,0,0,600,0,0,0],
-[100,100,100,100,25,75,400,75,0,0],
-[100,0,100,0,0,100,200,25,0,0],
-[101,101,101,101,101,101,101,101,101,300],
-[10,10,10,10,0,10,10,10,10,100],
-[0,0,0,0,0,0,0,5500,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,100,0,0],
-[0,0,0,0,0,0,0,500,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,100,0,0,0,0,0,0],
-[0,0,0,300,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,100,0,0,0,0,0,0,0],
-[0,0,300,0,0,0,0,0,0,0],
-[0,0,300,0,0,0,0,0,0,0]
-];
+var miceInfo = {
+    "Abominable Snow": {
+        "power": 1900
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Absolute Acolyte": {
+        "power": 54000
+        "effs": [0,0,0,0,0,0,0,0,0,2500]
+    },
+    "Acolyte": {
+        "power": 18000
+        "effs": [25,0,175,0,0,0,25,0,0,0]
+    },
+    "Admiral Arrrgh": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Admiral Cloudbeard": {
+        "power": 81690
+        "effs": [500,500,500,500,0,500,500,500,500,0]
+    },
+    "Aether": {
+        "power": 9800
+        "effs": [0,0,0,0,0,125,0,275,0,0]
+    },
+    "Aged": {
+        "power": 9000
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Agent M": {
+        "power": 38885
+        "effs": [0,0,0,0,0,0,0,0,300,0]
+    },
+    "Agitated Gentle Giant": {
+        "power": 1000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Alchemist": {
+        "power": 1930
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Alnilam": {
+        "power": 5500
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Alnitak": {
+        "power": 6150
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Alpha Weremouse": {
+        "power": 10500
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Amplified Brown": {
+        "power": 750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Amplified Grey": {
+        "power": 750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Amplified White": {
+        "power": 750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Ancient of the Deep": {
+        "power": 37999
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Ancient Scribe": {
+        "power": 16700
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Angelfish": {
+        "power": 4960
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Angler": {
+        "power": 8709
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Angry Train Staff": {
+        "power": 3499
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Aquos": {
+        "power": 4600
+        "effs": [100,100,100,100,25,75,400,75,0,0]
+    },
+    "Arcane Summoner": {
+        "power": 11000
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Arch Champion Necromancer": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Archer": {
+        "power": 1500
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Aristo-Cat Burglar": {
+        "power": 14590
+        "effs": [0,0,0,0,0,0,0,0,600,0]
+    },
+    "Armored Archer": {
+        "power": 2590
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Artillery Commander": {
+        "power": 21065
+        "effs": [100,0,0,50,0,50,0,50,0,0]
+    },
+    "Ascended Elder": {
+        "power": 375015
+        "effs": [0,0,0,0,0,0,0,0,0,350]
+    },
+    "Ash Golem": {
+        "power": 13601
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Assassin": {
+        "power": 13175
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Assassin Beast": {
+        "power": 14999
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Astrological Astronomer": {
+        "power": 11825
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Automated Sentry": {
+        "power": 950
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Automated Stone Sentry": {
+        "power": 20250
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Automorat": {
+        "power": 3751
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Baba Gaga": {
+        "power": 3750
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Balack the Banished": {
+        "power": 72929
+        "effs": [50,0,200,0,0,0,25,0,0,0]
+    },
+    "Bandit": {
+        "power": 100
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Bark": {
+        "power": 5000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Barkshell": {
+        "power": 8000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Barmy Gunner": {
+        "power": 275
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Barnacle Beautician": {
+        "power": 5400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Barracuda": {
+        "power": 8600
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Bartender": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Bat": {
+        "power": 515
+        "effs": [100,0,100,0,0,100,200,25,0,0]
+    },
+    "Battering Ram": {
+        "power": 59974
+        "effs": [25,0,0,0,0,0,25,0,0,0]
+    },
+    "Battle Cleric": {
+        "power": 10851
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Bear": {
+        "power": 700
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Bearded Elder": {
+        "power": 7825
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Beast Tamer": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Berserker": {
+        "power": 600
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Berzerker": {
+        "power": 8250
+        "effs": [0,0,0,0,0,0,0,0,0,175]
+    },
+    "Betta": {
+        "power": 4960
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Big Bad Behemoth Burroughs": {
+        "power": 35002
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Big Bad Burroughs": {
+        "power": 51151
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Bilged Boatswain": {
+        "power": 250
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Biohazard": {
+        "power": 12999
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Bionic": {
+        "power": 220
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Birthday": {
+        "power": 765
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Bitter Root": {
+        "power": 6825
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Black Diamond Racer": {
+        "power": 1215
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Black Mage": {
+        "power": 1550
+        "effs": [100,100,100,100,25,75,400,75,0,0]
+    },
+    "Black Powder Thief": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Black Widow": {
+        "power": 4010
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Blacksmith": {
+        "power": 27899
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Bloomed Sylvan": {
+        "power": 1750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Bog Beast": {
+        "power": 4200
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Bonbon Gummy Globlin": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Bookborn": {
+        "power": 6100
+        "effs": [0,0,0,0,0,125,0,200,0,0]
+    },
+    "Borean Commander": {
+        "power": 755
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Bottled": {
+        "power": 3600
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Bottom Feeder": {
+        "power": 3930
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Boulder Biter": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Bounty Hunter": {
+        "power": 2100
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Brawny": {
+        "power": 882
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Breakdancer": {
+        "power": 750
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Breeze Borrower": {
+        "power": 3500
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Briegull": {
+        "power": 635
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Brimstone": {
+        "power": 3200
+        "effs": [150,0,125,0,0,0,200,0,0,0]
+    },
+    "Brown": {
+        "power": 3
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Bruticle": {
+        "power": 16800
+        "effs": [0,0,0,200,0,0,0,100,0,0]
+    },
+    "Bruticus, the Blazing": {
+        "power": 58920
+        "effs": [0,600,0,0,0,0,0,0,0,0]
+    },
+    "Buccaneer": {
+        "power": 4544
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Buckethead": {
+        "power": 500
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Builder": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Bulwark of Ascent": {
+        "power": 818250
+        "effs": [0,0,0,0,0,0,0,0,0,7500]
+    },
+    "Burglar": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,125,100]
+    },
+    "Burly Bruiser": {
+        "power": 6300
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Cabin Boy": {
+        "power": 100
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Calalilly": {
+        "power": 6000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Calligraphy": {
+        "power": 888
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Camoflower": {
+        "power": 9000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Camofusion": {
+        "power": 14500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Candy Cane": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Candy Cat": {
+        "power": 1250
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Candy Goblin": {
+        "power": 1750
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Cannonball": {
+        "power": 3499
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Captain": {
+        "power": 6885
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Captain Cannonball": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Captain Cloudkicker": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,300,0,0]
+    },
+    "Captain Croissant": {
+        "power": 500
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Caravan Guard": {
+        "power": 9000
+        "effs": [0,0,0,50,0,50,0,50,0,0]
+    },
+    "Cardshark": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Carefree Cook": {
+        "power": 2200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Caretaker": {
+        "power": 1600
+        "effs": [0,0,0,100,0,100,0,175,0,0]
+    },
+    "Carmine the Apothecary": {
+        "power": 9998
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Carnivore": {
+        "power": 15099
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Carrion Medium": {
+        "power": 8400
+        "effs": [0,0,0,0,0,0,0,0,0,315]
+    },
+    "Cavalier": {
+        "power": 1270
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Cavern Crumbler": {
+        "power": 3630
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Centaur": {
+        "power": 5690
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Centaur Ranger": {
+        "power": 7500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Chamber Cleaver": {
+        "power": 1400
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Chameleon": {
+        "power": 635
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Champion": {
+        "power": 12000
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Champion Danseuse": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Champion Thief": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Charming Chimer": {
+        "power": 5100
+        "effs": [150,50,0,0,0,0,100,0,0,0]
+    },
+    "Cheesy Party": {
+        "power": 1010
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Cherry": {
+        "power": 1500
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Cherry Sprite": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Chess Master": {
+        "power": 88000
+        "effs": [0,0,0,0,0,0,0,4000,0,0]
+    },
+    "Chip Chiseler": {
+        "power": 1260
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Chipper": {
+        "power": 4500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Chitinous": {
+        "power": 14000
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Chocolate Gold Foil": {
+        "power": 2650
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Chocolate Overload": {
+        "power": 200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Christmas Tree": {
+        "power": 460
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Chrono": {
+        "power": 25450
+        "effs": [25,0,175,0,0,0,25,0,0,0]
+    },
+    "Chronomaster": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,0,0,0,300]
+    },
+    "Cinderstorm": {
+        "power": 9410
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Circuit Judge": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "City Noble": {
+        "power": 3810
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "City Worker": {
+        "power": 4240
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Clockwork Samurai": {
+        "power": 50
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Clockwork Timespinner": {
+        "power": 2300
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Cloud Collector": {
+        "power": 2400
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Cloud Miner": {
+        "power": 41950
+        "effs": [500,500,500,500,0,500,500,500,500,0]
+    },
+    "Cloud Strider": {
+        "power": 33400
+        "effs": [0,0,0,600,0,0,0,0,0,0]
+    },
+    "Clownfish": {
+        "power": 5110
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Clump": {
+        "power": 1300
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Clumsy Carrier": {
+        "power": 6559
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Clumsy Chemist": {
+        "power": 233
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Coal Shoveller": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Cobweb": {
+        "power": 1100
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Coco Commander": {
+        "power": 2000
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Coffin Zombie": {
+        "power": 1135
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Confused Courier": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Conjurer": {
+        "power": 6000
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Conqueror": {
+        "power": 6600
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Consumed Charm Tinkerer": {
+        "power": 18435
+        "effs": [300,300,300,300,0,300,300,300,300,0]
+    },
+    "Cook": {
+        "power": 2650
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Coral": {
+        "power": 5400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Cuddler": {
+        "power": 3930
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Dragon": {
+        "power": 7500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Gardener": {
+        "power": 6741
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Guard": {
+        "power": 8709
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Harvester": {
+        "power": 6380
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Coral Queen": {
+        "power": 11150
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Core Sample": {
+        "power": 1000
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Cork Defender": {
+        "power": 4550
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Corkataur": {
+        "power": 18630
+        "effs": [0,600,0,0,0,0,0,0,0,0]
+    },
+    "Corky, the Collector": {
+        "power": 2595
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Corridor Bruiser": {
+        "power": 17150
+        "effs": [100,0,125,0,0,0,0,0,0,0]
+    },
+    "Corrupt": {
+        "power": 6351
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Corrupt Commodore": {
+        "power": 300
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Costumed Dog": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Dragon": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Horse": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Monkey": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Ox": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Pig": {
+        "power": 1300
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Rabbit": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Rat": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Rooster": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Sheep": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Snake": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Costumed Tiger": {
+        "power": 1200
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Count Vampire": {
+        "power": 1000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Cowardly": {
+        "power": 4
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Cowbell": {
+        "power": 570
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Crabolia": {
+        "power": 4900
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Crag Elder": {
+        "power": 4100
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Craggy Ore": {
+        "power": 600
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Cranky Caterpillar": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Crate Camo": {
+        "power": 3751
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Crazed Goblin": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Creepy Marionette": {
+        "power": 6000
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Crimson Commander": {
+        "power": 9299
+        "effs": [125,125,0,125,0,125,0,125,0,0]
+    },
+    "Crimson Ranger": {
+        "power": 5999
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Crimson Titan": {
+        "power": 6799
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Crimson Watch": {
+        "power": 5600
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Croquet Crusher": {
+        "power": 2945
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Crown Collector": {
+        "power": 2647
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Crystal Behemoth": {
+        "power": 94170
+        "effs": [0,0,2150,0,0,0,0,0,0,0]
+    },
+    "Crystal Cave Worm": {
+        "power": 12526
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystal Controller": {
+        "power": 10550
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystal Golem": {
+        "power": 17399
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystal Lurker": {
+        "power": 24100
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystal Observer": {
+        "power": 28400
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystal Queen": {
+        "power": 20500
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystalback": {
+        "power": 10925
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Crystalline Slasher": {
+        "power": 6575
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Cumulost": {
+        "power": 19100
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Cupcake Camo": {
+        "power": 900
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Cupcake Candle Thief": {
+        "power": 290
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Cupcake Cutie": {
+        "power": 950
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Cupcake Runner": {
+        "power": 600
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Cupid": {
+        "power": 680
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Curious Chemist": {
+        "power": 800
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Cursed": {
+        "power": 4225
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Cursed Crusader": {
+        "power": 21500
+        "effs": [0,0,0,0,0,0,0,0,0,600]
+    },
+    "Cursed Enchanter": {
+        "power": 3500
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Cursed Engineer": {
+        "power": 6499
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Cursed Librarian": {
+        "power": 12499
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Cursed Taskmaster": {
+        "power": 18502
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Cursed Thief": {
+        "power": 8502
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Cute Cloud Conjurer": {
+        "power": 23400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Cute Crate Carrier": {
+        "power": 3499
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Cutpurse": {
+        "power": 6650
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Cutthroat Cannoneer": {
+        "power": 32604
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Cutthroat Pirate": {
+        "power": 24375
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Cuttle": {
+        "power": 3990
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Cyber Miner": {
+        "power": 1350
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Cybernetic Specialist": {
+        "power": 880
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Cyborg": {
+        "power": 1340
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Cycloness": {
+        "power": 10800
+        "effs": [150,50,0,0,0,0,100,0,0,0]
+    },
+    "Cyclops": {
+        "power": 1600
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Cyclops Barbarian": {
+        "power": 7500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Dance Party": {
+        "power": 500
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Dancer": {
+        "power": 1280
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Dancing Assassin": {
+        "power": 46501
+        "effs": [0,0,0,0,0,0,0,0,0,250]
+    },
+    "Dangerous Duo": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Dark Magi": {
+        "power": 40001
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Dark Templar": {
+        "power": 28901
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Dashing Buccaneer": {
+        "power": 225
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Davy Jones": {
+        "power": 2000
+        "effs": [150,0,125,0,0,0,200,0,0,0]
+    },
+    "Dawn Guardian": {
+        "power": 71999
+        "effs": [1000,0,0,0,0,0,100,0,0,0]
+    },
+    "Daydreamer": {
+        "power": 12565
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Decrepit Tentacle Terror": {
+        "power": 24251
+        "effs": [100,0,300,0,0,0,300,0,0,0]
+    },
+    "Deep": {
+        "power": 94990
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Deep Sea Diver": {
+        "power": 7500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Defender": {
+        "power": 8400
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Dehydrated": {
+        "power": 2000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Demolitions": {
+        "power": 2300
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Deranged Deckhand": {
+        "power": 11150
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Derpicorn": {
+        "power": 998
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Derpshark": {
+        "power": 11302
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Derr Chieftain": {
+        "power": 20400
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Derr Lich": {
+        "power": 20800
+        "effs": [150,0,200,0,0,0,125,0,0,0]
+    },
+    "Desert Archer": {
+        "power": 4398
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Desert Architect": {
+        "power": 11151
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Desert Nomad": {
+        "power": 17201
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Desert Soldier": {
+        "power": 4900
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Desperado": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Destructoy": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Devious Gentleman": {
+        "power": 5520
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Diamond": {
+        "power": 400
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Diamondhide": {
+        "power": 48748
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Dinosuit": {
+        "power": 900
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Dire Lycan": {
+        "power": 1240
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Dirt Thing": {
+        "power": 5925
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Dojo Sensei": {
+        "power": 45000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Doktor": {
+        "power": 1150
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Double Black Diamond Racer": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Draconic Warden": {
+        "power": 13194
+        "effs": [0,100,0,75,0,75,0,75,0,0]
+    },
+    "Dragon": {
+        "power": 74800
+        "effs": [0,900,0,0,0,0,0,0,0,0]
+    },
+    "Dragonbreather": {
+        "power": 17790
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Dragoon": {
+        "power": 38400
+        "effs": [0,400,0,0,0,0,0,0,0,0]
+    },
+    "Dread Knight": {
+        "power": 2450
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Dread Pirate Mousert": {
+        "power": 6380
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Dream Drifter": {
+        "power": 947
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Drudge": {
+        "power": 7900
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Drummer": {
+        "power": 1000
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Dumpling Chef": {
+        "power": 2000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Dumpling Delivery": {
+        "power": 2305
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Dunehopper": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Dwarf": {
+        "power": 40
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Eagle Owl": {
+        "power": 2295
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Eclipse": {
+        "power": 37399
+        "effs": [1000,1000,100000,1000,25,1000,1000,1000,0,0]
+    },
+    "Eel": {
+        "power": 4960
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Effervescent": {
+        "power": 13500
+        "effs": [0,0,0,0,0,125,0,250,0,0]
+    },
+    "Egg Painter": {
+        "power": 900
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Egg Scrambler": {
+        "power": 1250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Eggscavator": {
+        "power": 2200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Eggsplosive Scientist": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Eggsquisite Entertainer": {
+        "power": 2200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "El Flamenco": {
+        "power": 1400
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Elder": {
+        "power": 8800
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Elf": {
+        "power": 755
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Elite Guardian": {
+        "power": 5710
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Elixir Maker": {
+        "power": 5050
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Elub Chieftain": {
+        "power": 15250
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Elub Lich": {
+        "power": 22000
+        "effs": [150,0,200,0,0,0,125,0,0,0]
+    },
+    "Elven Princess": {
+        "power": 1270
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Emberstone Scaled": {
+        "power": 18690
+        "effs": [0,600,0,0,0,0,0,0,0,0]
+    },
+    "Empyrean Appraiser": {
+        "power": 20550
+        "effs": [300,300,300,300,0,300,300,300,300,0]
+    },
+    "Empyrean Empress": {
+        "power": 263025
+        "effs": [500,500,500,500,0,500,500,500,500,0]
+    },
+    "Empyrean Geologist": {
+        "power": 15235
+        "effs": [300,300,300,300,0,300,300,300,300,0]
+    },
+    "Empyrean Javelineer": {
+        "power": 25350
+        "effs": [0,600,0,0,0,0,0,0,0,0]
+    },
+    "Enginseer": {
+        "power": 3930
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Enlightened Labourer": {
+        "power": 2180
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Enslaved Spirit": {
+        "power": 5732
+        "effs": [150,0,125,0,0,0,200,0,0,0]
+    },
+    "Epoch Golem": {
+        "power": 1250
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Escape Artist": {
+        "power": 50
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Essence Collector": {
+        "power": 3275
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Essence Guardian": {
+        "power": 3275
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Ethereal Enchanter": {
+        "power": 2500
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Ethereal Engineer": {
+        "power": 5500
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Ethereal Guardian": {
+        "power": 10851
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Ethereal Librarian": {
+        "power": 6499
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Ethereal Thief": {
+        "power": 6499
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Evil Scientist": {
+        "power": 1100
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Excitable Electric": {
+        "power": 965
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Exo-Tech": {
+        "power": 10851
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Explorator": {
+        "power": 4700
+        "effs": [0,0,0,0,0,175,0,150,0,0]
+    },
+    "Extreme Everysports": {
+        "power": 1000
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Factory Technician": {
+        "power": 1000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Fairy": {
+        "power": 2500
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Fall Familiar": {
+        "power": 11500
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "Fallen Champion Footman": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Falling Carpet": {
+        "power": 12200
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Farmhand": {
+        "power": 600
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Farrier": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Fencer": {
+        "power": 225
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Fete Fromager": {
+        "power": 200
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Fetid Swamp": {
+        "power": 12675
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Fiddler": {
+        "power": 2000
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Field": {
+        "power": 5
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Fiend": {
+        "power": 11000
+        "effs": [125,125,125,400,25,75,125,75,0,0]
+    },
+    "Fiery Crusher": {
+        "power": 5095
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Finder": {
+        "power": 2350
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Firebreather": {
+        "power": 15401
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Firefly": {
+        "power": 3691
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Flame Archer": {
+        "power": 5200
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Flame Ordnance": {
+        "power": 7900
+        "effs": [100,0,0,50,0,50,0,50,0,0]
+    },
+    "Flame Warrior": {
+        "power": 5700
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Floating Spore": {
+        "power": 9200
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Flutterby": {
+        "power": 6248
+        "effs": [0,0,0,0,0,125,0,200,0,0]
+    },
+    "Fluttering Flutist": {
+        "power": 8000
+        "effs": [150,50,0,0,0,0,100,0,0,0]
+    },
+    "Flying": {
+        "power": 50
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Fog": {
+        "power": 160
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Force Fighter Blue": {
+        "power": 1000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Force Fighter Green": {
+        "power": 2000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Force Fighter Pink": {
+        "power": 1750
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Force Fighter Red": {
+        "power": 1500
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Force Fighter Yellow": {
+        "power": 1250
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Forever Alone": {
+        "power": 900
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Forgotten Elder": {
+        "power": 29000
+        "effs": [0,0,600,0,0,0,0,0,0,0]
+    },
+    "Fortuitous Fool": {
+        "power": 39150
+        "effs": [200,200,200,200,0,200,200,200,200,0]
+    },
+    "Foxy": {
+        "power": 1650
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Free Skiing": {
+        "power": 460
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Frightened Flying Fireworks": {
+        "power": 465
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Frigid Foreman": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Frog": {
+        "power": 590
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Frostbite": {
+        "power": 14399
+        "effs": [0,0,0,200,0,0,0,100,0,0]
+    },
+    "Frostlance Guard": {
+        "power": 6500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Frostwing Commander": {
+        "power": 15250
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Frosty Snow": {
+        "power": 280
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Frozen": {
+        "power": 80
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Fuel": {
+        "power": 3253
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Ful'Mina, The Mountain Queen": {
+        "power": 78003
+        "effs": [0,900,0,0,0,0,0,0,0,0]
+    },
+    "Fungal Frog": {
+        "power": 1250
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Fungal Spore": {
+        "power": 11499
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Fungal Technomorph": {
+        "power": 28901
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Funglore": {
+        "power": 8525
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Fuzzy Drake": {
+        "power": 3175
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Gargantuamouse": {
+        "power": 93997
+        "effs": [50,50000,0,25,0,25,0,25,0,0]
+    },
+    "Gargoyle": {
+        "power": 5010
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Gate Guardian": {
+        "power": 7600
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Gelatinous Octahedron": {
+        "power": 5000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Gemorpher": {
+        "power": 8501
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Gemstone Worshipper": {
+        "power": 3340
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "General Drheller": {
+        "power": 23500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Gentleman Caller": {
+        "power": 2000
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Ghost": {
+        "power": 2200
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Ghost Pirate Queen": {
+        "power": 4000
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Giant Snail": {
+        "power": 1515
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Gilded Leaf": {
+        "power": 1400
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Gingerbread": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Glacia Ice Fist": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Gladiator": {
+        "power": 15600
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Glamorous Gladiator": {
+        "power": 28575
+        "effs": [0,0,0,0,0,600,0,0,0,0]
+    },
+    "Glass Blower": {
+        "power": 27899
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Glazy": {
+        "power": 205
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Glitchpaw": {
+        "power": 785
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Gluttonous Zombie": {
+        "power": 820
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Goblin": {
+        "power": 2290
+        "effs": [100,0,0,100,0,100,175,100,0,0]
+    },
+    "Gold": {
+        "power": 350
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Goldleaf": {
+        "power": 2100
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Golem": {
+        "power": 6885
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Goliath Field": {
+        "power": 11175
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Gorgon": {
+        "power": 9500
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Gourd Ghoul": {
+        "power": 3500
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Gourdborg": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Grampa Golem": {
+        "power": 2815
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Grand Master of the Dojo": {
+        "power": 330997
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Grandfather": {
+        "power": 7000
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Granite": {
+        "power": 185
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Granny Spice": {
+        "power": 4625
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Grave Robber": {
+        "power": 2145
+        "effs": [100,100,100,100,0,100,100,100,125,300]
+    },
+    "Great Giftnapper": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Great Winter Hunt Impostor": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Greedy Al": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Grey": {
+        "power": 2
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Grey Recluse": {
+        "power": 2500
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Greyrun": {
+        "power": 913
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Grizzled Silth": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Ground Gavaleer": {
+        "power": 12475
+        "effs": [0,0,0,0,0,100,0,0,0,0]
+    },
+    "Grubling": {
+        "power": 1200
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Grubling Herder": {
+        "power": 4000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Grunt": {
+        "power": 4620
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Guardian": {
+        "power": 13200
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Guppy": {
+        "power": 4900
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Guqin Player": {
+        "power": 4000
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Gyrologer": {
+        "power": 18050
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Hapless": {
+        "power": 570
+    "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Hapless Marionette": {
+        "power": 2
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Harbinger of Death": {
+        "power": 4590
+        "effs": [0,0,0,0,0,0,0,0,0,216]
+    },
+    "Hardboiled": {
+        "power": 2500
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Hardworking Hauler": {
+        "power": 2780
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Hare Razer": {
+        "power": 2600
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Harpy": {
+        "power": 14500
+        "effs": [100,0,0,100,0,100,175,100,0,0]
+    },
+    "Harvest Harrier": {
+        "power": 10867
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "Harvester": {
+        "power": 20700
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "Hazmat": {
+        "power": 5799
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Healer": {
+        "power": 3650
+        "effs": [0,0,0,100,0,175,0,100,0,0]
+    },
+    "Heart of the Meteor": {
+        "power": 1500000
+        "effs": [1000,0,0,0,0,0,100,0,0,0]
+    },
+    "Heavy Blaster": {
+        "power": 5000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Herc": {
+        "power": 21625
+        "effs": [0,0,0,0,0,100,0,0,0,0]
+    },
+    "High Roller": {
+        "power": 16320
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Hired Eidolon": {
+        "power": 11900
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Hoarder": {
+        "power": 70
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Hollowed": {
+        "power": 3500
+        "effs": [100,100,100,100,0,100,100,100,100,200]
+    },
+    "Hollowed Minion": {
+        "power": 4000
+        "effs": [100,100,100,100,0,100,100,100,100,200]
+    },
+    "Hollowhead": {
+        "power": 750
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Homeopathic Apothecary": {
+        "power": 1300
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Hookshot": {
+        "power": 4250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Hope": {
+        "power": 10
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Horned Cork Hoarder": {
+        "power": 8565
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Hot Head": {
+        "power": 2300
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Huntereater": {
+        "power": 12551
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Hurdle": {
+        "power": 1250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Hydra": {
+        "power": 5000
+        "effs": [0,0,0,175,0,100,0,175,0,0]
+    },
+    "Hydrologist": {
+        "power": 4970
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Hydrophobe": {
+        "power": 1995
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Hypnotized Gunslinger": {
+        "power": 10000
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Iceberg Sculptor": {
+        "power": 755
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Iceblade": {
+        "power": 7700
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Iceblock": {
+        "power": 5400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Icebreaker": {
+        "power": 5000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Icewing": {
+        "power": 25000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Icicle": {
+        "power": 11340
+        "effs": [0,0,0,200,0,0,0,100,0,0]},
+    "Ignatia": {
+        "power": 9400
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Ignis": {
+        "power": 2300
+        "effs": [100,100,100,100,25,75,400,75,0,0]
+    },
+    "Impersonator": {
+        "power": 5
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Incompetent Ice Climber": {
+        "power": 5000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Industrious Digger": {
+        "power": 1150
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Inferna, The Engulfed": {
+        "power": 35325
+        "effs": [500,0,0,0,0,0,0,0,0,0]
+    },
+    "Inferno Mage": {
+        "power": 4800
+        "effs": [0,0,0,100,0,75,0,75,0,0]
+    },
+    "Infiltrator": {
+        "power": 12500
+        "effs": [0,0,0,0,0,125,0,250,0,0]
+    },
+    "Itty Bitty Rifty Burroughs": {
+        "power": 1250
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Itty-Bitty Burroughs": {
+        "power": 8250
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Jellyfish": {
+        "power": 4300
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Joy": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Juliyes": {
+        "power": 2999
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Jurassic": {
+        "power": 13650
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Kalor'ignis of the Geyser": {
+        "power": 59640
+        "effs": [0,900,0,0,0,0,0,0,0,0]
+    },
+    "Karmachameleon": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Keeper": {
+        "power": 3485
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Keeper's Assistant": {
+        "power": 3300
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "King Grub": {
+        "power": 499995
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "King Scarab": {
+        "power": 999989
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Kite Flyer": {
+        "power": 22275
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Knight": {
+        "power": 700
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Koimaid": {
+        "power": 2240
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Kung Fu": {
+        "power": 5695
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Lab Technician": {
+        "power": 1800
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Lady Coldsnap": {
+        "power": 18500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Lambent": {
+        "power": 1350
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Lambent Crystal": {
+        "power": 8000
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Lancer Guard": {
+        "power": 15532
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Lasso Cowgirl": {
+        "power": 2000
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Launchpad Labourer": {
+        "power": 9512
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Lawbender": {
+        "power": 9680
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Leprechaun": {
+        "power": 27200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Leviathan": {
+        "power": 13706
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Lich": {
+        "power": 20700
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Lightning Rod": {
+        "power": 4
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Limestone Miner": {
+        "power": 25101
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Living Ice": {
+        "power": 2000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Living Salt": {
+        "power": 3000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Lockpick": {
+        "power": 10
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Longtail": {
+        "power": 80
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Lord Splodington": {
+        "power": 12000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Lost": {
+        "power": 6425
+        "effs": [100,0,125,0,0,0,0,0,0,0]
+    },
+    "Lost Legionnaire": {
+        "power": 5300
+        "effs": [100,0,125,0,0,0,0,0,0,0]
+    },
+    "Lovely Sports": {
+        "power": 650
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Lucky": {
+        "power": 250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Lumahead": {
+        "power": 8275
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Lumberjack": {
+        "power": 26000
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Lumi-lancer": {
+        "power": 23000
+        "effs": [0,0,0,0,0,0,0,0,0,175]
+    },
+    "Lunar Red Candle Maker": {
+        "power": 888
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Lycan": {
+        "power": 8765
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Lycanoid": {
+        "power": 1100
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "M400": {
+        "power": 24599
+        "effs": [0,0,0,0,0,75,0,75,0,0]
+    },
+    "Mad Elf": {
+        "power": 2100
+        "effs": [100,75,75,75,0,75,75,75,75,75]
+    },
+    "Mage Weaver": {
+        "power": 29999
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Magic": {
+        "power": 300
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Magic Champion": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Magma Carrier": {
+        "power": 14300
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Magmarage": {
+        "power": 5500
+        "effs": [0,0,0,100,0,75,0,75,0,0]
+    },
+    "Magmatic Crystal Thief": {
+        "power": 5499
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Magmatic Golem": {
+        "power": 6000
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Mairitime Pirate": {
+        "power": 137485
+        "effs": [300,300,300,300,0,300,300,300,300,0]
+    },
+    "Maize Harvester": {
+        "power": 3050
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Mammoth": {
+        "power": 7000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Manaforge Smith": {
+        "power": 18501
+        "effs": [100,0,5000,0,0,0,0,0,0,0]
+    },
+    "Manatee": {
+        "power": 3990
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Market Guard": {
+        "power": 42803
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Market Thief": {
+        "power": 42900
+        "effs": [0,0,0,0,0,300,0,300,400,0]
+    },
+    "Martial": {
+        "power": 8800
+        "effs": [0,0,0,0,0,0,0,0,0,300]
+    },
+    "Masked Pikeman": {
+        "power": 13601
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Master Burglar": {
+        "power": 3000
+        "effs": [100,100,100,100,0,100,100,100,125,100]
+    },
+    "Master Exploder": {
+        "power": 1450
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Master of the Cheese Belt": {
+        "power": 4000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Master of the Cheese Claw": {
+        "power": 4000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Master of the Cheese Fang": {
+        "power": 4000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Master of the Chi Belt": {
+        "power": 92000
+        "effs": [0,0,0,0,0,0,0,0,0,400]
+    },
+    "Master of the Chi Claw": {
+        "power": 92000
+        "effs": [0,0,0,0,0,0,0,0,0,400]
+    },
+    "Master of the Chi Fang": {
+        "power": 92000
+        "effs": [0,0,0,0,0,0,0,0,0,400]
+    },
+    "Master of the Dojo": {
+        "power": 10000
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Matron of Machinery": {
+        "power": 16700
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Matron of Wealth": {
+        "power": 15400
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Mecha Tail": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Medicine": {
+        "power": 1250
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Menace of the Rift": {
+        "power": 5003
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Mermouse": {
+        "power": 3300
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Mermousette": {
+        "power": 6380
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mershark": {
+        "power": 7500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Meteorite Golem": {
+        "power": 21000
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Meteorite Miner": {
+        "power": 5100
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Meteorite Mover": {
+        "power": 10999
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Meteorite Mystic": {
+        "power": 27002
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Meteorite Snacker": {
+        "power": 2650
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Micro": {
+        "power": 866
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Mighty Mole": {
+        "power": 1000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Mild Spicekin": {
+        "power": 5725
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Militant Samurai": {
+        "power": 18000
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Mimic": {
+        "power": 18051
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Mind Tearer": {
+        "power": 20250
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Miner": {
+        "power": 3442
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Mining Materials Manager": {
+        "power": 3250
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Mintaka": {
+        "power": 8000
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Mischievous Meteorite Miner": {
+        "power": 3900
+        "effs": [50,0,0,0,0,0,50,0,200,0]
+    },
+    "Mischievous Wereminer": {
+        "power": 10500
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Miser": {
+        "power": 1030
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Missile Toe": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mist Maker": {
+        "power": 91674
+        "effs": [0,0,0,300,0,0,0,0,0,0]
+    },
+    "Mlounder Flounder": {
+        "power": 3710
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mobster": {
+        "power": 20400
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mole": {
+        "power": 300
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Molten Midas": {
+        "power": 491997
+        "effs": [100,0,5000,0,0,0,0,0,0,0]
+    },
+    "Monarch": {
+        "power": 2530
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Monk": {
+        "power": 6630
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Monsoon Maker": {
+        "power": 9500
+        "effs": [100,50,0,0,0,0,150,0,0,0]
+    },
+    "Monster": {
+        "power": 8240
+        "effs": [100,0,100,100,0,500,500,100,100,0]
+    },
+    "Monster of the Meteor": {
+        "power": 87996
+        "effs": [1000,0,0,0,0,0,100,0,0,0]
+    },
+    "Monster Tail": {
+        "power": 3750
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Monstrous Abomination": {
+        "power": 24998
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Monstrous Black Widow": {
+        "power": 9000
+        "effs": [10,10,10,10,0,10,10,10,10,200]
+    },
+    "Moosker": {
+        "power": 45
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Mossy Moosker": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Mouldy Mole": {
+        "power": 5560
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Mountain": {
+        "power": 1100
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Mousataur Priestess": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Mouse of Elements": {
+        "power": 16000
+        "effs": [0,0,0,0,0,0,0,0,0,500]
+    },
+    "Mouse of Winter Future": {
+        "power": 2560
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mouse of Winter Past": {
+        "power": 3100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mouse of Winter Present": {
+        "power": 2095
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mouse With No Name": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Mousevina von Vermin": {
+        "power": 18300
+        "effs": [100,0,100,0,0,25,2500,25,0,0]
+    },
+    "Moussile": {
+        "power": 700
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Mummy": {
+        "power": 3860
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Mush": {
+        "power": 7290
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Mush Monster": {
+        "power": 13601
+        "effs": [275,0,300,0,0,0,0,0,0,0]
+    },
+    "Mushroom Harvester": {
+        "power": 10851
+        "effs": [275,0,300,0,0,0,0,0,0,0]
+    },
+    "Mushroom Sprite": {
+        "power": 8800
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Mutant Mongrel": {
+        "power": 17499
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mutant Ninja": {
+        "power": 11003
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mutated Behemoth": {
+        "power": 25000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mutated Brown": {
+        "power": 465
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Mutated Grey": {
+        "power": 192
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Mutated Mole": {
+        "power": 5004
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Mutated Siblings": {
+        "power": 3500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Mutated White": {
+        "power": 138
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Mysterious Traveller": {
+        "power": 3253
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Mystic": {
+        "power": 3250
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Mystic Bishop": {
+        "power": 10800
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mystic Guardian": {
+        "power": 40602
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Mystic Herald": {
+        "power": 20250
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Mystic King": {
+        "power": 38398
+        "effs": [0,0,0,0,0,0,0,4000,0,0]
+    },
+    "Mystic Knight": {
+        "power": 8596
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mystic Pawn": {
+        "power": 1800
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mystic Queen": {
+        "power": 22004
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mystic Rook": {
+        "power": 18620
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mystic Scholar": {
+        "power": 28901
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Nachore Golem": {
+        "power": 2235
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Nachous, The Molten": {
+        "power": 26675
+        "effs": [0,0,0,0,0,0,500,0,0,0]
+    },
+    "Narrator": {
+        "power": 1330
+        "effs": [0,0,0,100,0,100,0,175,0,0]
+    },
+    "Naturalist": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Naughty Nougat": {
+        "power": 2560
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Necromancer": {
+        "power": 2000
+        "effs": [125,125,125,400,25,75,125,75,0,0]
+    },
+    "Nerg Chieftain": {
+        "power": 12600
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Nerg Lich": {
+        "power": 20900
+        "effs": [150,0,200,0,0,0,125,0,0,0]
+    },
+    "New Year's": {
+        "power": 755
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Nibbler": {
+        "power": 275
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Nice Knitting": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Night Shift Materials Manager": {
+        "power": 8400
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Night Watcher": {
+        "power": 14751
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Nightfire": {
+        "power": 103992
+        "effs": [150,0,0,0,0,0,100,0,0,0]
+    },
+    "Nightmancer": {
+        "power": 64021
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Nightshade Flower Girl": {
+        "power": 2800
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Nightshade Fungalmancer": {
+        "power": 15400
+        "effs": [275,0,300,0,0,0,0,0,0,0]
+    },
+    "Nightshade Maiden": {
+        "power": 1600
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Nightshade Masquerade": {
+        "power": 3800
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Nightshade Nanny": {
+        "power": 16700
+        "effs": [275,0,300,0,0,0,0,0,0,0]
+    },
+    "Nimbomancer": {
+        "power": 13474
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Ninja": {
+        "power": 1275
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Nitro Racer": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Nomad": {
+        "power": 13175
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Nomadic Warrior": {
+        "power": 2500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Nugget": {
+        "power": 900
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Nutcracker": {
+        "power": 1215
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Octomermaid": {
+        "power": 6741
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Ol' King Coal": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Old One": {
+        "power": 9850
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Old Spice Collector": {
+        "power": 3800
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "One-Mouse Band": {
+        "power": 11750
+        "effs": [0,0,0,0,0,0,0,0,0,400]
+    },
+    "Onion Chopper": {
+        "power": 2200
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Ooze": {
+        "power": 5205
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Ore Chipper": {
+        "power": 1720
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Ornament": {
+        "power": 1215
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Outbreak Assassin": {
+        "power": 17250
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Outlaw": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Over-Prepared": {
+        "power": 2280
+        "effs": [0,0,0,200,0,0,0,100,0,0]
+    },
+    "Overcaster": {
+        "power": 17275
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Oxygen Baron": {
+        "power": 7500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Pack": {
+        "power": 2700
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Page": {
+        "power": 275
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Paladin": {
+        "power": 7700
+        "effs": [300,200,200,200,25,75,200,75,0,0]
+    },
+    "Paladin Weapon Master": {
+        "power": 18501
+        "effs": [100,0,5000,0,0,0,0,0,0,0]
+    },
+    "Pan Slammer": {
+        "power": 2500
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Para Para Dancer": {
+        "power": 900
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Paragon of Arcane": {
+        "power": 225000
+        "effs": [500,0,0,0,0,0,0,0,0,0]
+    },
+    "Paragon of Dragons": {
+        "power": 151650
+        "effs": [0,500,0,0,0,0,0,0,0,0]
+    },
+    "Paragon of Forgotten": {
+        "power": 315000
+        "effs": [0,0,500,0,0,0,0,0,0,0]
+    },
+    "Paragon of Shadow": {
+        "power": 246650
+        "effs": [0,0,0,0,0,0,500,0,0,0]
+    },
+    "Paragon of Strength": {
+        "power": 305875
+        "effs": [0,0,0,0,0,500,0,0,0,0]
+    },
+    "Paragon of Tactics": {
+        "power": 246965
+        "effs": [0,0,0,0,0,0,0,500,0,0]
+    },
+    "Paragon of the Lawless": {
+        "power": 124100
+        "effs": [0,0,0,0,0,0,0,0,500,0]
+    },
+    "Paragon of Water": {
+        "power": 322000
+        "effs": [0,0,0,500,0,0,0,0,0,0]
+    },
+    "Parlour Player": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Party Head": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Passenger": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Pathfinder": {
+        "power": 1500
+        "effs": [0,0,0,100,0,100,0,175,0,0]
+    },
+    "Pearl": {
+        "power": 5720
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Pearl Diver": {
+        "power": 4960
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Pebble": {
+        "power": 120
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Peggy the Plunderer": {
+        "power": 110950
+        "effs": [700,700,700,700,0,700,700,700,700,0]
+    },
+    "Penguin": {
+        "power": 2508
+        "effs": [0,0,0,200,0,0,0,100,0,0]
+    },
+    "Phalanx": {
+        "power": 800
+        "effs": [50,50,50,50,25,50,50,200,0,0]
+    },
+    "Phase Zombie": {
+        "power": 975
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Photographer": {
+        "power": 2752
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Pie Thief": {
+        "power": 8600
+        "effs": [0,0,0,0,0,300,0,300,400,0]
+    },
+    "Pinchy": {
+        "power": 635
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Pintail": {
+        "power": 600
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Pirate": {
+        "power": 1275
+        "effs": [100,100,100,175,0,100,100,100,100,0]
+    },
+    "Pirate Anchor": {
+        "power": 6741
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Plague Hag": {
+        "power": 8801
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Plutonium Tentacle": {
+        "power": 14999
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Pneumatic Dirt Displacement": {
+        "power": 1200
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Pocketwatch": {
+        "power": 5001
+        "effs": [0,0,0,0,0,175,0,150,0,0]
+    },
+    "Polar Bear": {
+        "power": 5200
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Portable Generator": {
+        "power": 1000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Portal Paladin": {
+        "power": 8000
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Portal Plunderer": {
+        "power": 1650
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Portal Pursuer": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,0,0,0,50]
+    },
+    "Possessed Armaments": {
+        "power": 38000
+        "effs": [0,0,0,0,0,0,0,0,0,1000]
+    },
+    "Praetorian Champion": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Present": {
+        "power": 85
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Prestigious Adventurer": {
+        "power": 150000
+        "effs": [0,0,0,0,0,0,0,0,0,2500]
+    },
+    "Primal": {
+        "power": 12345
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Princess Fist": {
+        "power": 15500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Prospector": {
+        "power": 1750
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Protector": {
+        "power": 10400
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Prototype": {
+        "power": 950
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Puddlemancer": {
+        "power": 9925
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Puffer": {
+        "power": 3990
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Pugilist": {
+        "power": 70
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Pump Raider": {
+        "power": 1915
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Pumpkin Head": {
+        "power": 2400
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "Pumpkin Hoarder": {
+        "power": 1600
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Puppet Champion": {
+        "power": 72000
+        "effs": [0,0,0,0,0,0,0,0,0,900]
+    },
+    "Puppet Master": {
+        "power": 100
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Puppetto": {
+        "power": 2900
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Pygmy Wrangler": {
+        "power": 3600
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Pyrehyde": {
+        "power": 13700
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Pyrite": {
+        "power": 650
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Queen Quesada": {
+        "power": 42000
+        "effs": [0,0,0,0,0,0,0,0,500,0]
+    },
+    "Queso Extractor": {
+        "power": 4310
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Quesodillo": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Quillback": {
+        "power": 8000
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Radioactive Ooze": {
+        "power": 1601
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Rain Collector": {
+        "power": 2400
+        "effs": [100,50,0,0,0,0,150,0,0,0]
+    },
+    "Rain Summoner": {
+        "power": 7000
+        "effs": [100,50,0,0,0,0,150,0,0,0]
+    },
+    "Rain Wallower": {
+        "power": 3800
+        "effs": [100,50,0,0,0,0,150,0,0,0]
+    },
+    "Rainbow Racer": {
+        "power": 3100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Rainmancer": {
+        "power": 18500
+        "effs": [100,50,0,0,0,0,150,0,0,0]
+    },
+    "Rainwater Purifier": {
+        "power": 3500
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Rambunctious Rain Rumbler": {
+        "power": 13700
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Rancid Bog Beast": {
+        "power": 2199
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Ravenous Zombie": {
+        "power": 2385
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Raw Diamond": {
+        "power": 1525
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Reality Restitch": {
+        "power": 300
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Realm Ripper": {
+        "power": 3200
+        "effs": [400,0,100,0,0,0,100,0,0,0]
+    },
+    "Reanimated Carver": {
+        "power": 14651
+        "effs": [100,0,125,0,0,0,0,0,0,0]
+    },
+    "Reaper": {
+        "power": 11400
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Record Keeper": {
+        "power": 2300
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Record Keeper's Assistant": {
+        "power": 1650
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Red Coat Bear": {
+        "power": 1750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Red Envelope": {
+        "power": 888
+        "effs": [101,101,101,101,101,101,101,101,300,300]
+    },
+    "Red-Eyed Watcher Owl": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Regal Spearman": {
+        "power": 68550
+        "effs": [0,300,0,0,0,0,0,0,0,0]
+    },
+    "Reinbo": {
+        "power": 755
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Relic Hunter": {
+        "power": 1250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Renegade": {
+        "power": 9700
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Retired Minotaur": {
+        "power": 1824975
+        "effs": [100,0,5000,0,0,0,0,0,0,0]
+    },
+    "Reveling Lycanthrope": {
+        "power": 11750
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Revenant": {
+        "power": 1150
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Ribbon": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Richard the Rich": {
+        "power": 33725
+        "effs": [200,200,200,200,0,200,200,200,200,0]
+    },
+    "Ridiculous Sweater": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Rift Bio Engineer": {
+        "power": 980
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Rift Guardian": {
+        "power": 1225
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Rift Tiger": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Rifterranian": {
+        "power": 1250
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Riftweaver": {
+        "power": 900
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Riptide": {
+        "power": 3260
+        "effs": [150,0,200,0,0,0,200,0,0,0]
+    },
+    "Robat": {
+        "power": 975
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Rock Muncher": {
+        "power": 1145
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Rocketeer": {
+        "power": 27300
+        "effs": [0,0,0,0,0,0,0,600,0,0]
+    },
+    "Rockstar": {
+        "power": 3000
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Rogue": {
+        "power": 600
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Romeno": {
+        "power": 1
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Romeo": {
+        "power": 3000
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "RR-8": {
+        "power": 7900
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Rubble Rouser": {
+        "power": 4225
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Rubble Rummager": {
+        "power": 3480
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Ruffian": {
+        "power": 2000
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "S.N.O.W. Golem": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Saboteur": {
+        "power": 4500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sacred Shrine": {
+        "power": 5200
+        "effs": [300,200,200,200,25,75,200,75,0,0]
+    },
+    "Saloon Gal": {
+        "power": 1750
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Salt Water Snapper": {
+        "power": 1650
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Saltwater Axolotl": {
+        "power": 3990
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Samurai": {
+        "power": 6630
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Sand Cavalry": {
+        "power": 5500
+        "effs": [0,0,0,75,0,75,0,100,0,0]
+    },
+    "Sand Colossus": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Sand Dollar Diver": {
+        "power": 3750
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sand Dollar Queen": {
+        "power": 4300
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sand Pilgrim": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Sandmouse": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Sandwing Cavalry": {
+        "power": 6200
+        "effs": [0,0,0,75,0,75,0,100,0,0]
+    },
+    "Sanguinarian": {
+        "power": 13601
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Sarcophamouse": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Scarab": {
+        "power": 7998
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Scarecrow": {
+        "power": 2645
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "Scarlet Revenger": {
+        "power": 114000
+        "effs": [300,300,300,300,0,300,300,300,300,0]
+    },
+    "Scavenger": {
+        "power": 5205
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "School of Mish": {
+        "power": 3930
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Scorned Pirate": {
+        "power": 2350
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Scout": {
+        "power": 1750
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Scrap Metal Monster": {
+        "power": 10000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Scribe": {
+        "power": 26999
+        "effs": [0,0,0,0,0,300,0,275,0,0]
+    },
+    "Scrooge": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Scruffy": {
+        "power": 120
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Seadragon": {
+        "power": 4900
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Seasoned Islandographer": {
+        "power": 20550
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Seer": {
+        "power": 8800
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Sentient Slime": {
+        "power": 1750
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Sentinel": {
+        "power": 4800
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Serpent Monster": {
+        "power": 26599
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Serpentine": {
+        "power": 7998
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Shackled Servant": {
+        "power": 5800
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Shade of the Eclipse": {
+        "power": 7000000
+        "effs": [0,0,0,0,0,0,0,0,0,100000]
+    },
+    "Shadow Sage": {
+        "power": 73500
+        "effs": [0,0,0,0,0,0,300,0,0,0]
+    },
+    "Shadow Stalker": {
+        "power": 51990
+        "effs": [0,0,50,0,0,0,0,0,0,0]
+    },
+    "Shaman": {
+        "power": 755
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Shaolin Kung Fu": {
+        "power": 12375
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Shard Centurion": {
+        "power": 1340
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Sharpshooter": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Shattered Carmine": {
+        "power": 40000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Shattered Obsidian": {
+        "power": 8325
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Shelder": {
+        "power": 1270
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Shinobi": {
+        "power": 2910
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Shipwrecked": {
+        "power": 1485
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Shopkeeper": {
+        "power": 1500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Shortcut": {
+        "power": 1750
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Shorts-All-Year": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Shroom": {
+        "power": 7000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Silth": {
+        "power": 60001
+        "effs": [100,0,0,175,0,100,100,125,0,0]
+    },
+    "Silvertail": {
+        "power": 500
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Sinister Egg Painter": {
+        "power": 1100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Sir Fleekio": {
+        "power": 16700
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Siren": {
+        "power": 5508
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Sizzle Pup": {
+        "power": 5725
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Skeletal Champion": {
+        "power": 1550
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Skeleton": {
+        "power": 3175
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Sky Dancer": {
+        "power": 18375
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Sky Glass Glazier": {
+        "power": 16100
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Sky Glass Sorcerer": {
+        "power": 11000
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Sky Glider": {
+        "power": 24350
+        "effs": [600,0,0,0,0,0,0,0,0,0]
+    },
+    "Sky Greaser": {
+        "power": 8185
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Sky Highborne": {
+        "power": 64845
+        "effs": [300,0,0,0,0,0,0,0,0,0]
+    },
+    "Sky Squire": {
+        "power": 80460
+        "effs": [0,0,0,0,0,300,0,0,0,0]
+    },
+    "Sky Surfer": {
+        "power": 20374
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sky Swordsman": {
+        "power": 18610
+        "effs": [0,0,0,0,0,100,0,0,0,0]
+    },
+    "Skydiver": {
+        "power": 5950
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Slay Ride": {
+        "power": 1695
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Slayer": {
+        "power": 9800
+        "effs": [0,0,0,0,0,0,0,175,0,0]
+    },
+    "Sleepwalker": {
+        "power": 800
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Sleepy Merchant": {
+        "power": 420
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Slimefist": {
+        "power": 18500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Slope Swimmer": {
+        "power": 600
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Sludge": {
+        "power": 3900
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sludge Scientist": {
+        "power": 462
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Sludge Soaker": {
+        "power": 7400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sludge Swimmer": {
+        "power": 19000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Smoldersnap": {
+        "power": 7820
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Snake Charmer": {
+        "power": 6351
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Snooty": {
+        "power": 12240
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snow Boulder": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Snow Bowler": {
+        "power": 6500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Snow Fort": {
+        "power": 4510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snow Golem Architect": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snow Golem Jockey": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snow Scavenger": {
+        "power": 510
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snow Slinger": {
+        "power": 5400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Snow Sniper": {
+        "power": 5600
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Snow Soldier": {
+        "power": 5200
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Snow Sorceress": {
+        "power": 3740
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snowball Hoarder": {
+        "power": 288
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Snowblind": {
+        "power": 5600
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Snowblower": {
+        "power": 288
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snowflake": {
+        "power": 285
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Snowglobe": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Sock Puppet Ghost": {
+        "power": 210
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Soldier of the Shade": {
+        "power": 350000
+        "effs": [0,0,0,0,0,0,0,0,0,5000]
+    },
+    "Solemn Soldier": {
+        "power": 40602
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Soothsayer": {
+        "power": 6775
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Sorcerer": {
+        "power": 5208
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Soul Binder": {
+        "power": 18501
+        "effs": [100,0,5000,0,0,0,0,0,0,0]
+    },
+    "Space Party-Time Plumber": {
+        "power": 500
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Spear Fisher": {
+        "power": 9850
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Spectral Butler": {
+        "power": 3200
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Spectral Swashbuckler": {
+        "power": 3000
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Spectre": {
+        "power": 5210
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Speedy": {
+        "power": 120
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Spellbinder": {
+        "power": 5350
+        "effs": [0,0,0,0,0,175,0,0,0,0]
+    },
+    "Spheric Diviner": {
+        "power": 86670
+        "effs": [0,0,300,0,0,0,0,0,0,0]
+    },
+    "Spice Farmer": {
+        "power": 2455
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spice Finder": {
+        "power": 5575
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spice Merchant": {
+        "power": 13950
+        "effs": [0,0,0,0,0,300,0,300,300,0]
+    },
+    "Spice Raider": {
+        "power": 3810
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spice Reaper": {
+        "power": 6700
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spice Seer": {
+        "power": 1873
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spice Sovereign": {
+        "power": 3080
+        "effs": [100,0,0,0,0,0,0,0,0,0]
+    },
+    "Spider": {
+        "power": 5205
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Spiked Burrower": {
+        "power": 5750
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Spiky Devil": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Spirit Fox": {
+        "power": 1750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Spirit Light": {
+        "power": 600
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Spirit of Balance": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Spiritual Steel": {
+        "power": 1340
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Splintered Stone Sentry": {
+        "power": 7050
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Spore": {
+        "power": 3000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Spore Muncher": {
+        "power": 5275
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Spore Salesman": {
+        "power": 2200
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Sporeticus": {
+        "power": 5175
+        "effs": [0,0,100,100,0,0,0,0,0,0]
+    },
+    "Sporty Ski Instructor": {
+        "power": 370
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Spotted": {
+        "power": 5
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Spring Familiar": {
+        "power": 10500
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Spring Sprig": {
+        "power": 2250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Sprinkly Sweet Cupcake Cook": {
+        "power": 1000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Spry Sky Explorer": {
+        "power": 9594
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Spry Sky Seer": {
+        "power": 16175
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Spud": {
+        "power": 250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Squeaken": {
+        "power": 13250
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Squeaker Bot": {
+        "power": 65
+        "effs": [100,0,100,100,0,100,100,100,100,0]
+    },
+    "Squeaker Claws": {
+        "power": 3100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Stack of Thieves": {
+        "power": 8400
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Stagecoach Driver": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Stalagmite": {
+        "power": 14799
+        "effs": [0,0,200,0,0,0,0,0,0,0]
+    },
+    "Stealth": {
+        "power": 300
+        "effs": [25,25,25,25,25,200,25,100,100,0]
+    },
+    "Steam Grip": {
+        "power": 23001
+        "effs": [0,0,0,0,0,300,0,275,0,0]
+    },
+    "Steam Sailor": {
+        "power": 5365
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Steel": {
+        "power": 160
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Steel Horse Rider": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Stickybomber": {
+        "power": 4500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Stinger": {
+        "power": 13200
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Stingray": {
+        "power": 4300
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Stocking": {
+        "power": 3100
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Stone Cutter": {
+        "power": 2100
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Stone Maiden": {
+        "power": 3950
+        "effs": [0,0,100,50,0,0,0,0,0,0]
+    },
+    "Stonework Warrior": {
+        "power": 13450
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Stormsurge, the Vile Tempest": {
+        "power": 63300
+        "effs": [0,600,0,0,0,0,0,0,0,0]
+    },
+    "Stoutgear": {
+        "power": 4000
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Stowaway": {
+        "power": 2501
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Stratocaster": {
+        "power": 19700
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Strawberry Hotcakes": {
+        "power": 4500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Stuck Snowball": {
+        "power": 1033
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Student of the Cheese Belt": {
+        "power": 2200
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Student of the Cheese Claw": {
+        "power": 2200
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Student of the Cheese Fang": {
+        "power": 2200
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Student of the Chi Belt": {
+        "power": 15000
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Student of the Chi Claw": {
+        "power": 15000
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Student of the Chi Fang": {
+        "power": 15000
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Stuffy Banker": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Suave Pirate": {
+        "power": 18510
+        "effs": [100,100,100,100,0,100,100,100,100,0]
+    },
+    "Subterranean": {
+        "power": 9500
+        "effs": [100,0,0,0,0,100,100,100,0,0]
+    },
+    "Sugar Rush": {
+        "power": 3200
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Summer Mage": {
+        "power": 19800
+        "effs": [0,0,0,0,0,0,0,150,0,0]
+    },
+    "Summoning Scholar": {
+        "power": 7900
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Sunken Banshee": {
+        "power": 9850
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sunken Citizen": {
+        "power": 3930
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Super FighterBot MegaSupreme": {
+        "power": 2450
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Super Mega Mecha Ultra RoboGold": {
+        "power": 2300
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Supernatural": {
+        "power": 980
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Supply Hoarder": {
+        "power": 4999
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Supreme Sensei": {
+        "power": 404014
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Surgeon Bot": {
+        "power": 975
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Swabbie": {
+        "power": 570
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Swamp Runner": {
+        "power": 2150
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Swamp Thang": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Swarm of Pygmy Mice": {
+        "power": 3000
+        "effs": [0,0,0,0,0,0,200,0,0,0]
+    },
+    "Swashblade": {
+        "power": 8709
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sylvan": {
+        "power": 200
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Tadpole": {
+        "power": 5400
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Taleweaver": {
+        "power": 1600
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Tanglefoot": {
+        "power": 4420
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Tech Golem": {
+        "power": 40602
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Tech Ravenous Zombie": {
+        "power": 1100
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Technic Bishop": {
+        "power": 10800
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Technic King": {
+        "power": 38398
+        "effs": [0,0,0,0,0,0,0,4000,0,0]
+    },
+    "Technic Knight": {
+        "power": 8596
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Technic Pawn": {
+        "power": 1800
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Technic Queen": {
+        "power": 22004
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Technic Rook": {
+        "power": 18620
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Teenage Vampire": {
+        "power": 100
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Telekinetic Mutant": {
+        "power": 14498
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Tentacle": {
+        "power": 12000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Terra": {
+        "power": 2200
+        "effs": [100,100,100,100,25,75,400,75,0,0]
+    },
+    "Terrible Twos": {
+        "power": 300
+        "effs": [25,25,25,25,200,25,25,25,100,25]
+    },
+    "Terrified Adventurer": {
+        "power": 100
+        "effs": [0,0,0,0,0,0,0,0,0,150]
+    },
+    "Terror Knight": {
+        "power": 5750
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "The Menace": {
+        "power": 20000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "The Total Eclipse": {
+        "power": 13500000
+        "effs": [0,0,0,0,0,0,0,0,0,100000]
+    },
+    "Theurgy Warden": {
+        "power": 10498
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Thirsty": {
+        "power": 999
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Thistle": {
+        "power": 4000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Thorn": {
+        "power": 6000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Thunder Strike": {
+        "power": 1650
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Thundering Watcher": {
+        "power": 16500
+        "effs": [0,300,0,0,0,0,0,0,0,0]
+    },
+    "Thunderlord": {
+        "power": 13500
+        "effs": [0,300,0,0,0,0,0,0,0,0]
+    },
+    "Tidal Fisher": {
+        "power": 2500
+        "effs": [150,0,125,0,0,0,200,0,0,0]
+    },
+    "Tiger": {
+        "power": 6700
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Time Punk": {
+        "power": 1000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Time Tailor": {
+        "power": 1500
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Time Thief": {
+        "power": 2850
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Timeless Lich": {
+        "power": 9500
+        "effs": [0,0,0,0,0,0,0,0,0,300]
+    },
+    "Timelost Thaumaturge": {
+        "power": 4700
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Timeslither Pythoness": {
+        "power": 8800
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Timid Explorer": {
+        "power": 3300
+        "effs": [0,0,0,0,0,0,0,0,0,100]
+    },
+    "Tiny": {
+        "power": 7
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Tiny Dragonfly": {
+        "power": 10390
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Tiny Saboteur": {
+        "power": 1120
+        "effs": [0,0,0,0,0,0,0,0,100,0]
+    },
+    "Tiny Toppler": {
+        "power": 2815
+        "effs": [0,0,0,0,0,0,100,0,0,0]
+    },
+    "Titanic Brain-Taker": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Toboggan Technician": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Tomb Exhumer": {
+        "power": 1100
+        "effs": [100,100,100,100,0,100,100,100,100,200]
+    },
+    "Tome Sprite": {
+        "power": 6200
+        "effs": [0,0,0,0,0,125,0,200,0,0]
+    },
+    "Tonic Salesman": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Totally Not Bitter": {
+        "power": 650
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Toxic Avenger": {
+        "power": 2100
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Toxic Warrior": {
+        "power": 17000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Toxikinetic": {
+        "power": 1700
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Toy": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Toy Sylvan": {
+        "power": 3
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Toy Tinkerer": {
+        "power": 120
+        "effs": [100,100,100,100,0,100,100,100,100,100]},
+    "Trailblazer": {
+        "power": 2500
+        "effs": [0,0,0,100,0,175,0,100,0,0]
+    },
+    "Train Conductor": {
+        "power": 3253
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Train Engineer": {
+        "power": 3499
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Trampoline": {
+        "power": 750
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Travelling Barber": {
+        "power": 3253
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Treant": {
+        "power": 760
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Treant Queen": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Treasure Brawler": {
+        "power": 27900
+        "effs": [100,0,300,0,0,0,0,0,0,0]
+    },
+    "Treasure Hoarder": {
+        "power": 6549
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Treasure Keeper": {
+        "power": 8600
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Treasurer": {
+        "power": 4080
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Treat": {
+        "power": 2000
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Tree Troll": {
+        "power": 2000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Tri-dra": {
+        "power": 7500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Trick": {
+        "power": 2000
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Tricky Witch": {
+        "power": 1250
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Triple Lutz": {
+        "power": 285
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Tritus": {
+        "power": 68501
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Troll": {
+        "power": 14460
+        "effs": [100,0,0,100,0,100,175,100,0,0]
+    },
+    "Tumbleweed": {
+        "power": 1375
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Tundra Huntress": {
+        "power": 6620
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Turret Guard": {
+        "power": 9850
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Twisted Carmine": {
+        "power": 20000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Twisted Fiend": {
+        "power": 3000
+        "effs": [150,0,125,0,0,0,200,0,0,0]
+    },
+    "Twisted Hotcakes": {
+        "power": 7501
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Twisted Lilly": {
+        "power": 9499
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Twisted Treant": {
+        "power": 1500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Undertaker": {
+        "power": 4500
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Unwavering Adventurer": {
+        "power": 4800
+        "effs": [0,0,0,0,0,0,0,0,0,175]
+    },
+    "Upper Class Lady": {
+        "power": 2250
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Urchin King": {
+        "power": 11150
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Vampire": {
+        "power": 2340
+        "effs": [100,0,100,0,0,25,200,25,0,0]
+    },
+    "Vanguard": {
+        "power": 4100
+        "effs": [0,0,0,75,0,100,0,75,0,0]
+    },
+    "Vanquisher": {
+        "power": 7450
+        "effs": [0,0,0,175,0,0,0,0,0,0]
+    },
+    "Vaporior": {
+        "power": 10000
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Vigilant Ward": {
+        "power": 5000
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Vincent, The Magnificent": {
+        "power": 4000
+        "effs": [100,100,100,100,100,100,100,100,100,100]
+    },
+    "Vinetail": {
+        "power": 18900
+        "effs": [0,0,0,0,0,200,0,125,0,0]
+    },
+    "Violet Stormchild": {
+        "power": 2000
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Walker": {
+        "power": 14751
+        "effs": [0,0,0,0,0,125,0,250,0,0]
+    },
+    "Wandering Monk": {
+        "power": 15275
+        "effs": [0,0,0,0,0,0,0,0,0,200]
+    },
+    "Warden of Fog": {
+        "power": 203580
+        "effs": [400,400,400,400,0,400,400,400,400,0]
+    },
+    "Warden of Frost": {
+        "power": 203580
+        "effs": [400,400,400,400,0,400,400,400,400,0]
+    },
+    "Warden of Rain": {
+        "power": 203580
+        "effs": [400,400,400,400,0,400,400,400,400,0]
+    },
+    "Warden of Wind": {
+        "power": 203580
+        "effs": [400,400,400,400,0,400,400,400,400,0]
+    },
+    "Warehouse Manager": {
+        "power": 4498
+        "effs": [0,0,0,0,0,0,0,0,200,0]
+    },
+    "Warming Wyvern": {
+        "power": 7350
+        "effs": [0,100,0,0,0,0,0,0,0,0]
+    },
+    "Warmonger": {
+        "power": 43007
+        "effs": [75,0,0,75,0,100,0,75,0,0]
+    },
+    "Water Nymph": {
+        "power": 4280
+        "effs": [0,0,0,175,0,100,0,100,0,0]
+    },
+    "Water Sprite": {
+        "power": 1750
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Water Wielder": {
+        "power": 7500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Wave Racer": {
+        "power": 1250
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Wealth": {
+        "power": 1525
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Wealthy Werewarrior": {
+        "power": 9450
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Werehauler": {
+        "power": 8500
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Wereminer": {
+        "power": 14501
+        "effs": [100,0,0,0,0,0,150,0,0,0]
+    },
+    "Whelpling": {
+        "power": 1275
+        "effs": [0,100,0,75,0,75,0,75,0,0]
+    },
+    "Whirleygig": {
+        "power": 2185
+        "effs": [0,0,0,0,0,0,200,100,0,0]
+    },
+    "White": {
+        "power": 1
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "White Mage": {
+        "power": 5200
+        "effs": [300,200,200,200,25,75,200,75,0,0]
+    },
+    "Wicked Witch of Whisker Woods": {
+        "power": 1270
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Wiggler": {
+        "power": 90
+        "effs": [100,0,0,100,0,100,100,175,100,0]
+    },
+    "Wight": {
+        "power": 13780
+        "effs": [200,0,100,0,0,0,100,0,0,0]
+    },
+    "Wild Chainsaw": {
+        "power": 1800
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Wind Warrior": {
+        "power": 21200
+        "effs": [150,50,0,0,0,0,100,0,0,0]
+    },
+    "Wind Watcher": {
+        "power": 4100
+        "effs": [150,50,0,0,0,0,100,0,0,0]
+    },
+    "Windy Farmer": {
+        "power": 2400
+        "effs": [100,100,0,0,0,0,100,0,0,0]
+    },
+    "Winged Harpy": {
+        "power": 2500
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Winter Games": {
+        "power": 500
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Winter Mage": {
+        "power": 21600
+        "effs": [0,0,0,200,0,0,0,100,0,0]
+    },
+    "Withered Remains": {
+        "power": 29000
+        "effs": [0,0,0,0,0,0,0,0,0,700]
+    },
+    "Wolfskie": {
+        "power": 5600
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Wordsmith": {
+        "power": 3000
+        "effs": [0,0,0,100,0,175,0,100,0,0]
+    },
+    "Worker": {
+        "power": 635
+        "effs": [0,0,0,0,0,100,0,175,0,0]
+    },
+    "Worried Wayfinder": {
+        "power": 12410
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Wound Up White": {
+        "power": 1
+        "effs": [25,25,25,25,25,100,25,100,0,0]
+    },
+    "Wreath Thief": {
+        "power": 2100
+        "effs": [100,100,100,100,0,100,100,100,125,100]
+    },
+    "Yeti": {
+        "power": 6500
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Young Prodigy Racer": {
+        "power": 85
+        "effs": [100,100,100,100,0,100,100,100,100,100]
+    },
+    "Zealous Academic": {
+        "power": 28000
+        "effs": [0,0,0,0,0,0,600,0,0,0]
+    },
+    "Zephyr": {
+        "power": 4100
+        "effs": [100,100,100,100,25,75,400,75,0,0]
+    },
+    "Zombie": {
+        "power": 920
+        "effs": [100,0,100,0,0,100,200,25,0,0]
+    },
+    "Zombot Unipire": {
+        "power": 330
+        "effs": [101,101,101,101,101,101,101,101,101,300]
+    },
+    "Zombot Unipire the Third": {
+        "power": 1000
+        "effs": [10,10,10,10,0,10,10,10,10,100]
+    },
+    "Zurreal the Eternal": {
+        "power": 73001
+        "effs": [0,0,0,0,0,0,0,5500,0,0]
+    },
+    "Land Loafer": {
+        "power": 8000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Root Rummager": {
+        "power": 9000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Grit Grifter": {
+        "power": 10000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Crazed Cultivator": {
+        "power": 7000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Angry Aphid": {
+        "power": 10000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Wily Weevil": {
+        "power": 12000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Mighty Mite": {
+        "power": 13000
+        "effs": [0,0,0,0,0,0,0,100,0,0]
+    },
+    "Loathsome Locust": {
+        "power": 20000
+        "effs": [0,0,0,0,0,0,0,500,0,0]
+    },
+    "Beachcomber": {
+        "power": 8000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sand Sifter": {
+        "power": 9000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Tackle Tracker": {
+        "power": 10000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Covetous Coastguard": {
+        "power": 7000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Pompous Perch": {
+        "power": 9000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Careless Catfish": {
+        "power": 10000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Melodramatic Minnow": {
+        "power": 11000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Sinister Squid": {
+        "power": 13000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Nefarious Nautilus": {
+        "power": 15000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Vicious Vampire Squid": {
+        "power": 16000
+        "effs": [0,0,0,100,0,0,0,0,0,0]
+    },
+    "Architeuthulhu of the Abyss": {
+        "power": 75000
+        "effs": [0,0,0,300,0,0,0,0,0,0]
+    },
+    "Hans Cheesetian Squeakersen": {
+        "power": 8000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Brothers Grimmaus": {
+        "power": 9000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Madame d'Ormouse": {
+        "power": 8500
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Matriarch Gander": {
+        "power": 7000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Little Miss Fluffet": {
+        "power": 9000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Humphrey Dumphrey": {
+        "power": 9500
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Little Bo Squeak": {
+        "power": 10000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Princess and the Olive": {
+        "power": 9800
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Pinkielina": {
+        "power": 11000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Fibbocchio": {
+        "power": 12000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Greenbeard": {
+        "power": 11500
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Flamboyant Flautist": {
+        "power": 12500
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Ice Regent": {
+        "power": 13000
+        "effs": [0,0,100,0,0,0,0,0,0,0]
+    },
+    "Bitter Grammarian": {
+        "power": 67500
+        "effs": [0,0,300,0,0,0,0,0,0,0]
+    },
+    "Mythweaver": {
+        "power": 80001
+        "effs": [0,0,300,0,0,0,0,0,0,0]
+    },
+}
+
 var allType = ['Arcane','Draconic','Forgotten','Hydro','Parental','Physical','Shadow','Tactical','Law','Rift'];
 
 function render(){
@@ -4717,9 +4709,12 @@ function renderBox(list){return new Promise((resolve, reject) => {
         mouseName.innerText = list[i];
         var mouseNameConverted = list[i];
 
-        var mice_index = allMice.indexOf(mouseNameConverted);
+        var mice_power = allMice[mouseName]["power"];
+        var mice_eff = allMice[mouseName]["effs"];
+        var cr_string = convertToCR(power,luck, mice_power, mice_eff);
+
         var power_index = allType.indexOf(powerType);
-        var minluck_string = replaceInfinity(mice_index,power_index);
+        var minluck_string = replaceInfinity(mice_power, mice_eff[power_index]);
 
         //minluck----
         var minLuck = document.createElement("td");
@@ -4729,10 +4724,6 @@ function renderBox(list){return new Promise((resolve, reject) => {
         if(luck >= minluck_string){
             minLuck.style.color = "#228B22"
         }
-
-        var mice_power = micePower[mice_index]
-        var mice_eff = miceEff[mice_index][power_index]
-        var cr_string = convertToCR(power,luck,mice_power,mice_eff)
 
         //catch rate-------
         var cR = document.createElement("td");
@@ -4832,10 +4823,13 @@ function dragElement(elmnt) {
   }
 }
 
-function replaceInfinity(a,b){
+function replaceInfinity(mouse_power, eff){
     //Can't evalute infinity symbol, so was replaced with 9999 as minluck instead
-    var text = minluckvalues[a][b]
     var infinitySym = String.fromCharCode(0x221E)
+    if (eff === 0) {
+        return infinitySym
+    }
+    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / min(eff,1.4))
     if (text == 9999){
         return infinitySym
     } else {
