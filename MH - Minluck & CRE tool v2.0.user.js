@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.1.2
+// @version      2.1.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -4708,13 +4708,12 @@ function renderBox(list){return new Promise((resolve, reject) => {
         var mouseName = document.createElement("td");
         mouseName.innerText = list[i];
         var mouseNameConverted = list[i];
-
-        var mice_power = allMiceInfo[mouseName]["power"];
-        var mice_eff = allMiceInfo[mouseName]["effs"];
-        var cr_string = convertToCR(power,luck, mice_power, mice_eff);
-
         var power_index = allType.indexOf(powerType);
-        var minluck_string = replaceInfinity(mice_power, mice_eff[power_index]);
+
+        var mice_power = allMiceInfo[mouseNameConverted].power;
+        var mice_eff = allMiceInfo[mouseNameConverted].effs[power_index];
+        var cr_string = convertToCR(power,luck, mice_power, mice_eff);
+        var minluck_string = replaceInfinity(mice_power, mice_eff);
 
         //minluck----
         var minLuck = document.createElement("td");
@@ -4829,11 +4828,11 @@ function replaceInfinity(mouse_power, eff){
     if (eff === 0) {
         return infinitySym
     }
-    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / min(eff,1.4))
-    if (text == 9999){
+    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / Math.min(eff,1.4))
+    if (minluck >= 9999){
         return infinitySym
     } else {
-        return text;
+        return minluck;
     }
 };
 
