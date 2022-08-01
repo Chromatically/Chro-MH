@@ -1845,7 +1845,8 @@ var allMiceInfo = {
     },
     "Icicle": {
         "power": 11340,
-        "effs": [0,0,0,200,0,0,0,100,0,0]},
+        "effs": [0,0,0,200,0,0,0,100,0,0],
+    },
     "Ignatia": {
         "power": 9400,
         "effs": [0,100,0,0,0,0,0,0,0,0],
@@ -4032,7 +4033,8 @@ var allMiceInfo = {
     },
     "Toy Tinkerer": {
         "power": 120,
-        "effs": [100,100,100,100,0,100,100,100,100,100]},
+        "effs": [100,100,100,100,0,100,100,100,100,100],
+    },
     "Trailblazer": {
         "power": 2500,
         "effs": [0,0,0,100,0,175,0,100,0,0],
@@ -4509,7 +4511,7 @@ var allMiceInfo = {
         "power": 80001,
         "effs": [0,0,300,0,0,0,0,0,0,0],
     },
-}
+};
 
 var allType = ['Arcane','Draconic','Forgotten','Hydro','Parental','Physical','Shadow','Tactical','Law','Rift'];
 
