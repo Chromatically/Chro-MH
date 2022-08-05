@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.2.1
+// @version      2.2.2
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -4448,8 +4448,8 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Architeuthulhu of the Abyss": {
-        "power": 75000,
-        "effs": [0,0,0,300,0,0,0,0,0,0],
+        "power": 100000,
+        "effs": [0,0,0,400,0,0,0,0,0,0],
     },
     "Hans Cheesetian Squeakersen": {
         "power": 8000,
@@ -4504,12 +4504,12 @@ var allMiceInfo = {
         "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Bitter Grammarian": {
-        "power": 67500,
-        "effs": [0,0,300,0,0,0,0,0,0,0],
+        "power": 90000,
+        "effs": [0,0,400,0,0,0,0,0,0,0],
     },
     "Mythweaver": {
-        "power": 80001,
-        "effs": [0,0,300,0,0,0,0,0,0,0],
+        "power": 200000,
+        "effs": [0,0,750,0,0,0,0,0,0,0],
     },
 };
 
@@ -4623,7 +4623,7 @@ function renderBox(list){return new Promise((resolve, reject) => {
     infoButton.style.marginLeft = "10px"
     infoButton.onclick = function(){
         let position = JSON.parse(localStorage.getItem("Chro-minluck-vwvh")).split(",");
-        let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 29 July 2022\n\n Change tool's position / Set % for red text?\n\n" +
+        let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 5 Aug 2022\nSSBD - Someone\n\n Change tool's position / Set % for red text?\n\n" +
                          "Left: " + position[0] + "\nTop: " + position[1] + "\nRed text at: " + position[2] + "%","35,28,60");
         if (mes == null || mes == ""){
             return
