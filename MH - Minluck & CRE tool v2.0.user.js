@@ -4827,14 +4827,18 @@ function dragElement(elmnt) {
 function replaceInfinity(mouse_power, eff){
     // Can't evalute infinity symbol, so was replaced with 9999 as minluck instead
     var infinitySym = String.fromCharCode(0x221E)
+    eff= eff/100;
     if (eff === 0) {
         return infinitySym;
     }
-    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / Math.min(eff/100,1.4));
+    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / Math.min(eff,1.4));
     if (minluck >= 9999){
         return infinitySym;
     } else {
-        return minluck;
+        if (2*Math.pow(Math.floor(Math.min(1.4,eff)*minluck),2) >= mouse_power){
+        return minluck}
+        else {minluck = minluck+1
+              return minluck};
     }
 };
 
