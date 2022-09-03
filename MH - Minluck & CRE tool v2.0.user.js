@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.2.2
+// @version      2.3.0
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -111,6 +111,10 @@ var allMiceInfo = {
         "power": 8709,
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
+    "Angry Aphid": {
+        "power": 10000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
+    },
     "Angry Train Staff": {
         "power": 3499,
         "effs": [0,0,0,0,0,0,0,0,200,0],
@@ -130,6 +134,10 @@ var allMiceInfo = {
     "Archer": {
         "power": 1500,
         "effs": [0,0,0,0,0,100,0,175,0,0],
+    },
+    "Architeuthulhu of the Abyss": {
+        "power": 100000,
+        "effs": [0,0,0,400,0,0,0,0,0,0],
     },
     "Aristo-Cat Burglar": {
         "power": 14590,
@@ -223,6 +231,10 @@ var allMiceInfo = {
         "power": 10851,
         "effs": [100,0,300,0,0,0,0,0,0,0],
     },
+    "Beachcomber": {
+        "power": 8000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
     "Bear": {
         "power": 700,
         "effs": [100,0,0,100,0,100,100,175,100,0],
@@ -270,6 +282,10 @@ var allMiceInfo = {
     "Birthday": {
         "power": 765,
         "effs": [100,100,100,100,100,100,100,100,100,100],
+    },
+    "Bitter Grammarian": {
+        "power": 90000,
+        "effs": [0,0,400,0,0,0,0,0,0,0],
     },
     "Bitter Root": {
         "power": 6825,
@@ -350,6 +366,10 @@ var allMiceInfo = {
     "Brimstone": {
         "power": 3200,
         "effs": [150,0,125,0,0,0,200,0,0,0],
+    },
+    "Brothers Grimmaus": {
+        "power": 9000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Brown": {
         "power": 3,
@@ -450,6 +470,10 @@ var allMiceInfo = {
     "Carefree Cook": {
         "power": 2200,
         "effs": [100,100,100,100,0,100,100,100,100,100],
+    },
+    "Careless Catfish": {
+        "power": 10000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Caretaker": {
         "power": 1600,
@@ -751,6 +775,10 @@ var allMiceInfo = {
         "power": 1000,
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
+    "Covetous Coastguard": {
+        "power": 7000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
     "Cowardly": {
         "power": 4,
         "effs": [100,100,100,100,0,100,100,100,100,100],
@@ -778,6 +806,10 @@ var allMiceInfo = {
     "Crate Camo": {
         "power": 3751,
         "effs": [0,0,0,0,0,0,0,0,200,0],
+    },
+    "Crazed Cultivator": {
+        "power": 7000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
     },
     "Crazed Goblin": {
         "power": 1500,
@@ -1343,6 +1375,10 @@ var allMiceInfo = {
         "power": 12675,
         "effs": [0,0,0,0,0,0,200,0,0,0],
     },
+    "Fibbocchio": {
+        "power": 12000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Fiddler": {
         "power": 2000,
         "effs": [50,50,50,50,25,50,50,200,0,0],
@@ -1370,6 +1406,10 @@ var allMiceInfo = {
     "Firefly": {
         "power": 3691,
         "effs": [0,0,0,0,0,0,0,150,0,0],
+    },
+    "Flamboyant Flautist": {
+        "power": 12500,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Flame Archer": {
         "power": 5200,
@@ -1651,6 +1691,10 @@ var allMiceInfo = {
         "power": 2100,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
+    "Greenbeard": {
+        "power": 11500,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Grey": {
         "power": 2,
         "effs": [100,100,100,100,0,100,100,100,100,100],
@@ -1662,6 +1706,10 @@ var allMiceInfo = {
     "Greyrun": {
         "power": 913,
         "effs": [10,10,10,10,0,10,10,10,10,100],
+    },
+    "Grit Grifter": {
+        "power": 10000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
     },
     "Grizzled Silth": {
         "power": 2000,
@@ -1699,6 +1747,10 @@ var allMiceInfo = {
         "power": 18050,
         "effs": [0,0,0,0,0,0,0,100,0,0],
     },
+    "Hans Cheesetian Squeakersen": {
+        "power": 8000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Hapless": {
         "power": 570,
         "effs": [0,0,0,0,0,100,0,175,0,0],
@@ -1708,8 +1760,8 @@ var allMiceInfo = {
         "effs": [25,25,25,25,25,100,25,100,0,0],
     },
     "Harbinger of Death": {
-        "power": 4590,
-        "effs": [0,0,0,0,0,0,0,0,0,216],
+        "power": 4250,
+        "effs": [0,0,0,0,0,0,0,0,0,200],
     },
     "Hardboiled": {
         "power": 2500,
@@ -1799,6 +1851,10 @@ var allMiceInfo = {
         "power": 2300,
         "effs": [0,0,0,0,0,0,0,150,0,0],
     },
+    "Humphrey Dumphrey": {
+        "power": 9500,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Huntereater": {
         "power": 12551,
         "effs": [0,0,200,0,0,0,0,0,0,0],
@@ -1822,6 +1878,10 @@ var allMiceInfo = {
     "Hypnotized Gunslinger": {
         "power": 10000,
         "effs": [150,0,0,0,0,0,100,0,0,0],
+    },
+    "Ice Regent": {
+        "power": 13000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Iceberg Sculptor": {
         "power": 755,
@@ -1963,6 +2023,10 @@ var allMiceInfo = {
         "power": 15532,
         "effs": [0,100,0,0,0,0,0,0,0,0],
     },
+    "Land Loafer": {
+        "power": 8000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
+    },
     "Lasso Cowgirl": {
         "power": 2000,
         "effs": [0,0,0,0,0,0,0,0,200,0],
@@ -1995,6 +2059,14 @@ var allMiceInfo = {
         "power": 25101,
         "effs": [0,0,0,0,0,300,0,300,300,0],
     },
+    "Little Bo Squeak": {
+        "power": 10000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
+    "Little Miss Fluffet": {
+        "power": 9000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Living Ice": {
         "power": 2000,
         "effs": [0,0,0,100,0,0,0,0,0,0],
@@ -2002,6 +2074,10 @@ var allMiceInfo = {
     "Living Salt": {
         "power": 3000,
         "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
+    "Loathsome Locust": {
+        "power": 20000,
+        "effs": [0,0,0,0,0,0,0,500,0,0],
     },
     "Lockpick": {
         "power": 10,
@@ -2062,6 +2138,10 @@ var allMiceInfo = {
     "Mad Elf": {
         "power": 2100,
         "effs": [100,75,75,75,0,75,75,75,75,75],
+    },
+    "Madame d'Ormouse": {
+        "power": 8500,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Mage Weaver": {
         "power": 29999,
@@ -2163,6 +2243,10 @@ var allMiceInfo = {
         "power": 10000,
         "effs": [0,0,0,0,0,100,0,175,0,0],
     },
+    "Matriarch Gander": {
+        "power": 7000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Matron of Machinery": {
         "power": 16700,
         "effs": [100,0,300,0,0,0,0,0,0,0],
@@ -2178,6 +2262,10 @@ var allMiceInfo = {
     "Medicine": {
         "power": 1250,
         "effs": [10,10,10,10,0,10,10,10,10,100],
+    },
+    "Melodramatic Minnow": {
+        "power": 11000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Menace of the Rift": {
         "power": 5003,
@@ -2218,6 +2306,10 @@ var allMiceInfo = {
     "Micro": {
         "power": 866,
         "effs": [10,10,10,10,0,10,10,10,10,100],
+    },
+    "Mighty Mite": {
+        "power": 13000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
     },
     "Mighty Mole": {
         "power": 1000,
@@ -2463,6 +2555,10 @@ var allMiceInfo = {
         "power": 28901,
         "effs": [100,0,300,0,0,0,0,0,0,0],
     },
+    "Mythweaver": {
+        "power": 200000,
+        "effs": [0,0,750,0,0,0,0,0,0,0],
+    },
     "Nachore Golem": {
         "power": 2235,
         "effs": [0,0,0,0,0,0,100,0,0,0],
@@ -2486,6 +2582,10 @@ var allMiceInfo = {
     "Necromancer": {
         "power": 2000,
         "effs": [125,125,125,400,25,75,125,75,0,0],
+    },
+    "Nefarious Nautilus": {
+        "power": 15000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Nerg Chieftain": {
         "power": 12600,
@@ -2739,6 +2839,10 @@ var allMiceInfo = {
         "power": 635,
         "effs": [0,0,0,175,0,100,0,100,0,0],
     },
+    "Pinkielina": {
+        "power": 11000,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
+    },
     "Pintail": {
         "power": 600,
         "effs": [100,100,100,100,100,100,100,100,100,100],
@@ -2769,6 +2873,10 @@ var allMiceInfo = {
     },
     "Polar Bear": {
         "power": 5200,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
+    "Pompous Perch": {
+        "power": 9000,
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Portable Generator": {
@@ -2806,6 +2914,10 @@ var allMiceInfo = {
     "Primal": {
         "power": 12345,
         "effs": [0,0,0,0,0,0,200,0,0,0],
+    },
+    "Princess and the Olive": {
+        "power": 9800,
+        "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Princess Fist": {
         "power": 15500,
@@ -3059,6 +3171,10 @@ var allMiceInfo = {
         "power": 3000,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
+    "Root Rummager": {
+        "power": 9000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
+    },
     "RR-8": {
         "power": 7900,
         "effs": [100,0,300,0,0,0,0,0,0,0],
@@ -3122,6 +3238,10 @@ var allMiceInfo = {
     "Sand Pilgrim": {
         "power": 3000,
         "effs": [0,0,0,0,0,0,100,0,0,0],
+    },
+    "Sand Sifter": {
+        "power": 9000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Sandmouse": {
         "power": 1800,
@@ -3290,6 +3410,10 @@ var allMiceInfo = {
     "Sinister Egg Painter": {
         "power": 1100,
         "effs": [100,100,100,100,0,100,100,100,100,100],
+    },
+    "Sinister Squid": {
+        "power": 13000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Sir Fleekio": {
         "power": 16700,
@@ -3827,6 +3951,10 @@ var allMiceInfo = {
         "power": 200,
         "effs": [100,0,0,100,0,100,100,175,100,0],
     },
+    "Tackle Tracker": {
+        "power": 10000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
     "Tadpole": {
         "power": 5400,
         "effs": [0,0,0,100,0,0,0,0,0,0],
@@ -4175,6 +4303,10 @@ var allMiceInfo = {
         "power": 10000,
         "effs": [0,100,0,0,0,0,0,0,0,0],
     },
+    "Vicious Vampire Squid": {
+        "power": 16000,
+        "effs": [0,0,0,100,0,0,0,0,0,0],
+    },
     "Vigilant Ward": {
         "power": 5000,
         "effs": [0,0,0,0,0,0,0,0,0,200],
@@ -4291,6 +4423,10 @@ var allMiceInfo = {
         "power": 1800,
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
+    "Wily Weevil": {
+        "power": 12000,
+        "effs": [0,0,0,0,0,0,0,100,0,0],
+    },
     "Wind Warrior": {
         "power": 21200,
         "effs": [150,50,0,0,0,0,100,0,0,0],
@@ -4374,142 +4510,6 @@ var allMiceInfo = {
     "Zurreal the Eternal": {
         "power": 73001,
         "effs": [0,0,0,0,0,0,0,5500,0,0],
-    },
-    "Land Loafer": {
-        "power": 8000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Root Rummager": {
-        "power": 9000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Grit Grifter": {
-        "power": 10000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Crazed Cultivator": {
-        "power": 7000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Angry Aphid": {
-        "power": 10000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Wily Weevil": {
-        "power": 12000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Mighty Mite": {
-        "power": 13000,
-        "effs": [0,0,0,0,0,0,0,100,0,0],
-    },
-    "Loathsome Locust": {
-        "power": 20000,
-        "effs": [0,0,0,0,0,0,0,500,0,0],
-    },
-    "Beachcomber": {
-        "power": 8000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Sand Sifter": {
-        "power": 9000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Tackle Tracker": {
-        "power": 10000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Covetous Coastguard": {
-        "power": 7000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Pompous Perch": {
-        "power": 9000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Careless Catfish": {
-        "power": 10000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Melodramatic Minnow": {
-        "power": 11000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Sinister Squid": {
-        "power": 13000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Nefarious Nautilus": {
-        "power": 15000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Vicious Vampire Squid": {
-        "power": 16000,
-        "effs": [0,0,0,100,0,0,0,0,0,0],
-    },
-    "Architeuthulhu of the Abyss": {
-        "power": 100000,
-        "effs": [0,0,0,400,0,0,0,0,0,0],
-    },
-    "Hans Cheesetian Squeakersen": {
-        "power": 8000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Brothers Grimmaus": {
-        "power": 9000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Madame d'Ormouse": {
-        "power": 8500,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Matriarch Gander": {
-        "power": 7000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Little Miss Fluffet": {
-        "power": 9000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Humphrey Dumphrey": {
-        "power": 9500,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Little Bo Squeak": {
-        "power": 10000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Princess and the Olive": {
-        "power": 9800,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Pinkielina": {
-        "power": 11000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Fibbocchio": {
-        "power": 12000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Greenbeard": {
-        "power": 11500,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Flamboyant Flautist": {
-        "power": 12500,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Ice Regent": {
-        "power": 13000,
-        "effs": [0,0,100,0,0,0,0,0,0,0],
-    },
-    "Bitter Grammarian": {
-        "power": 90000,
-        "effs": [0,0,400,0,0,0,0,0,0,0],
-    },
-    "Mythweaver": {
-        "power": 200000,
-        "effs": [0,0,750,0,0,0,0,0,0,0],
     },
 };
 
@@ -4827,14 +4827,18 @@ function dragElement(elmnt) {
 function replaceInfinity(mouse_power, eff){
     // Can't evalute infinity symbol, so was replaced with 9999 as minluck instead
     var infinitySym = String.fromCharCode(0x221E)
+    eff= eff/100;
     if (eff === 0) {
         return infinitySym;
     }
-    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / Math.min(eff/100,1.4));
+    var minluck = Math.ceil(Math.ceil(Math.sqrt(mouse_power/2)) / Math.min(eff,1.4));
     if (minluck >= 9999){
         return infinitySym;
     } else {
-        return minluck;
+        if (2*Math.pow(Math.floor(Math.min(1.4,eff)*minluck),2) >= mouse_power){
+        return minluck}
+        else {minluck = minluck+1
+              return minluck};
     }
 };
 
