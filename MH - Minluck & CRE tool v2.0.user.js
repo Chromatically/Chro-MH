@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.3.0
+// @version      2.3.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -992,8 +992,8 @@ var allMiceInfo = {
         "effs": [50,50,50,50,25,50,50,200,0,0],
     },
     "Dancing Assassin": {
-        "power": 46501,
-        "effs": [0,0,0,0,0,0,0,0,0,250],
+        "power": 51150,
+        "effs": [0,0,0,0,0,0,0,0,0,275],
     },
     "Dangerous Duo": {
         "power": 4999,
@@ -2410,6 +2410,10 @@ var allMiceInfo = {
     "Monstrous Black Widow": {
         "power": 9000,
         "effs": [10,10,10,10,0,10,10,10,10,200],
+    },
+    "Monstrous Midge": {
+        "power": 110000,
+        "effs": [0,0,400,0,0,0,0,0,0,0],
     },
     "Moosker": {
         "power": 45,
