@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.3.1
+// @version      2.3.2
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -2413,7 +2413,7 @@ var allMiceInfo = {
     },
     "Monstrous Midge": {
         "power": 110000,
-        "effs": [0,0,400,0,0,0,0,0,0,0],
+        "effs": [0,0,0,0,0,0,0,400,0,0],
     },
     "Moosker": {
         "power": 45,
