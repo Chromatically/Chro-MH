@@ -4580,10 +4580,11 @@ function getData(){return new Promise((resolve, reject) => {
     });
 })}
 
-function renderBox(list){return new Promise((resolve, reject) => {
+//CR% Average NO AR*CR, take it as you will
+function renderBox(list) {return new Promise((resolve, reject) => {
     document
-     .querySelectorAll("#minluck-list")
-     .forEach(el=> el.remove())
+        .querySelectorAll("#minluck-list")
+        .forEach(el => el.remove())
 
     var power = Number(document.getElementsByClassName("campPage-trap-trapStat power")[0].children[1].innerText.match(/[0-9]/g).join(""))
     var luck = Number(document.getElementsByClassName("campPage-trap-trapStat luck")[0].children[1].innerText)
@@ -4596,16 +4597,16 @@ function renderBox(list){return new Promise((resolve, reject) => {
     div.style.zIndex = "9999";
     var vwvh = localStorage.getItem("Chro-minluck-vwvh")
     var turnRed;
-    if (vwvh){
+    if (vwvh) {
         var position = JSON.parse(vwvh).split(",");
-        div.style.left = position[0]+"vw";
-        div.style.top = position[1]+ "vh";
+        div.style.left = position[0] + "vw";
+        div.style.top = position[1] + "vh";
         turnRed = Number(position[2]);
     } else {
         div.style.left = "35vw";
         div.style.top = "28vh";
         turnRed = 60;
-        localStorage.setItem("Chro-minluck-vwvh",JSON.stringify("35,28,60"));
+        localStorage.setItem("Chro-minluck-vwvh", JSON.stringify("35,28,60"));
     };
     div.style.border = "solid 3px #696969";
     div.style.borderRadius = "20px";
@@ -4616,19 +4617,19 @@ function renderBox(list){return new Promise((resolve, reject) => {
     const buttonDiv = document.createElement("div")
     buttonDiv.id = "button-Div"
 
-    const infoButton = document.createElement("button",{
+    const infoButton = document.createElement("button", {
         id: "info-button"
     });
     infoButton.textContent = "i"
     infoButton.style.marginLeft = "10px"
-    infoButton.onclick = function(){
+    infoButton.onclick = function () {
         let position = JSON.parse(localStorage.getItem("Chro-minluck-vwvh")).split(",");
         let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 5 Aug 2022\nSSBD - Someone\n\n Change tool's position / Set % for red text?\n\n" +
-                         "Left: " + position[0] + "\nTop: " + position[1] + "\nRed text at: " + position[2] + "%","35,28,60");
-        if (mes == null || mes == ""){
+            "Left: " + position[0] + "\nTop: " + position[1] + "\nRed text at: " + position[2] + "%", "35,28,60");
+        if (mes == null || mes == "") {
             return
         } else {
-            localStorage.setItem("Chro-minluck-vwvh",JSON.stringify(mes));
+            localStorage.setItem("Chro-minluck-vwvh", JSON.stringify(mes));
             renderBox(list);
         }
     }
@@ -4639,13 +4640,13 @@ function renderBox(list){return new Promise((resolve, reject) => {
     minButton.textContent = "-"
     minButton.style.cursor = "pointer"
     minButton.style.marginLeft = "5px"
-    minButton.onclick = function(){
-        if (minButton.textContent == "-"){
+    minButton.onclick = function () {
+        if (minButton.textContent == "-") {
             document.getElementById("chro-minluck-table").style.display = "none"
             document.getElementById("button-Div").style.float = "right"
             //$(".maptain-tool-info")[0].style.marginLeft = "0px"
             minButton.textContent = "+"
-        } else if (minButton.textContent == "+"){
+        } else if (minButton.textContent == "+") {
             document.getElementById("chro-minluck-table").style.display = ""
             document.getElementById("button-Div").style.float = ""
             //$(".maptain-tool-info")[0].style.marginLeft = "17px"
@@ -4659,7 +4660,7 @@ function renderBox(list){return new Promise((resolve, reject) => {
     closeButton.textContent = "x";
     closeButton.style.marginLeft = "5px"
     closeButton.onclick = function () {
-    document.body.removeChild(div);
+        document.body.removeChild(div);
     };
 
     const setupInfo = document.createElement("div")
@@ -4667,7 +4668,7 @@ function renderBox(list){return new Promise((resolve, reject) => {
     setupInfo.textContent = "Catch Rate Estimator"
     setupInfo.style.textAlign = "Left"
     setupInfo.style.fontWeight = "bold"
-    setupInfo.style.float= "left"
+    setupInfo.style.float = "left"
     setupInfo.style.marginLeft = "5px"
 
     const powerInfo = document.createElement("div")
@@ -4704,7 +4705,9 @@ function renderBox(list){return new Promise((resolve, reject) => {
     table.appendChild(miceheader);
     table.appendChild(minluckheader);
     table.appendChild(crheader);
-    for (var i=0;i<list.length;i++){
+
+    var miceListWithCR = []
+    for (var i = 0; i < list.length; i++) {
         var row = document.createElement("tr");
         row.className = "chro-minluck-row"
         var mouseName = document.createElement("td");
@@ -4714,15 +4717,21 @@ function renderBox(list){return new Promise((resolve, reject) => {
 
         var mice_power = allMiceInfo[mouseNameConverted].power;
         var mice_eff = allMiceInfo[mouseNameConverted].effs[power_index];
-        var cr_string = convertToCR(power,luck, mice_power, mice_eff);
+        var cr_string = convertToCR(power, luck, mice_power, mice_eff);
         var minluck_string = replaceInfinity(mice_power, mice_eff);
+        var cr_value = convertToCRNumber(power, luck, mice_power, mice_eff);
+
+        miceListWithCR.push({
+            name: list[i],
+            cr: cr_value
+        })
 
         //minluck----
         var minLuck = document.createElement("td");
         minLuck.className = "chro-minluck-data";
         minLuck.style.textAlign = "center";
         minLuck.innerText = minluck_string;
-        if(luck >= minluck_string){
+        if (luck >= minluck_string) {
             minLuck.style.color = "#228B22"
         }
 
@@ -4731,9 +4740,9 @@ function renderBox(list){return new Promise((resolve, reject) => {
         cR.style.textAlign = "center"
         cR.innerText = cr_string;
         var cr_number = (parseInt(cr_string))
-        if(cr_string == "100.00%"){
+        if (cr_string == "100.00%") {
             cR.style.color = "#228B22"
-        } else if (cr_number <= turnRed){
+        } else if (cr_number <= turnRed) {
             cR.style.color = "#990000"
         }
 
@@ -4742,6 +4751,21 @@ function renderBox(list){return new Promise((resolve, reject) => {
         row.appendChild(cR);
         table.appendChild(row);
     }
+
+    var averow = document.createElement("tr");
+    var averowTitTd = document.createElement("td");
+    averowTitTd.innerText = "Average"
+    averowTitTd.style.fontWeight = "bold"
+
+    var averowValTd = document.createElement("td");
+    averowValTd.style.fontWeight = "bold"
+    var crAve = miceListWithCR.reduce((a, b) => a + b.cr, 0) / list.length
+    averowValTd.innerText = (crAve.toFixed(2)) + "%"
+
+    averow.appendChild(averowTitTd);
+    averow.appendChild(document.createElement("td"));
+    averow.appendChild(averowValTd);
+    table.appendChild(averow);
 
     buttonDiv.appendChild(infoButton);
     buttonDiv.appendChild(minButton);
@@ -4753,7 +4777,8 @@ function renderBox(list){return new Promise((resolve, reject) => {
     document.body.appendChild(div);
     dragElement(div);
     resolve();
-})}
+})
+}
 
 function sortTable(table_id, sortColumn){
     var rowData = table_id.getElementsByTagName('tr');
@@ -4843,6 +4868,14 @@ function convertToCR(power,luck,mPower,mEff){
     var result = Math.min(1, (power*mEff + 2*Math.pow(Math.floor(luck*Math.min(mEff,1.4)),2)) / (mPower + power*mEff));
     result = (result*100).toFixed(2) + '%';
     return result;
+}
+
+//cause we're lazy to substring
+function convertToCRNumber(power, luck, mPower, mEff) {
+    mEff = mEff / 100;
+    var result = Math.min(1, (power * mEff + 2 * Math.pow(Math.floor(luck * Math.min(mEff, 1.4)), 2)) / (mPower + power * mEff));
+    result = (result * 100).toFixed(2);
+    return Number(result);
 }
 
 function trapChangeListener(){
