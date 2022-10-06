@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MH - Uncaught Mouse Stats
 // @namespace    http://tampermonkey.net/
-// @version      0.11
+// @version      0.111
 // @description  Displays any uncaught mice in a location.
 // @author       MI
 // @match        https://www.mousehuntgame.com/*
@@ -10,8 +10,5 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
-
-    // Your code here...
-    let var = x
+     var x = y
 })();
