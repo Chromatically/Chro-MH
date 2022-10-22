@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.3.2
+// @version      2.3.3
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -816,7 +816,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Creepy Marionette": {
-        "power": 6000,
+        "power": 4000,
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Crimson Commander": {
