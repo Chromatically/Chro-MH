@@ -816,7 +816,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Creepy Marionette": {
-        "power": 6000,
+        "power": 4000,
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Crimson Commander": {
