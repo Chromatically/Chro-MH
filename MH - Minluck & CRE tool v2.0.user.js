@@ -80,7 +80,7 @@ var allMiceInfo = {
         "effs": [0,0,0,175,0,0,0,0,0,0],
     },
     "Alpha Weremouse": {
-        "power": 10500,
+        "power": 6825,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Amplified Brown": {
@@ -124,7 +124,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,25,75,400,75,0,0],
     },
     "Arcane Summoner": {
-        "power": 11000,
+        "power": 7150,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Arch Champion Necromancer": {
@@ -224,7 +224,7 @@ var allMiceInfo = {
         "effs": [100,0,100,0,0,100,200,25,0,0],
     },
     "Battering Ram": {
-        "power": 59974,
+        "power": 60000,
         "effs": [25,0,0,0,0,0,25,0,0,0],
     },
     "Battle Cleric": {
@@ -928,7 +928,7 @@ var allMiceInfo = {
         "effs": [100,0,0,0,0,0,0,0,0,0],
     },
     "Cursed Taskmaster": {
-        "power": 18502,
+        "power": 12025,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Cursed Thief": {
@@ -1016,7 +1016,7 @@ var allMiceInfo = {
         "effs": [150,0,125,0,0,0,200,0,0,0],
     },
     "Dawn Guardian": {
-        "power": 71999,
+        "power": 72000,
         "effs": [1000,0,0,0,0,0,100,0,0,0],
     },
     "Daydreamer": {
@@ -1768,7 +1768,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Hardworking Hauler": {
-        "power": 2780,
+        "power": 1400,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Hare Razer": {
@@ -1876,7 +1876,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,200,0,125,0,0],
     },
     "Hypnotized Gunslinger": {
-        "power": 10000,
+        "power": 6500,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Ice Regent": {
@@ -2228,16 +2228,16 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,100,0,175,0,0],
     },
     "Master of the Chi Belt": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Chi Claw": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Chi Fang": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Dojo": {
         "power": 10000,
@@ -2284,23 +2284,23 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Meteorite Golem": {
-        "power": 21000,
+        "power": 13650,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Meteorite Miner": {
-        "power": 5100,
+        "power": 2550,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Meteorite Mover": {
-        "power": 10999,
+        "power": 11000,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Meteorite Mystic": {
-        "power": 27002,
+        "power": 17500,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Meteorite Snacker": {
-        "power": 2650,
+        "power": 1325,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Micro": {
@@ -2336,7 +2336,7 @@ var allMiceInfo = {
         "effs": [100,0,0,0,0,100,100,100,0,0],
     },
     "Mining Materials Manager": {
-        "power": 3250,
+        "power": 1650,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Mintaka": {
@@ -2344,11 +2344,11 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,175,0,0,0,0],
     },
     "Mischievous Meteorite Miner": {
-        "power": 3900,
+        "power": 1950,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Mischievous Wereminer": {
-        "power": 10500,
+        "power": 6825,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Miser": {
@@ -2396,7 +2396,7 @@ var allMiceInfo = {
         "effs": [100,0,100,100,0,500,500,100,100,0],
     },
     "Monster of the Meteor": {
-        "power": 87996,
+        "power": 88000,
         "effs": [1000,0,0,0,0,0,100,0,0,0],
     },
     "Monster Tail": {
@@ -2612,19 +2612,19 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Night Shift Materials Manager": {
-        "power": 8400,
+        "power": 5500,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Night Watcher": {
-        "power": 14751,
+        "power": 9587.5,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Nightfire": {
-        "power": 103992,
+        "power": 67600,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Nightmancer": {
-        "power": 64021,
+        "power": 41600,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Nightshade Flower Girl": {
@@ -3104,7 +3104,7 @@ var allMiceInfo = {
         "effs": [100,0,5000,0,0,0,0,0,0,0],
     },
     "Reveling Lycanthrope": {
-        "power": 11750,
+        "power": 7637.5,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Revenant": {
@@ -4384,15 +4384,15 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Wealthy Werewarrior": {
-        "power": 9450,
+        "power": 6142.5,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Werehauler": {
-        "power": 8500,
+        "power": 5500,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Wereminer": {
-        "power": 14501,
+        "power": 9425,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Whelpling": {
