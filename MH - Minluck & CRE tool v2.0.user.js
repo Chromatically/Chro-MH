@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.4.0
+// @version      2.4.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -4063,7 +4063,7 @@ var allMiceInfo = {
         "power": 16500,
         "effs": [0,300,0,0,0,0,0,0,0,0],
     },
-    "Thunderlord": {
+    "⚡Thunderlord⚡": {
         "power": 13500,
         "effs": [0,300,0,0,0,0,0,0,0,0],
     },
