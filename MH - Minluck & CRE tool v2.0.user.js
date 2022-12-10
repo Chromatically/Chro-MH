@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.5.0
+// @version      2.5.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -1494,6 +1494,10 @@ var allMiceInfo = {
     "Frog": {
         "power": 590,
         "effs": [100,0,0,100,0,100,100,175,100,0],
+    },
+    "Frost King": {
+        "power": 1768,
+        "effs": [100,100,100,100,0,100,100,100,100,0],
     },
     "Frostbite": {
         "power": 14399,
