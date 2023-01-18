@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.5.1
+// @version      2.6.0
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -1165,7 +1165,7 @@ var allMiceInfo = {
     },
     "Dumpling Chef": {
         "power": 2000,
-        "effs": [0,0,0,0,0,100,0,175,0,0],
+        "effs": [100,100,100,100,100,100,100,175,100,100],
     },
     "Dumpling Delivery": {
         "power": 2305,
@@ -2124,7 +2124,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,175],
     },
     "Lunar Red Candle Maker": {
-        "power": 888,
+        "power": 88,
         "effs": [101,101,101,101,101,101,101,101,300,300],
     },
     "Lycan": {
