@@ -1165,7 +1165,7 @@ var allMiceInfo = {
     },
     "Dumpling Chef": {
         "power": 2000,
-        "effs": [0,0,0,0,0,100,0,175,0,0],
+        "effs": [100,100,100,100,100,100,100,175,100,100],
     },
     "Dumpling Delivery": {
         "power": 2305,
@@ -2124,7 +2124,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,175],
     },
     "Lunar Red Candle Maker": {
-        "power": 888,
+        "power": 88,
         "effs": [101,101,101,101,101,101,101,101,300,300],
     },
     "Lycan": {
