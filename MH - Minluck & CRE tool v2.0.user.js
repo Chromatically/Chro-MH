@@ -188,7 +188,7 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Balack the Banished": {
-        "power": 72929,
+        "power": 62000,
         "effs": [50,0,200,0,0,0,25,0,0,0],
     },
     "Bandit": {
@@ -1064,7 +1064,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,175,0,0,0,0],
     },
     "Derr Lich": {
-        "power": 20800,
+        "power": 8400,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "Desert Archer": {
@@ -1240,7 +1240,7 @@ var allMiceInfo = {
         "effs": [0,0,0,175,0,0,0,0,0,0],
     },
     "Elub Lich": {
-        "power": 22000,
+        "power": 8800,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "Elven Princess": {
@@ -1276,7 +1276,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,100],
     },
     "Enslaved Spirit": {
-        "power": 5732,
+        "power": 5730,
         "effs": [150,0,125,0,0,0,200,0,0,0],
     },
     "Epoch Golem": {
@@ -2600,7 +2600,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,175,0,0],
     },
     "Nerg Lich": {
-        "power": 20900,
+        "power": 8000,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "New Year's": {
@@ -2980,8 +2980,8 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,100],
     },
     "Pygmy Wrangler": {
-        "power": 3600,
-        "effs": [0,0,0,0,0,0,200,0,0,0],
+        "power": 2400,
+        "effs": [0,0,100,0,0,0,200,0,0,0],
     },
     "Pyrehyde": {
         "power": 13700,
@@ -3948,8 +3948,8 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Swarm of Pygmy Mice": {
-        "power": 3000,
-        "effs": [0,0,0,0,0,0,200,0,0,0],
+        "power": 1800,
+        "effs": [0,0,100,0,0,0,200,0,0,0],
     },
     "Swashblade": {
         "power": 8709,
