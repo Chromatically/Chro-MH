@@ -5,7 +5,7 @@
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
-// @version      2.3.2
+// @version      2.6.1
 // @grant        none
 // @namespace https://greasyfork.org/users/748165
 // ==/UserScript==
@@ -80,7 +80,7 @@ var allMiceInfo = {
         "effs": [0,0,0,175,0,0,0,0,0,0],
     },
     "Alpha Weremouse": {
-        "power": 10500,
+        "power": 6825,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Amplified Brown": {
@@ -124,7 +124,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,25,75,400,75,0,0],
     },
     "Arcane Summoner": {
-        "power": 11000,
+        "power": 7150,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Arch Champion Necromancer": {
@@ -188,7 +188,7 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Balack the Banished": {
-        "power": 72929,
+        "power": 62000,
         "effs": [50,0,200,0,0,0,25,0,0,0],
     },
     "Bandit": {
@@ -224,7 +224,7 @@ var allMiceInfo = {
         "effs": [100,0,100,0,0,100,200,25,0,0],
     },
     "Battering Ram": {
-        "power": 59974,
+        "power": 60000,
         "effs": [25,0,0,0,0,0,25,0,0,0],
     },
     "Battle Cleric": {
@@ -292,7 +292,7 @@ var allMiceInfo = {
         "effs": [0,0,100,100,0,0,0,0,0,0],
     },
     "Black Diamond Racer": {
-        "power": 1215,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Black Mage": {
@@ -328,7 +328,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,125,0,200,0,0],
     },
     "Borean Commander": {
-        "power": 755,
+        "power": 2400,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Bottled": {
@@ -392,7 +392,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,100,100,100,100,100,100],
     },
     "Builder": {
-        "power": 510,
+        "power": 559,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Bulwark of Ascent": {
@@ -428,7 +428,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Candy Cane": {
-        "power": 85,
+        "power": 172,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Candy Cat": {
@@ -568,7 +568,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Christmas Tree": {
-        "power": 460,
+        "power": 847,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Chrono": {
@@ -648,7 +648,7 @@ var allMiceInfo = {
         "effs": [100,0,100,0,0,25,200,25,0,0],
     },
     "Confused Courier": {
-        "power": 510,
+        "power": 2064,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Conjurer": {
@@ -816,7 +816,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Creepy Marionette": {
-        "power": 6000,
+        "power": 4000,
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Crimson Commander": {
@@ -928,7 +928,7 @@ var allMiceInfo = {
         "effs": [100,0,0,0,0,0,0,0,0,0],
     },
     "Cursed Taskmaster": {
-        "power": 18502,
+        "power": 12025,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Cursed Thief": {
@@ -1016,7 +1016,7 @@ var allMiceInfo = {
         "effs": [150,0,125,0,0,0,200,0,0,0],
     },
     "Dawn Guardian": {
-        "power": 71999,
+        "power": 72000,
         "effs": [1000,0,0,0,0,0,100,0,0,0],
     },
     "Daydreamer": {
@@ -1064,7 +1064,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,175,0,0,0,0],
     },
     "Derr Lich": {
-        "power": 20800,
+        "power": 8400,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "Desert Archer": {
@@ -1088,7 +1088,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,200,0],
     },
     "Destructoy": {
-        "power": 370,
+        "power": 1506,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Devious Gentleman": {
@@ -1124,7 +1124,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Double Black Diamond Racer": {
-        "power": 2100,
+        "power": 2400,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Draconic Warden": {
@@ -1165,7 +1165,7 @@ var allMiceInfo = {
     },
     "Dumpling Chef": {
         "power": 2000,
-        "effs": [0,0,0,0,0,100,0,175,0,0],
+        "effs": [100,100,100,100,100,100,100,175,100,100],
     },
     "Dumpling Delivery": {
         "power": 2305,
@@ -1224,7 +1224,7 @@ var allMiceInfo = {
         "effs": [0,0,0,175,0,0,0,0,0,0],
     },
     "Elf": {
-        "power": 755,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Elite Guardian": {
@@ -1240,7 +1240,7 @@ var allMiceInfo = {
         "effs": [0,0,0,175,0,0,0,0,0,0],
     },
     "Elub Lich": {
-        "power": 22000,
+        "power": 8800,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "Elven Princess": {
@@ -1276,7 +1276,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,100],
     },
     "Enslaved Spirit": {
-        "power": 5732,
+        "power": 5730,
         "effs": [150,0,125,0,0,0,200,0,0,0],
     },
     "Epoch Golem": {
@@ -1480,20 +1480,24 @@ var allMiceInfo = {
         "effs": [100,0,0,100,0,100,100,175,100,0],
     },
     "Free Skiing": {
-        "power": 460,
+        "power": 2064,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Frightened Flying Fireworks": {
-        "power": 465,
+        "power": 106,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Frigid Foreman": {
-        "power": 85,
+        "power": 1276,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Frog": {
         "power": 590,
         "effs": [100,0,0,100,0,100,100,175,100,0],
+    },
+    "Frost King": {
+        "power": 1768,
+        "effs": [100,100,100,100,0,100,100,100,100,0],
     },
     "Frostbite": {
         "power": 14399,
@@ -1592,11 +1596,11 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Gingerbread": {
-        "power": 370,
+        "power": 558,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Glacia Ice Fist": {
-        "power": 510,
+        "power": 1768,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Gladiator": {
@@ -1612,7 +1616,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,300,0,300,300,0],
     },
     "Glazy": {
-        "power": 205,
+        "power": 2,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Glitchpaw": {
@@ -1680,15 +1684,15 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,125,300],
     },
     "Great Giftnapper": {
-        "power": 1695,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Great Winter Hunt Impostor": {
-        "power": 1695,
+        "power": 3780,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Greedy Al": {
-        "power": 2100,
+        "power": 2400,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Greenbeard": {
@@ -1768,7 +1772,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Hardworking Hauler": {
-        "power": 2780,
+        "power": 1400,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Hare Razer": {
@@ -1816,7 +1820,7 @@ var allMiceInfo = {
         "effs": [100,0,300,0,0,0,0,0,0,0],
     },
     "Hoarder": {
-        "power": 70,
+        "power": 172,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Hollowed": {
@@ -1876,7 +1880,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,200,0,125,0,0],
     },
     "Hypnotized Gunslinger": {
-        "power": 10000,
+        "power": 6500,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Ice Regent": {
@@ -1884,7 +1888,7 @@ var allMiceInfo = {
         "effs": [0,0,100,0,0,0,0,0,0,0],
     },
     "Iceberg Sculptor": {
-        "power": 755,
+        "power": 2790,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Iceblade": {
@@ -1952,7 +1956,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Joy": {
-        "power": 85,
+        "power": 2,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Juliyes": {
@@ -2120,7 +2124,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,175],
     },
     "Lunar Red Candle Maker": {
-        "power": 888,
+        "power": 88,
         "effs": [101,101,101,101,101,101,101,101,300,300],
     },
     "Lycan": {
@@ -2136,8 +2140,8 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,75,0,75,0,0],
     },
     "Mad Elf": {
-        "power": 2100,
-        "effs": [100,75,75,75,0,75,75,75,75,75],
+        "power": 3780,
+        "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Madame d'Ormouse": {
         "power": 8500,
@@ -2228,16 +2232,16 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,100,0,175,0,0],
     },
     "Master of the Chi Belt": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Chi Claw": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Chi Fang": {
-        "power": 92000,
-        "effs": [0,0,0,0,0,0,0,0,0,400],
+        "power": 115000,
+        "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Master of the Dojo": {
         "power": 10000,
@@ -2284,23 +2288,23 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Meteorite Golem": {
-        "power": 21000,
+        "power": 13650,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Meteorite Miner": {
-        "power": 5100,
+        "power": 2550,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Meteorite Mover": {
-        "power": 10999,
+        "power": 11000,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Meteorite Mystic": {
-        "power": 27002,
+        "power": 17500,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Meteorite Snacker": {
-        "power": 2650,
+        "power": 1325,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Micro": {
@@ -2336,7 +2340,7 @@ var allMiceInfo = {
         "effs": [100,0,0,0,0,100,100,100,0,0],
     },
     "Mining Materials Manager": {
-        "power": 3250,
+        "power": 1650,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Mintaka": {
@@ -2344,19 +2348,19 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,175,0,0,0,0],
     },
     "Mischievous Meteorite Miner": {
-        "power": 3900,
+        "power": 1950,
         "effs": [50,0,0,0,0,0,50,0,200,0],
     },
     "Mischievous Wereminer": {
-        "power": 10500,
+        "power": 6825,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Miser": {
-        "power": 1030,
+        "power": 2790,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Missile Toe": {
-        "power": 1695,
+        "power": 2400,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Mist Maker": {
@@ -2396,7 +2400,7 @@ var allMiceInfo = {
         "effs": [100,0,100,100,0,500,500,100,100,0],
     },
     "Monster of the Meteor": {
-        "power": 87996,
+        "power": 88000,
         "effs": [1000,0,0,0,0,0,100,0,0,0],
     },
     "Monster Tail": {
@@ -2440,15 +2444,15 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,500],
     },
     "Mouse of Winter Future": {
-        "power": 2560,
+        "power": 1276,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Mouse of Winter Past": {
-        "power": 3100,
+        "power": 1768,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Mouse of Winter Present": {
-        "power": 2095,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Mouse With No Name": {
@@ -2580,7 +2584,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Naughty Nougat": {
-        "power": 2560,
+        "power": 4428,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Necromancer": {
@@ -2596,11 +2600,11 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,175,0,0],
     },
     "Nerg Lich": {
-        "power": 20900,
+        "power": 8000,
         "effs": [150,0,200,0,0,0,125,0,0,0],
     },
     "New Year's": {
-        "power": 755,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Nibbler": {
@@ -2608,23 +2612,23 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Nice Knitting": {
-        "power": 510,
+        "power": 419,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Night Shift Materials Manager": {
-        "power": 8400,
+        "power": 5500,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Night Watcher": {
-        "power": 14751,
+        "power": 9587.5,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Nightfire": {
-        "power": 103992,
+        "power": 67600,
         "effs": [150,0,0,0,0,0,100,0,0,0],
     },
     "Nightmancer": {
-        "power": 64021,
+        "power": 41600,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Nightshade Flower Girl": {
@@ -2656,7 +2660,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,100,0,175,0,0],
     },
     "Nitro Racer": {
-        "power": 1695,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Nomad": {
@@ -2672,7 +2676,7 @@ var allMiceInfo = {
         "effs": [100,0,0,0,0,100,100,100,0,0],
     },
     "Nutcracker": {
-        "power": 1215,
+        "power": 2400,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Octomermaid": {
@@ -2680,7 +2684,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Ol' King Coal": {
-        "power": 1695,
+        "power": 1506,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Old One": {
@@ -2708,7 +2712,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,100,0,0,0],
     },
     "Ornament": {
-        "power": 1215,
+        "power": 2790,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Outbreak Assassin": {
@@ -2792,7 +2796,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,200,0],
     },
     "Party Head": {
-        "power": 510,
+        "power": 266,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Passenger": {
@@ -2908,7 +2912,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,900],
     },
     "Present": {
-        "power": 85,
+        "power": 778,
         "effs": [100,100,100,100,100,100,100,100,100,100],
     },
     "Prestigious Adventurer": {
@@ -2976,8 +2980,8 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,0,100],
     },
     "Pygmy Wrangler": {
-        "power": 3600,
-        "effs": [0,0,0,0,0,0,200,0,0,0],
+        "power": 2400,
+        "effs": [0,0,100,0,0,0,200,0,0,0],
     },
     "Pyrehyde": {
         "power": 13700,
@@ -3020,7 +3024,7 @@ var allMiceInfo = {
         "effs": [100,50,0,0,0,0,150,0,0,0],
     },
     "Rainbow Racer": {
-        "power": 3100,
+        "power": 2790,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Rainmancer": {
@@ -3088,7 +3092,7 @@ var allMiceInfo = {
         "effs": [0,300,0,0,0,0,0,0,0,0],
     },
     "Reinbo": {
-        "power": 755,
+        "power": 1275,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Relic Hunter": {
@@ -3104,7 +3108,7 @@ var allMiceInfo = {
         "effs": [100,0,5000,0,0,0,0,0,0,0],
     },
     "Reveling Lycanthrope": {
-        "power": 11750,
+        "power": 7637.5,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Revenant": {
@@ -3112,7 +3116,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Ribbon": {
-        "power": 85,
+        "power": 106,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Richard the Rich": {
@@ -3120,7 +3124,7 @@ var allMiceInfo = {
         "effs": [200,200,200,200,0,200,200,200,200,0],
     },
     "Ridiculous Sweater": {
-        "power": 370,
+        "power": 558,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Rift Bio Engineer": {
@@ -3196,7 +3200,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,200,0],
     },
     "S.N.O.W. Golem": {
-        "power": 1695,
+        "power": 4720,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Saboteur": {
@@ -3300,7 +3304,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,300,0,275,0,0],
     },
     "Scrooge": {
-        "power": 2100,
+        "power": 2064,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Scruffy": {
@@ -3396,7 +3400,7 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Shorts-All-Year": {
-        "power": 1695,
+        "power": 2064,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Shroom": {
@@ -3480,7 +3484,7 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,0],
     },
     "Slay Ride": {
-        "power": 1695,
+        "power": 1067,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Slayer": {
@@ -3532,27 +3536,27 @@ var allMiceInfo = {
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Boulder": {
-        "power": 85,
-        "effs": [100,100,100,100,0,100,100,100,100,0],
+        "power": 419,
+        "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Bowler": {
         "power": 6500,
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Snow Fort": {
-        "power": 4510,
+        "power": 712,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Golem Architect": {
-        "power": 370,
+        "power": 882,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Golem Jockey": {
-        "power": 510,
+        "power": 847,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Scavenger": {
-        "power": 510,
+        "power": 1506,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snow Slinger": {
@@ -3568,27 +3572,27 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Snow Sorceress": {
-        "power": 3740,
+        "power": 1508,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snowball Hoarder": {
-        "power": 288,
-        "effs": [100,100,100,100,0,100,100,100,100,0],
+        "power": 558,
+        "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snowblind": {
         "power": 5600,
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Snowblower": {
-        "power": 288,
+        "power": 1768,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snowflake": {
-        "power": 285,
+        "power": 286,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Snowglobe": {
-        "power": 370,
+        "power": 1506,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Sock Puppet Ghost": {
@@ -3724,7 +3728,7 @@ var allMiceInfo = {
         "effs": [0,0,100,100,0,0,0,0,0,0],
     },
     "Sporty Ski Instructor": {
-        "power": 370,
+        "power": 680,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Spotted": {
@@ -3764,7 +3768,7 @@ var allMiceInfo = {
         "effs": [100,0,100,100,0,100,100,100,100,0],
     },
     "Squeaker Claws": {
-        "power": 3100,
+        "power": 5210,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Stack of Thieves": {
@@ -3812,7 +3816,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Stocking": {
-        "power": 3100,
+        "power": 3245,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Stone Cutter": {
@@ -3848,7 +3852,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Stuck Snowball": {
-        "power": 1033,
+        "power": 1068,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Student of the Cheese Belt": {
@@ -3944,8 +3948,8 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Swarm of Pygmy Mice": {
-        "power": 3000,
-        "effs": [0,0,0,0,0,0,200,0,0,0],
+        "power": 1800,
+        "effs": [0,0,100,0,0,0,200,0,0,0],
     },
     "Swashblade": {
         "power": 8709,
@@ -4063,7 +4067,7 @@ var allMiceInfo = {
         "power": 16500,
         "effs": [0,300,0,0,0,0,0,0,0,0],
     },
-    "Thunderlord": {
+    "⚡Thunderlord⚡": {
         "power": 13500,
         "effs": [0,300,0,0,0,0,0,0,0,0],
     },
@@ -4124,7 +4128,7 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Toboggan Technician": {
-        "power": 85,
+        "power": 1067,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Tomb Exhumer": {
@@ -4156,7 +4160,7 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Toy": {
-        "power": 85,
+        "power": 419,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Toy Sylvan": {
@@ -4164,7 +4168,7 @@ var allMiceInfo = {
         "effs": [25,25,25,25,25,100,25,100,0,0],
     },
     "Toy Tinkerer": {
-        "power": 120,
+        "power": 680,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Trailblazer": {
@@ -4232,7 +4236,7 @@ var allMiceInfo = {
         "effs": [101,101,101,101,101,101,101,101,101,300],
     },
     "Triple Lutz": {
-        "power": 285,
+        "power": 266,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Tritus": {
@@ -4248,7 +4252,7 @@ var allMiceInfo = {
         "effs": [0,0,0,0,0,0,0,0,200,0],
     },
     "Tundra Huntress": {
-        "power": 6620,
+        "power": 5582,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Turret Guard": {
@@ -4384,15 +4388,15 @@ var allMiceInfo = {
         "effs": [10,10,10,10,0,10,10,10,10,100],
     },
     "Wealthy Werewarrior": {
-        "power": 9450,
+        "power": 6142.5,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Werehauler": {
-        "power": 8500,
+        "power": 5500,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Wereminer": {
-        "power": 14501,
+        "power": 9425,
         "effs": [100,0,0,0,0,0,150,0,0,0],
     },
     "Whelpling": {
@@ -4480,7 +4484,7 @@ var allMiceInfo = {
         "effs": [25,25,25,25,25,100,25,100,0,0],
     },
     "Wreath Thief": {
-        "power": 2100,
+        "power": 778,
         "effs": [100,100,100,100,0,100,100,100,125,100],
     },
     "Yeti": {
@@ -4488,7 +4492,7 @@ var allMiceInfo = {
         "effs": [0,0,0,100,0,0,0,0,0,0],
     },
     "Young Prodigy Racer": {
-        "power": 85,
+        "power": 712,
         "effs": [100,100,100,100,0,100,100,100,100,100],
     },
     "Zealous Academic": {
