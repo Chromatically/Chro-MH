@@ -1165,7 +1165,7 @@ var allMiceInfo = {
     },
     "Dumpling Chef": {
         "power": 2000,
-        "effs": 0,0,0,0,0,100,0,175,0,0,
+        "effs": [0,0,0,0,0,100,0,175,0,0],
     },
     "Dumpling Delivery": {
         "power": 2305,
