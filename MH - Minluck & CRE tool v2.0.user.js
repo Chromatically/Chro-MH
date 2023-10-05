@@ -13,6 +13,14 @@
 //User Settings-----------------------------
 //var turn_red_when = 60; //Turns red when your CR falls below it, in % Deprecated, set it with the tool nox now (click on "i");
 //User Settings End-------------------------
+const addStyles = (styles) => {
+    const style = document.createElement('style');
+    style.id = `chro-minluck-styles`;
+    style.innerHTML = styles;
+    document.head.appendChild(style);
+
+    return style;
+};
 
 (function() {
     if (document.getElementsByClassName("trapImageView-trapAuraContainer")[0] && document.getElementById("mousehuntContainer").className.includes("PageCamp")){
@@ -4526,27 +4534,137 @@ var allType = ['Arcane','Draconic','Forgotten','Hydro','Parental','Physical','Sh
 function render(){
     const div = document.createElement("div");
     div.className = "min-luck-container";
-    div.style.position = "absolute";
-    var weaponName = user.weapon_name;
-    if (weaponName == "Smoldering Stone Sentinel Trap"){
-        div.style.top = "1px";
-        div.style.right = "10px"
-    } else {
-        div.style.top = "7px";
-        div.style.right = "7px";
+
+    if (user.weapon_name == "Smoldering Stone Sentinel Trap"){
+        div.classList.add('min-luck-container-ssst');
     }
 
     const luck_btn = document.createElement("img");
     luck_btn.src = 'https://www.mousehuntgame.com/images/ui/camp/trap/stat_luck.png?asset_cache_version=2'
-    luck_btn.className = "min-luck-button"
-    luck_btn.style.width = "20px"
-    luck_btn.style.height = "20px"
-    luck_btn.onclick = function(){getData()}
+    luck_btn.className = "min-luck-button";
+    luck_btn.addEventListener('click', getData);
 
     div.appendChild(luck_btn);
     const trap_container = document.getElementsByClassName("trapImageView-trapAuraContainer")[0]
     trap_container.insertAdjacentElement("afterend",div);
     colourClover();
+
+    addStyles(`.min-luck-container {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
+
+    .min-luck-container-ssst {
+        top: 1px;
+        right: 10px;
+    }
+
+    .min-luck-button {
+        width: 20px;
+        height: 20px;
+    }
+
+    #minluck-list {
+        background-color: #f5f5f5;
+        position: fixed;
+        z-index: 9999;
+
+        border: 3px solid #696969;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        min-width: 207px;
+
+        left: 35vw;
+        top: 28vh;
+    }
+
+    #button-Div {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #info-button {
+        margin-left: 10px;
+    }
+
+    #minimise-button {
+        cursor: pointer;
+        margin-left: 5px;
+        display: block;
+    }
+
+    #chro-minluck-table.minimised {
+        display: none;
+    }
+
+    #close-button {
+        margin-left: 5px;
+    }
+
+    .setup-info {
+        text-align: left;
+        font-weight: 900;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .power-info, .luck-info {
+        font-weight: 400;
+    }
+
+    #chro-minluck-table {
+        text-align: left;
+        border-spacing: 1em 0;
+        padding-top: 5px;
+    }
+
+    .chro-minluck-header-name,
+    .chro-minluck-header-minluck,
+    .chro-minluck-header-cr {
+        font-weight: 900;
+    }
+
+    .chro-minluck-header-minluck,
+    .chro-minluck-header-cr {
+        text-align: center;
+    }
+
+    .chro-minluck-data,
+    .chro-minluck-data-cr {
+        text-align: center;
+    }
+
+    .good-minluck {
+        color: #228B22;
+    }
+
+    .bad-minluck {
+        color: #990000;
+    }
+
+    .min-luck-button {
+        display: none;
+    }
+
+    .min-luck-button.blue,
+    .min-luck-button.red,
+    .min-luck-button.green {
+        display: block; /* this is to prevent a flash of the clover changing color */
+    }
+
+    .min-luck-button.blue {
+        filter: hue-rotate(100deg);
+    }
+
+    .min-luck-button.red {
+        filter: hue-rotate(185deg);
+    }
+
+    .min-luck-button.green {
+        filter: hue-rotate(0deg);
+    }`);
 }
 
 function getData(){return new Promise((resolve, reject) => {
@@ -4599,9 +4717,7 @@ function renderBox(list){return new Promise((resolve, reject) => {
 
     const div = document.createElement("div");
     div.id = "minluck-list";
-    div.style.backgroundColor = "#F5F5F5";
-    div.style.position = "fixed";
-    div.style.zIndex = "9999";
+
     var vwvh = localStorage.getItem("Chro-minluck-vwvh")
     var turnRed;
     if (vwvh){
@@ -4610,25 +4726,17 @@ function renderBox(list){return new Promise((resolve, reject) => {
         div.style.top = position[1]+ "vh";
         turnRed = Number(position[2]);
     } else {
-        div.style.left = "35vw";
-        div.style.top = "28vh";
         turnRed = 60;
         localStorage.setItem("Chro-minluck-vwvh",JSON.stringify("35,28,60"));
     };
-    div.style.border = "solid 3px #696969";
-    div.style.borderRadius = "20px";
-    div.style.padding = "10px";
-    div.style.textAlign = "center";
-    div.style.minWidth = "207px"
 
     const buttonDiv = document.createElement("div")
     buttonDiv.id = "button-Div"
 
-    const infoButton = document.createElement("button",{
-        id: "info-button"
-    });
+    const infoButton = document.createElement("button");
+    infoButton.id = "info-button"
+
     infoButton.textContent = "i"
-    infoButton.style.marginLeft = "10px"
     infoButton.onclick = function(){
         let position = JSON.parse(localStorage.getItem("Chro-minluck-vwvh")).split(",");
         let mes = prompt("More information can be found at:\nhttps://tsitu.github.io/MH-Tools/cre.html\nLast Updated 5 Aug 2022\nSSBD - Someone\n\n Change tool's position / Set % for red text?\n\n" +
@@ -4639,84 +4747,72 @@ function renderBox(list){return new Promise((resolve, reject) => {
             localStorage.setItem("Chro-minluck-vwvh",JSON.stringify(mes));
             renderBox(list);
         }
-    }
+    };
 
-    const minButton = document.createElement("button", {
-        id: "minimise-button"
-    });
+    const minButton = document.createElement("button");
+    minButton.id = "minimise-button"
+
     minButton.textContent = "-"
-    minButton.style.cursor = "pointer"
-    minButton.style.marginLeft = "5px"
     minButton.onclick = function(){
+        const minluckTable = document.getElementById("chro-minluck-table");
         if (minButton.textContent == "-"){
-            document.getElementById("chro-minluck-table").style.display = "none"
-            document.getElementById("button-Div").style.float = "right"
-            //$(".maptain-tool-info")[0].style.marginLeft = "0px"
+            minluckTable.classList.add("minimised")
             minButton.textContent = "+"
         } else if (minButton.textContent == "+"){
-            document.getElementById("chro-minluck-table").style.display = ""
-            document.getElementById("button-Div").style.float = ""
-            //$(".maptain-tool-info")[0].style.marginLeft = "17px"
+            minluckTable.classList.remove("minimised")
             minButton.textContent = "-"
         }
-    }
-
-    const closeButton = document.createElement("button", {
-        id: "close-button"
-    });
-    closeButton.textContent = "x";
-    closeButton.style.marginLeft = "5px"
-    closeButton.onclick = function () {
-    document.body.removeChild(div);
     };
+
+    const closeButton = document.createElement("button");
+    closeButton.id = "close-button"
+
+    closeButton.textContent = "x";
+    closeButton.addEventListener("click", () => {
+        document.body.removeChild(div);
+    });
 
     const setupInfo = document.createElement("div")
     setupInfo.className = "setup-info"
     setupInfo.textContent = "Catch Rate Estimator"
-    setupInfo.style.textAlign = "Left"
-    setupInfo.style.fontWeight = "bold"
-    setupInfo.style.float= "left"
-    setupInfo.style.marginLeft = "5px"
 
     const powerInfo = document.createElement("div")
     powerInfo.className = "power-info"
     powerInfo.textContent = "Power: ".concat(power)
-    powerInfo.style.fontWeight = "normal"
 
     const luckInfo = document.createElement("div")
     luckInfo.className = "luck-info"
     luckInfo.textContent = "Luck: ".concat(luck);
-    luckInfo.style.fontWeight = "normal"
 
     setupInfo.appendChild(powerInfo);
     setupInfo.appendChild(luckInfo);
 
     const table = document.createElement("table");
     table.id = "chro-minluck-table"
-    table.style.textAlign = "left";
-    table.style.borderSpacing = "1em 0";
-    table.style.paddingTop = "5px"
 
     const miceheader = document.createElement("th");
+    miceheader.className = "chro-minluck-header-name"
     miceheader.innerText = "Mouse Name"
-    miceheader.style.fontWeight = "bold"
-    const minluckheader = document.createElement("th");
-    minluckheader.innerText = "Minluck"
-    minluckheader.style.textAlign = "center"
-    minluckheader.style.fontWeight = "bold"
-    const crheader = document.createElement("th");
-    crheader.innerText = "CRE"
-    crheader.style.textAlign = "center"
-    crheader.style.fontWeight = "bold"
-
     table.appendChild(miceheader);
+
+    const minluckheader = document.createElement("th");
+    minluckheader.className = "chro-minluck-header-minluck"
+    minluckheader.innerText = "Minluck"
     table.appendChild(minluckheader);
+
+    const crheader = document.createElement("th");
+    crheader.className = "chro-minluck-header-cr"
+    crheader.innerText = "CRE"
     table.appendChild(crheader);
+
     for (var i=0;i<list.length;i++){
         var row = document.createElement("tr");
         row.className = "chro-minluck-row"
+
         var mouseName = document.createElement("td");
         mouseName.innerText = list[i];
+        row.appendChild(mouseName);
+
         var mouseNameConverted = list[i];
         var power_index = allType.indexOf(powerType);
 
@@ -4728,26 +4824,26 @@ function renderBox(list){return new Promise((resolve, reject) => {
         //minluck----
         var minLuck = document.createElement("td");
         minLuck.className = "chro-minluck-data";
-        minLuck.style.textAlign = "center";
         minLuck.innerText = minluck_string;
         if(luck >= minluck_string){
-            minLuck.style.color = "#228B22"
+            minLuck.classList.add('good-minluck');
         }
+        row.appendChild(minLuck);
+
 
         //catch rate-------
         var cR = document.createElement("td");
-        cR.style.textAlign = "center"
+        cR.className = "chro-minluck-data-cr";
         cR.innerText = cr_string;
         var cr_number = (parseInt(cr_string))
         if(cr_string == "100.00%"){
-            cR.style.color = "#228B22"
+            cR.classList.add('good-minluck');
         } else if (cr_number <= turnRed){
-            cR.style.color = "#990000"
+            cR.classList.add('bad-minluck');
         }
-
-        row.appendChild(mouseName);
-        row.appendChild(minLuck);
         row.appendChild(cR);
+
+
         table.appendChild(row);
     }
 
@@ -4756,7 +4852,6 @@ function renderBox(list){return new Promise((resolve, reject) => {
     buttonDiv.appendChild(closeButton);
     div.appendChild(setupInfo);
     div.appendChild(buttonDiv)
-    //div.appendChild(minluck_title);
     div.appendChild(table);
     document.body.appendChild(div);
     dragElement(div);
@@ -4872,25 +4967,25 @@ function trapChangeListener(){
 };
 
 async function colourClover(){
-    var isOpened;
-    var colour;
     var button = $(".min-luck-button")[0];
-    document.getElementById("minluck-list")? isOpened = true : isOpened = false;
+
     const p = await getData()
-    .then(res=>{
-        var data = $(".chro-minluck-data");
-        var count = 0;
-        for (var i=0; i<data.length; i++){
-            data[i].style.color == "rgb(34, 139, 34)" ? count++ : null
-        }
-        count/data.length == 1 ? colour = "blue" : count/data.length >= 0.5 ? colour = "green" : colour = "red";
-        colour == "blue" ? button.style.filter = "hue-rotate(100deg)" : null;
-        colour == "red" ? button.style.filter = "hue-rotate(185deg)" : null;
-        colour == "green" ? button.style.filter = "hue-rotate(0deg)" : null;
-    })
-    if (isOpened == false){
-        document
-            .querySelectorAll("#minluck-list")
-            .forEach(el=> el.remove())
+        .then(res=>{
+            var data = $(".chro-minluck-data");
+            var count = 0;
+            for (var i=0; i<data.length; i++){
+                data[i].style.color == "rgb(34, 139, 34)" ? count++ : null
+            }
+            if (count/data.length == 1) {
+                button.classList.add("blue");
+            } else if (count/data.length >= 0.5) {
+                button.classList.add("green");
+            } else {
+                button.classList.add("red");
+            }
+        });
+
+    if (document.getElementById("minluck-list")) {
+        document.querySelectorAll("#minluck-list").forEach(el=> el.remove());
     }
 }
