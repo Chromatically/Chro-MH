@@ -2,7 +2,7 @@
 // @name         MH - Consolidated Map Colour Coder
 // @description  Colour code your maps
 // @author       Chromatical
-// @version      1.2.7
+// @version      1.2.11
 // @match        https://www.mousehuntgame.com/*
 // @match        https://apps.facebook.com/mousehunt/*
 // @icon         https://www.google.com/s2/favicons?domain=mousehuntgame.com
@@ -827,8 +827,15 @@ function loadPreset(){
             ["Pump","#e3ac30",["Reality Restitch","Time Punk","Time Tailor","Time Thief","Space Party-Time Plumber"]],
             ["QA","#6c71c6",["Cupcake Candle Thief","Cupcake Cutie","Sprinkly Sweet Cupcake Cook","Cupcake Camo","Cupcake Runner"]],
             ["FRC","#a9edf9",["Factory Technician"]],
-            ["Vince","#cd87ff",["Vincent, The Magnificent"]],
-        ]]
+            ["Vince","#cd87ff",["Vincent, The Magnificent"]]
+        ]],
+        ["Fort Rox Treasure Chest",[
+            ["Day","yellow",["Meteorite Snacker","Mining Materials Manager","Mischievous Meteorite Miner","Hardworking Hauler","Meteorite Miner","Meteorite Mover"]],
+            ["Dawn","silver",["Dawn Guardian","Monster of the Meteor"]],
+            ["Special","pink",["Nightmancer","Nightfire"]],
+            ["Shadow","orange",["Night Shift Materials Manager","Werehauler","Wealthy Werewarrior","Mischievous Wereminer","Alpha Weremouse","Wereminer","Reveling Lycanthrope"]],
+            ["Arcane","#6699CC",["Hypnotized Gunslinger","Arcane Summoner","Night Watcher","Cursed Taskmaster","Meteorite Golem","Meteorite Mystic"]] //blue
+        ]],
     ]))
 }
 
